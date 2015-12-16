@@ -26,6 +26,12 @@ class CoursesController < ApplicationController
   end
 
   def update
+    if @course.update(course_params)
+      flash[:success] = "Course updated successfully!"
+      redirect_to @course
+    else
+      render :edit
+    end
   end
 
   def destroy
