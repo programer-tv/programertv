@@ -1,0 +1,9 @@
+= simple_form_for [@course, @episode] do |f|
+  = f.input :en_title
+  = f.input :ar_title
+  = f.input :description
+  = f.input :sequence
+  = f.input :video_host, collection: %w(YouTube Wistia Vimeo),
+                         default: "YouTube"
+  = f.input :video_id
+  = f.button :submit

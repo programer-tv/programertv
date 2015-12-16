@@ -1,2 +1,24 @@
-%h1 Episodes#show
-%p Find me in app/views/episodes/show.html.haml
+%p
+  English Title:
+  = @episode.en_title
+%p
+  Arabic Title:
+  = @episode.ar_title
+%p
+  Description:
+  = @episode.description
+%p
+  Sequence
+  = @episode.sequence
+%p
+  Video Host:
+  = @episode.video_host
+%p
+  Video ID:
+  = @episode.video_id
+
+= link_to "Courses", courses_path
+= link_to @course.en_title, @course
+= link_to "Edit Episode", edit_course_episode_path(@course, @episode)
+= link_to "Delete episode", course_episode_path(@course, @episode),
+          method: :delete, data: { confirm: "Are you sure?" }
