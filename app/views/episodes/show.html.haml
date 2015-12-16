@@ -17,7 +17,6 @@
   Video ID:
   = @episode.video_id
 
-= link_to "Courses", courses_path
 = link_to @course.en_title, @course
 = link_to "Edit Episode", edit_course_episode_path(@course, @episode)
 = link_to "Delete episode", course_episode_path(@course, @episode),
