@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "user adds course" do
+describe "adding course" do
   let(:course) { build(:course) }
   before(:example) { visit new_course_path }
 
@@ -31,7 +31,7 @@ describe "user adds course" do
   end
 end
 
-describe "user edits course" do
+describe "editing course" do
   let(:course) { build(:course) }
   before(:example) { visit edit_course_path(create(:course)) }
 
@@ -58,5 +58,14 @@ describe "user edits course" do
       click_on "Update Course"
       expect(page).to have_text("can't be blank")
     end
+  end
+end
+
+describe "deleting course" do
+  it "succeeds" do
+    course = create(:course)
+    visit course_path(course)
+    page.driver.submit :delete, "/courses/#{course.id}", {}
+    expect(page).not_to have_text(course.en_title)
   end
 end

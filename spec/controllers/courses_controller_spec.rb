@@ -115,7 +115,7 @@ describe CoursesController, type: :controller do
       end
 
       it "assigns @course" do
-        expect(assigns(:course)).to be_present
+        expect(assigns(:course)).to eq(course)
       end
 
       it "redirects to show page" do
@@ -132,12 +132,29 @@ describe CoursesController, type: :controller do
       end
 
       it "assigns @course" do
-        expect(assigns(:course)).to be_present
+        expect(assigns(:course)).to eq(course)
       end
 
       it "renders edit page" do
         expect(response).to render_template(:edit)
       end
+    end
+  end
+
+  describe "DELETE #destroy" do
+    let(:course) { create(:course) }
+    before(:example) { delete :destroy, id: course }
+
+    it "return http redirect" do
+      expect(response).to have_http_status(:redirect)
+    end
+
+    it "assigns @course" do
+      expect(assigns(:course)).to eq(course)
+    end
+
+    it "redirects to index page" do
+      expect(response).to redirect_to(courses_path)
     end
   end
 end
