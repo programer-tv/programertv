@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe Course, type: :model do
   describe "validations" do
+    it { should have_many(:episodes) }
     it { should validate_presence_of(:ar_title) }
     it { should validate_uniqueness_of(:ar_title) }
     it { should validate_presence_of(:en_title) }
