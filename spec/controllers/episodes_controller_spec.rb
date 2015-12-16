@@ -157,4 +157,25 @@ describe EpisodesController, type: :controller do
       end
     end
   end
+
+  describe "DELETE #destroy" do
+    let(:episode) { create(:episode) }
+    before(:example) { delete :destroy, course_id: episode.course, id: episode }
+
+    it "returns http redirect" do
+      expect(response).to have_http_status(:redirect)
+    end
+
+    it "assigns @course" do
+      expect(assigns(:course)).to eq(episode.course)
+    end
+
+    it "assigns @episode" do
+      expect(assigns(:episode)).to eq(episode)
+    end
+
+    it "redirects to course show page" do
+      expect(response).to redirect_to(episode.course)
+    end
+  end
 end

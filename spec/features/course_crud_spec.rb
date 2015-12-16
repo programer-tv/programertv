@@ -52,7 +52,7 @@ describe "update course" do
   end
 end
 
-describe "deleting course" do
+describe "delete course" do
   it "succeeds" do
     course = create(:course)
     visit course_path(course)

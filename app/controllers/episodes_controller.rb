@@ -32,6 +32,8 @@ class EpisodesController < ApplicationController
   end
 
   def destroy
+    @episode.destroy
+    redirect_to @course
   end
 
   private

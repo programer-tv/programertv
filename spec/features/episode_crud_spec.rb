@@ -52,3 +52,14 @@ describe "update episode" do
     expect(page).to have_text("can't be blank")
   end
 end
+
+describe "delete episode" do
+  it "succeeds" do
+    episode = create(:episode)
+    visit course_episode_path(episode.course, episode)
+    page.driver.submit :delete,
+                       "/courses/#{episode.course.id}/episodes/#{episode.id}",
+                       {}
+    expect(page).not_to have_text(episode.en_title)
+  end
+end
