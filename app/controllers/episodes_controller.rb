@@ -23,6 +23,12 @@ class EpisodesController < ApplicationController
   end
 
   def update
+    if @episode.update(episode_params)
+      flash[:success] = "Episode updated successfully!"
+      redirect_to course_episode_path(@course, @episode)
+    else
+      render :edit
+    end
   end
 
   def destroy

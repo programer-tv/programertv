@@ -63,4 +63,98 @@ describe EpisodesController, type: :controller do
       expect(response).to render_template(:edit)
     end
   end
+
+  describe "POST #create" do
+    let(:course) { create(:course) }
+
+    context "with valid attributes" do
+      before(:example) { post :create, course_id: course,
+                         episode: attributes_for(:episode) }
+
+      it "returns http redirect" do
+        expect(response).to have_http_status(:redirect)
+      end
+
+      it "assigns @course" do
+        expect(assigns(:course)).to eq(course)
+      end
+
+      it "assigns @episode" do
+        expect(assigns(:episode)).to be_present
+      end
+
+      it "redirects to show page" do
+        episode = assigns(:episode)
+        expect(response).to redirect_to(course_episode_path(course, episode))
+      end
+    end
+
+    context "with invalid attributes" do
+      before(:example) { post :create, course_id: course,
+                         episode: attributes_for(:episode, en_title: nil) }
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "assigns @course" do
+        expect(assigns(:course)).to eq(course)
+      end
+
+      it "assigns @episode" do
+        expect(assigns(:episode)).to be_present
+      end
+
+      it "renders new template" do
+        expect(response).to render_template(:new)
+      end
+    end
+  end
+
+  describe "PATCH #update" do
+    let(:episode) { create(:episode) }
+
+    context "with valid attributes" do
+      before(:example) { patch :update, course_id: episode.course, id: episode,
+                         episode: attributes_for(:episode) }
+
+      it "returns http redirect" do
+        expect(response).to have_http_status(:redirect)
+      end
+
+      it "assigns @course" do
+        expect(assigns(:course)).to eq(episode.course)
+      end
+
+      it "assigns @episode" do
+        expect(assigns(:episode)).to eq(episode)
+      end
+
+      it "redirects to show page" do
+        expect(response).to redirect_to(course_episode_path(episode.course,
+                                                            episode))
+      end
+    end
+
+    context "with invalid attributes" do
+      before(:example) { patch :update, course_id: episode.course, id: episode,
+                         episode: attributes_for(:episode, en_title: nil) }
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "assigns @course" do
+        expect(assigns(:course)).to eq(episode.course)
+      end
+
+      it "assigns @episode" do
+        expect(assigns(:episode)).to eq(episode)
+      end
+
+      it "renders edit page" do
+        expect(response).to render_template(:edit)
+      end
+    end
+  end
 end
