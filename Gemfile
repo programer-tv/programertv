@@ -14,6 +14,7 @@ gem 'bootstrap-sass',      '~> 3.3',   '>= 3.3.6'
 gem 'font-awesome-rails',  '~> 4.5'
 gem 'haml-rails',          '~> 0.9.0'
 gem 'simple_form',         '~> 3.2'
+gem 'jquery-turbolinks',   '~> 2.1'
 
 group :development, :test do
   gem 'byebug'

@@ -1,10 +1,19 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Programertv
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = favicon_link_tag "/favicon.ico?version=1"
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=no" }
+    %title programer.tv
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{ params[:controller] }.css")
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{ params[:controller] }.js")
     = csrf_meta_tags
-  %body
-    = yield
+  %body.rtl
+    = render "layouts/header"
+    .page-container.row-fluid
+      = render "layouts/sidebar"
+      .page-content
+        .content
+          = yield

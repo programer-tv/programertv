@@ -1,0 +1,70 @@
+.header.navbar.navbar-inverse
+  .navbar-inner
+    .header-seperation
+      %ul#main-menu-toggle-wrapper.nav.pull-left.notification-center
+        %li.dropdown
+          = link_to "#main-menu", id: "main-menu-toggle" do
+            .iconset.top-menu-toggle-white
+
+      = link_to root_url, "data-no-turbolink": true do
+        = image_tag "logo.png", alt: "Logo", class: "logo"
+
+      %ul.nav.pull-right.notification-center
+        %li#portrait-chat-toggler.dropdown
+          = link_to "#", id: "user-options",
+                    class: "dropdown-toggle pull-right",
+                    "data-toggle": "dropdown" do
+            .iconset.top-settings
+            %ul.dropdown-menu.pull-right{ role: "menu",
+                                          "aria-labelledby": "user-options" }
+              %li
+                = link_to "hello", "hello"
+              %li
+                = link_to "hello", "hello"
+              -# %li
+              -#   = link_to destroy_user_session_path, method: :delete,
+              -#             class: "text-right", id: "user_signout_link" do
+              -#     Sign Out &nbsp;
+              -#     = fa_icon "sign-out flip-horizontal"
+
+    .header-quick-nav
+      .pull-left
+        %ul.nav.quick-section
+          %li.quicklinks
+            = link_to "#", id: "layout-condensed-toggle" do
+              .iconset.top-menu-toggle-dark
+
+        %ul.nav.quick-section
+          %li.quicklinks
+            = link_to url_for(params), "data-no-turbolink": true do
+              .iconset.top-reload
+          %li.quicklinks
+            %span.h-seperate
+          -# %li.quicklinks
+          -#   = link_to authenticated_root_path, "data-no-turbolink": true do
+          -#     .iconset.top-tiles
+          %li.m-r-10.input-prepend.inside.search-form.no-boarder
+            = form_tag courses_path, method: :get, class: "pull-right",
+                       style: "width:250px; direction:rtl;" do
+              = text_field_tag :search, params[:search], placeholder: "بحث...",
+                               class: "no-boarder"
+              %span.iconset.top-search
+
+      .pull-right
+        %ul.nav.quick-section
+          %li.quicklinks
+            = link_to "#", id: "user-settings",
+                      class: "dropdown-toggle pull-right",
+                      "data-toggle": "dropdown" do
+              .iconset.top-settings-dark
+              %ul.dropdown-menu.pull-right{ role: "menu",
+                                            "aria-labelledby": "user-options" }
+                %li
+                  = link_to "hello", "hello"
+                %li
+                  = link_to "hello", "hello"
+                -# %li
+                -#   = link_to destroy_user_session_path, method: :delete,
+                -#             class: "text-right", id: "user_signout_link" do
+                -#     Sign Out &nbsp;
+                -#     = fa_icon "sign-out flip-horizontal"

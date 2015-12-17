@@ -1,3 +1,131 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "pace/pace-theme-flash";
+@import "jquery-scrollbar/jquery.scrollbar";
+@import "animate/animate";
+@import "webarch/rtl/style";
+@import "webarch/rtl/responsive";
+@import "fonts";
+
+html * {
+  font-family: "droid-sans";
+}
+
+body {
+	.header {
+		.header-seperation {
+			.logo {
+				height: 60px;
+				width: 250px;
+				margin: 0;
+			}
+		}
+
+		.header-quick-nav {
+			.iconset.top-search {
+				margin-right: 10px;
+				margin-top: 4px;
+			}
+
+			input {
+				font-family: "droid-sans";
+				padding-right: 35px !important;
+				margin-top: 1px;
+			}
+		}
+
+		.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+			background-color: transparent;
+		}
+	}
+
+	.breadcrumb {
+		direction: rtl;
+		margin-bottom: 10px !important;
+
+		li {
+			p {
+				display: inline-block;
+
+				a {
+					font-weight: bold !important;
+				}
+			}
+		}
+	}
+
+	.profile-wrapper {
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.grid.simple {
+		&.horizontal {
+			&.blue {
+				.grid-title {
+					border-top: 4px solid #0090d9;
+				}
+			}
+		}
+
+		&.transparent {
+			margin-bottom: 10px;
+
+			.social-buttons {
+				margin-top: 10px;
+				font-size: 1px;
+
+				iframe {
+					vertical-align: middle;
+				}
+
+				span {
+					display: inline-block;
+					width: 90px;
+				}
+
+				.twitter-share-button[style] {
+					vertical-align: text-bottom !important;
+				}
+			}
+		}
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	#main-menu-toggle-wrapper, #portrait-chat-toggler {
+		display: block;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	#main-menu-toggle-wrapper, #portrait-chat-toggler {
+		display: block;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#main-menu-toggle-wrapper, #portrait-chat-toggler {
+		display: block;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	#main-menu-toggle-wrapper, #portrait-chat-toggler {
+		display: none;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	#main-menu-toggle-wrapper, #portrait-chat-toggler {
+		display: none;
+	}
+}
