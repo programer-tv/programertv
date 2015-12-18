@@ -12,8 +12,8 @@ describe "create course" do
     fill_in "course_video_id"     , with: course.video_id
     check "course_premium"
     check "course_active"
-    click_on "Create Course"
-    expect(page).to have_text(course.en_title)
+    click_on "submit"
+    expect(page).to have_text(course.ar_title)
   end
 
   it "fails with invalid attributes" do
@@ -21,7 +21,7 @@ describe "create course" do
     fill_in "course_en_title"     , with: nil
     fill_in "course_description"  , with: nil
     fill_in "course_video_id"     , with: nil
-    click_on "Create Course"
+    click_on "submit"
     expect(page).to have_text("can't be blank")
   end
 end
@@ -38,7 +38,8 @@ describe "update course" do
     fill_in "course_video_id"     , with: course.video_id
     check "course_premium"
     check "course_active"
-    click_on "Update Course"
+    click_on "submit"
+    expect(page).to have_text(course.ar_title)
   end
 
   it "fails with invalid attributes" do
@@ -47,7 +48,7 @@ describe "update course" do
     fill_in "course_description"  , with: nil
     select course.video_host.to_s , from: "course_video_host"
     fill_in "course_video_id"     , with: nil
-    click_on "Update Course"
+    click_on "submit"
     expect(page).to have_text("can't be blank")
   end
 end
@@ -57,6 +58,6 @@ describe "delete course" do
     course = create(:course)
     visit course_path(course)
     page.driver.submit :delete, "/courses/#{course.id}", {}
-    expect(page).not_to have_text(course.en_title)
+    expect(page).not_to have_text(course.ar_title)
   end
 end

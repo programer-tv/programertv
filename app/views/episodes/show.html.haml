@@ -1,23 +1,61 @@
-%p
-  English Title:
-  = @episode.en_title
-%p
-  Arabic Title:
-  = @episode.ar_title
-%p
-  Description:
-  = @episode.description
-%p
-  Sequence
-  = @episode.sequence
-%p
-  Video Host:
-  = @episode.video_host
-%p
-  Video ID:
-  = @episode.video_id
+.row
+  .col-lg-12
+    %ul.breadcrumb
+      %li
+        %p= link_to @course.ar_title, course_path(@course)
+      %li
+        %p
+          &nbsp;
+          = @episode.ar_title
 
-= link_to @course.en_title, @course
-= link_to "Edit Episode", edit_course_episode_path(@course, @episode)
-= link_to "Delete episode", course_episode_path(@course, @episode),
-          method: :delete, data: { confirm: "Are you sure?" }
+.row
+  .col-lg-8
+    .grid.simple.transparent
+
+    .grid.simple.horizontal.green
+      .grid-title
+        %h4
+          %span.semi-bold= @episode.ar_title
+        .tools
+          %a{ href: "javascript:;", class: "collapse" }
+          %a{ href: "javascript:;", class: "reload" }
+          %a{ href: "javascript:;", class: "remove" }
+      .grid-body
+        %p#episode_description= @episode.description.html_safe
+
+    .grid.simple.horizontal.blue
+      .grid-title
+        %h4
+          %span.semi-bold Comments
+        .tools
+          %a{ href: "javascript:;", class: "collapse" }
+          %a{ href: "javascript:;", class: "reload" }
+          %a{ href: "javascript:;", class: "remove" }
+      .grid-body
+
+  .col-lg-4
+    .grid.simple.horizontal.yellow
+      .grid-title
+        %h4
+          %span.semi-bold Episodes
+        .tools
+          %a{ href: "javascript:;", class: "collapse" }
+          %a{ href: "javascript:;", class: "reload" }
+          %a{ href: "javascript:;", class: "remove" }
+      .grid-body
+        - @course.episodes.each do |episode|
+          %p= link_to episode.ar_title, course_episode_path(@course, episode),
+                      id: "#{dom_id(episode)}"
+
+.row
+  .col-lg-12
+    .grid.simple.transparent
+      = link_to edit_course_episode_path(@course, @episode),
+                class: "btn btn-warning btn-cons" do
+        = fa_icon "pencil"
+        %span &nbsp;Edit Episode
+      = link_to course_episode_path(@course, @episode),
+                class: "btn btn-danger btn-cons",
+                method: :delete, data: { confirm: "Are you sure?" } do
+        = fa_icon "trash-o"
+        %span &nbsp;Delete Episode

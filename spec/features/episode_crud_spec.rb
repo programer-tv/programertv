@@ -11,8 +11,8 @@ describe "create episode" do
     fill_in "episode_sequence"     , with: episode.sequence
     select episode.video_host.to_s , from: "episode_video_host"
     fill_in "episode_video_id"     , with: episode.video_id
-    click_on "Create Episode"
-    expect(page).to have_text(episode.en_title)
+    click_on "submit"
+    expect(page).to have_text(episode.ar_title)
   end
 
   it "fails with invalid attributes" do
@@ -21,7 +21,7 @@ describe "create episode" do
     fill_in "episode_description"  , with: nil
     fill_in "episode_sequence"     , with: nil
     fill_in "episode_video_id"     , with: nil
-    click_on "Create Episode"
+    click_on "submit"
     expect(page).to have_text("can't be blank")
   end
 end
@@ -38,8 +38,8 @@ describe "update episode" do
     fill_in "episode_sequence"     , with: episode.sequence
     select episode.video_host.to_s , from: "episode_video_host"
     fill_in "episode_video_id"     , with: episode.video_id
-    click_on "Update Episode"
-    expect(page).to have_text(episode.en_title)
+    click_on "submit"
+    expect(page).to have_text(episode.ar_title)
   end
 
   it "fails with invalid attributes" do
@@ -48,7 +48,7 @@ describe "update episode" do
     fill_in "episode_description"  , with: nil
     fill_in "episode_sequence"     , with: nil
     fill_in "episode_video_id"     , with: nil
-    click_on "Update Episode"
+    click_on "submit"
     expect(page).to have_text("can't be blank")
   end
 end
@@ -60,6 +60,6 @@ describe "delete episode" do
     page.driver.submit :delete,
                        "/courses/#{episode.course.id}/episodes/#{episode.id}",
                        {}
-    expect(page).not_to have_text(episode.en_title)
+    expect(page).not_to have_text(episode.ar_title)
   end
 end

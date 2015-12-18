@@ -1,9 +1,41 @@
-= simple_form_for [@course, @episode] do |f|
-  = f.input :en_title
-  = f.input :ar_title
-  = f.input :description
-  = f.input :sequence
-  = f.input :video_host, collection: %w(YouTube Wistia Vimeo),
-                         default: "YouTube"
-  = f.input :video_id
-  = f.button :submit
+.row
+  .col-md-12
+    .grid.simple
+      .grid-title.no-border
+      .grid-body.no-border
+        = simple_form_for [@course, @episode] do |f|
+          .row
+            .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
+              = f.input :en_title
+            .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
+              = f.input :ar_title
+          .row
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
+              = f.input :sequence
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
+              = f.input :video_host, collection: %w(YouTube Wistia Vimeo),
+                        default: "YouTube"
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
+              = f.input :video_id
+          .row
+            .form-group.col-lg-12
+              = f.input :description
+
+          .form-actions
+            - if @episode.new_record?
+              = button_tag type: "submit", class: "btn btn-success btn-cons",
+                           id: "submit" do
+                = fa_icon "plus"
+                %span &nbsp;Add
+              = link_to @course, class: "btn btn-danger btn-cons" do
+                = fa_icon "close"
+                %span &nbsp;Cancel
+            - else
+              = button_tag type: "submit", class: "btn btn-warning btn-cons",
+                           id: "submit" do
+                = fa_icon "pencil"
+                %span &nbsp;Edit
+              = link_to course_episode_path(@course, @episode),
+                        class: "btn btn-danger btn-cons" do
+                = fa_icon "close"
+                %span &nbsp;Cancel
