@@ -3,10 +3,9 @@ rvm:
   - 2.2.1
 env:
   - DB=postgresql
-  - TESTFOLDER=spec
 before_install: cp config/database.travis.yml config/database.yml
 script:
   - export RAILS_ENV=test
   - bundle exec rake db:create db:migrate
   - bundle exec rake db:test:prepare
-  - bundle exec rspec $TESTFOLDER
+  - bundle exec rspec spec
