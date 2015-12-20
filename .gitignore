@@ -15,7 +15,6 @@
 # Ignore application configuration
 /config/application.yml
 /config/database.yml
-/config/secrets.yml
 
 # Ignore rvm files
 .ruby-version

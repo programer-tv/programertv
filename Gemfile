@@ -18,6 +18,7 @@ gem 'jquery-turbolinks',    '~> 2.1'
 gem 'sweet-alert',          '~> 0.0.9'
 gem 'sweetalert-rails',     '~> 0.5.0'
 gem 'sweet-alert-confirm',  '~> 0.4.1'
+gem 'figaro',               '~> 1.1',   '>= 1.1.1'
 
 group :development, :test do
   gem 'byebug'
