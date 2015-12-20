@@ -1,0 +1,6 @@
+postgresql: &postgresql
+  adapter: postgresql
+  username: postgres
+  password:
+  database: programertv_<%= ENV['RAILS_ENV'] %>
+  min_messages: ERROR
