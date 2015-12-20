@@ -2,6 +2,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
+//= require sweet-alert
+//= require sweet-alert-confirm
 //= require pace/pace.min
 //= require breakpoints/breakpoints.min
 //= require jquery-unveil/jquery.unveil.min

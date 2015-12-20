@@ -10,11 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder',      '~> 2.0'
 gem 'sdoc',          '~> 0.4.0',  group: :doc
 
-gem 'bootstrap-sass',      '~> 3.3',   '>= 3.3.6'
-gem 'font-awesome-rails',  '~> 4.5'
-gem 'haml-rails',          '~> 0.9.0'
-gem 'simple_form',         '~> 3.2'
-gem 'jquery-turbolinks',   '~> 2.1'
+gem 'bootstrap-sass',       '~> 3.3',   '>= 3.3.6'
+gem 'font-awesome-rails',   '~> 4.5'
+gem 'haml-rails',           '~> 0.9.0'
+gem 'simple_form',          '~> 3.2'
+gem 'jquery-turbolinks',    '~> 2.1'
+gem 'sweet-alert',          '~> 0.0.9'
+gem 'sweetalert-rails',     '~> 0.5.0'
+gem 'sweet-alert-confirm',  '~> 0.4.1'
 
 group :development, :test do
   gem 'byebug'
