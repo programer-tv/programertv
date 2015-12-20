@@ -57,7 +57,7 @@ describe "delete course" do
   it "succeeds" do
     course = create(:course)
     visit course_path(course)
-    page.driver.submit :delete, "/courses/#{course.id}", {}
-    expect(page).not_to have_text(course.ar_title)
+    click_on "delete_course_button"
+    expect(page).not_to have_selector("#course_#{course.id}")
   end
 end

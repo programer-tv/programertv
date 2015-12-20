@@ -1,5 +1,5 @@
 %h1 Courses
 - @courses.each do |course|
-  %p= link_to course.en_title, course
+  %p= link_to course.ar_title, course, id: "#{dom_id(course)}"
 
 = link_to "Add New Course", new_course_path

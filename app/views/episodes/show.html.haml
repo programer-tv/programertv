@@ -56,6 +56,7 @@
         %span &nbsp;Edit Episode
       = link_to course_episode_path(@course, @episode),
                 class: "btn btn-danger btn-cons",
+                id: "delete_episode_button",
                 method: :delete, data: { confirm: "Are you sure?" } do
         = fa_icon "trash-o"
         %span &nbsp;Delete Episode

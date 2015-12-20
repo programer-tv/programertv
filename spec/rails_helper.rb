@@ -62,6 +62,11 @@ RSpec.configure do |config|
   # Set Capybara's javascript deiver
   Capybara.javascript_driver = :webkit
 
+  # block requests to unknown URLs
+  Capybara::Webkit.configure do |cnfg|
+    cnfg.block_unknown_urls
+  end
+
   # Include FactoryGirl DSL helpers
   config.include FactoryGirl::Syntax::Methods
 

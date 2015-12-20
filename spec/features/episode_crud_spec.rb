@@ -57,9 +57,7 @@ describe "delete episode" do
   it "succeeds" do
     episode = create(:episode)
     visit course_episode_path(episode.course, episode)
-    page.driver.submit :delete,
-                       "/courses/#{episode.course.id}/episodes/#{episode.id}",
-                       {}
-    expect(page).not_to have_text(episode.ar_title)
+    click_on "delete_episode_button"
+    expect(page).not_to have_selector("#episode_#{episode.id}")
   end
 end

@@ -53,7 +53,9 @@
       = link_to edit_course_path, class: "btn btn-warning btn-cons" do
         = fa_icon "pencil"
         %span &nbsp;Edit Course
-      = link_to course_path, class: "btn btn-danger btn-cons", method: :delete,
+      = link_to course_path, class: "btn btn-danger btn-cons",
+                id: "delete_course_button",
+                method: :delete,
                 data: { confirm: "Are you sure?" } do
         = fa_icon "trash-o"
         %span &nbsp;Delete Course
