@@ -4,3 +4,18 @@ postgresql: &postgresql
   password:
   database: programertv_<%= ENV['RAILS_ENV'] %>
   min_messages: ERROR
+
+defaults: &defaults
+  pool: 5
+  timeout: 5000
+  host: localhost
+  <<: *<%= ENV['DB'] || "sqlite" %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
