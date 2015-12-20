@@ -13,3 +13,7 @@ script:
   - bundle exec rake db:create db:migrate
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec
+
+addons:
+  code_climate:
+    repo_token: e6ef8bd1ffdfcb9fb4a39602638d8a45965c82207aef853775b348f4ca677694

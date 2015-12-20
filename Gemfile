@@ -22,19 +22,20 @@ gem 'figaro',               '~> 1.1',   '>= 1.1.1'
 
 group :development, :test do
   gem 'byebug'
-  gem 'pry-rails',           '~> 0.3.4'
-  gem 'pry-byebug',          '~> 3.3'
-  gem 'pry-stack_explorer',  '~> 0.4.9.2'
-  gem 'rspec-rails',         '~> 3.4'
-  gem 'capybara',            '~> 2.5'
-  gem 'capybara-webkit',     '~> 1.7',     '>= 1.7.1'
-  gem 'factory_girl_rails',  '~> 4.5'
-  gem 'database_cleaner',    '~> 1.5',     '>= 1.5.1'
-  gem 'shoulda-matchers',    '~> 3.0',     '>= 3.0.1'
-  gem 'ffaker',              '~> 2.1'
-  gem 'simplecov',           '~> 0.11.1'
-  gem 'guard-rspec',         '~> 4.6',     '>= 4.6.4',  require: false
-  gem 'guard-livereload',    '~> 2.5',     '>= 2.5.1',  require: false
+  gem 'pry-rails',                  '~> 0.3.4'
+  gem 'pry-byebug',                 '~> 3.3'
+  gem 'pry-stack_explorer',         '~> 0.4.9.2'
+  gem 'rspec-rails',                '~> 3.4'
+  gem 'capybara',                   '~> 2.5'
+  gem 'capybara-webkit',            '~> 1.7',     '>= 1.7.1'
+  gem 'factory_girl_rails',         '~> 4.5'
+  gem 'database_cleaner',           '~> 1.5',     '>= 1.5.1'
+  gem 'shoulda-matchers',           '~> 3.0',     '>= 3.0.1'
+  gem 'ffaker',                     '~> 2.1'
+  gem 'simplecov',                  '~> 0.11.1'
+  gem 'guard-rspec',                '~> 4.6',     '>= 4.6.4',  require: false
+  gem 'guard-livereload',           '~> 2.5',     '>= 2.5.1',  require: false
+  gem 'codeclimate-test-reporter',  '~> 0.4.8'
 end
 
 group :development do

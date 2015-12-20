@@ -60,6 +60,8 @@ GEM
     capybara-webkit (1.7.1)
       capybara (>= 2.3.0, < 2.6.0)
       json
+    codeclimate-test-reporter (0.4.8)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.5)
   capybara-webkit (~> 1.7, >= 1.7.1)
+  codeclimate-test-reporter (~> 0.4.8)
   coffee-rails (~> 4.1.0)
   database_cleaner (~> 1.5, >= 1.5.1)
   factory_girl_rails (~> 4.5)
