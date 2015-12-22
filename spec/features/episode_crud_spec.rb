@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "create episode" do
+describe "create episode", js: true do
   let(:episode) { build(:episode) }
   before(:example) { visit new_course_episode_path(episode.course) }
 
@@ -12,7 +12,8 @@ describe "create episode" do
     select episode.video_host.to_s , from: "episode_video_host"
     fill_in "episode_video_id"     , with: episode.video_id
     click_on "submit"
-    expect(page).to have_text(episode.ar_title)
+    expect(page).to have_selector(".sweet-alert",
+                                  text: "Episode created successfully!")
   end
 
   it "fails with invalid attributes" do
@@ -22,11 +23,11 @@ describe "create episode" do
     fill_in "episode_sequence"     , with: nil
     fill_in "episode_video_id"     , with: nil
     click_on "submit"
-    expect(page).to have_text("can't be blank")
+    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
   end
 end
 
-describe "update episode" do
+describe "update episode", js: true do
   let(:episode) { create(:episode) }
   before(:example) { visit edit_course_episode_path(episode.course, episode) }
 
@@ -39,7 +40,8 @@ describe "update episode" do
     select episode.video_host.to_s , from: "episode_video_host"
     fill_in "episode_video_id"     , with: episode.video_id
     click_on "submit"
-    expect(page).to have_text(episode.ar_title)
+    expect(page).to have_selector(".sweet-alert",
+                                  text: "Episode updated successfully!")
   end
 
   it "fails with invalid attributes" do
@@ -49,7 +51,7 @@ describe "update episode" do
     fill_in "episode_sequence"     , with: nil
     fill_in "episode_video_id"     , with: nil
     click_on "submit"
-    expect(page).to have_text("can't be blank")
+    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
   end
 end
 
@@ -57,7 +59,8 @@ describe "delete episode" do
   it "succeeds" do
     episode = create(:episode)
     visit course_episode_path(episode.course, episode)
-    click_on "delete_episode_button"
+    page.driver.submit :delete, "/courses/#{episode.course.id}" +
+                                "/episodes/#{episode.id}", nil
     expect(page).not_to have_selector("#episode_#{episode.id}")
   end
 end

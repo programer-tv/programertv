@@ -16,4 +16,6 @@
       = render "layouts/sidebar"
       .page-content
         .content
+          - flash.each do |key, value|
+            .flash-message{ key: key, value: value }
           = yield

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "create course" do
+describe "create course", js: true do
   let(:course) { build(:course) }
   before(:example) { visit new_course_path }
 
@@ -13,7 +13,8 @@ describe "create course" do
     check "course_premium"
     check "course_active"
     click_on "submit"
-    expect(page).to have_text(course.ar_title)
+    expect(page).to have_selector(".sweet-alert",
+                                  text: "Course created successfully!")
   end
 
   it "fails with invalid attributes" do
@@ -22,11 +23,11 @@ describe "create course" do
     fill_in "course_description"  , with: nil
     fill_in "course_video_id"     , with: nil
     click_on "submit"
-    expect(page).to have_text("can't be blank")
+    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
   end
 end
 
-describe "update course" do
+describe "update course", js: true do
   let(:course) { build(:course) }
   before(:example) { visit edit_course_path(create(:course)) }
 
@@ -39,7 +40,8 @@ describe "update course" do
     check "course_premium"
     check "course_active"
     click_on "submit"
-    expect(page).to have_text(course.ar_title)
+    expect(page).to have_selector(".sweet-alert",
+                                  text: "Course updated successfully!")
   end
 
   it "fails with invalid attributes" do
@@ -49,7 +51,7 @@ describe "update course" do
     select course.video_host.to_s , from: "course_video_host"
     fill_in "course_video_id"     , with: nil
     click_on "submit"
-    expect(page).to have_text("can't be blank")
+    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
   end
 end
 
@@ -57,7 +59,7 @@ describe "delete course" do
   it "succeeds" do
     course = create(:course)
     visit course_path(course)
-    click_on "delete_course_button"
+    page.driver.submit :delete, "/courses/#{course.id}", nil
     expect(page).not_to have_selector("#course_#{course.id}")
   end
 end

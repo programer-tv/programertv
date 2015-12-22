@@ -57,6 +57,10 @@
       = link_to course_episode_path(@course, @episode),
                 class: "btn btn-danger btn-cons",
                 id: "delete_episode_button",
-                method: :delete, data: { confirm: "Are you sure?" } do
+                method: :delete,
+                data: { "confirm": "Are you sure?",
+                        "confirm-button-text": "Yes",
+                        "cancel-button-text": "No",
+                        "confirm-button-color": "#F35958" } do
         = fa_icon "trash-o"
         %span &nbsp;Delete Episode

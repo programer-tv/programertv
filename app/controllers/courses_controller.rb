@@ -15,6 +15,7 @@ class CoursesController < ApplicationController
       flash[:success] = "Course created successfully!"
       redirect_to @course
     else
+      flash[:error] = "Something went wrong!"
       render :new
     end
   end
@@ -30,12 +31,14 @@ class CoursesController < ApplicationController
       flash[:success] = "Course updated successfully!"
       redirect_to @course
     else
+      flash[:error] = "Something went wrong!"
       render :edit
     end
   end
 
   def destroy
-    @course.delete
+    @course.destroy
+    flash[:success] = "Course deleted successfully!"
     redirect_to courses_path
   end
 

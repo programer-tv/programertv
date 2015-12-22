@@ -95,6 +95,14 @@ body {
 			}
 		}
 	}
+
+  .sweet-alert {
+    direction: ltr;
+
+    h2 {
+      direction: rtl;
+    }
+  }
 }
 
 /* Custom, iPhone Retina */
