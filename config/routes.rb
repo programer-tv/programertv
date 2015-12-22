@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   root "courses#index"
   resources :courses do
     resources :episodes, except: [:index]

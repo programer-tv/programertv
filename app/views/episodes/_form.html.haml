@@ -19,7 +19,10 @@
               = f.input :video_id
           .row
             .form-group.col-lg-12
-              = f.input :description
+              = f.input :description,
+                        label: "Description",
+                        as: :ckeditor,
+                        input_html: { ckeditor: { toolbar: "Full" } }
 
           .form-actions
             - if @episode.new_record?

@@ -19,6 +19,8 @@ gem 'sweet-alert',          '~> 0.0.9'
 gem 'sweetalert-rails',     '~> 0.5.0'
 gem 'sweet-alert-confirm',  '~> 0.4.1'
 gem 'figaro',               '~> 1.1',   '>= 1.1.1'
+gem 'paperclip',            '~> 4.3',   '>= 4.3.2'
+gem 'ckeditor',             '~> 4.1',   '>= 4.1.5'
 
 group :development, :test do
   gem 'byebug'

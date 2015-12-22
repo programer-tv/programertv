@@ -18,7 +18,10 @@
               = f.input :video_id
           .row
             .form-group.col-lg-12
-              = f.input :description
+              = f.input :description,
+                        label: "Description",
+                        as: :ckeditor,
+                        input_html: { ckeditor: { toolbar: "Full" } }
           .row
             .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
               = f.input_field :premium, as: :boolean, inline_label: "Premium"
