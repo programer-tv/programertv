@@ -2,7 +2,13 @@ require "rails_helper"
 
 describe "create episode", js: true do
   let(:episode) { build(:episode) }
-  before(:example) { visit new_course_episode_path(episode.course) }
+
+  before(:example) do
+    visit new_course_episode_path(episode.course)
+    # remove overlapping element
+    page.execute_script("document.getElementById('episode_image')." +
+                        "style.position = 'relative';")
+  end
 
   it "succeeds with valid attributes" do
     attach_file "episode_image"            , "app/assets/images/anonymous.png"
@@ -31,7 +37,13 @@ end
 
 describe "update episode", js: true do
   let(:episode) { create(:episode) }
-  before(:example) { visit edit_course_episode_path(episode.course, episode) }
+
+  before(:example) do
+    visit edit_course_episode_path(episode.course, episode)
+    # remove overlapping element
+    page.execute_script("document.getElementById('episode_image')." +
+                        "style.position = 'relative';")
+  end
 
   it "succeeds with valid attributes" do
     episode = build(:episode)

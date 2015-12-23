@@ -2,7 +2,13 @@ require "rails_helper"
 
 describe "create course", js: true do
   let(:course) { build(:course) }
-  before(:example) { visit new_course_path }
+
+  before(:example) do
+    visit new_course_path
+    # remove overlapping element
+    page.execute_script("document.getElementById('course_image')." +
+                        "style.position = 'relative';")
+  end
 
   it "succeeds with valid attributes" do
     attach_file "course_image"            , "app/assets/images/anonymous.png"
@@ -31,7 +37,14 @@ end
 
 describe "update course", js: true do
   let(:course) { build(:course) }
-  before(:example) { visit edit_course_path(create(:course)) }
+
+  before(:example) do
+    visit edit_course_path(create(:course))
+    # remove overlapping element
+    page.execute_script("document.getElementById('course_image')." +
+                        "style.position = 'relative';")
+  end
+
 
   it "succeeds with valid attribures" do
     attach_file "course_image"            , "app/assets/images/anonymous.png"

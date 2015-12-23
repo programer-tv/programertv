@@ -4,6 +4,7 @@
 //= require bootstrap
 //= require sweet-alert
 //= require sweet-alert-confirm
+//= require bootstrap-filestyle/bootstrap-filestyle.min
 //= require ckeditor/init
 //= require pace/pace.min
 //= require breakpoints/breakpoints.min
@@ -31,6 +32,15 @@ $(document).ready(function() {
         var value = $(".flash-message").attr("value");
         showFlashMessage(key, value);
     }
+
+    // Bootstrap Filestyle
+	$(":file").filestyle({
+		// input: false,
+		buttonBefore: true,
+		buttonText: "&nbsp;File Upload",
+		buttonName: "btn btn-success btn-cons",
+		iconName: "glyphicon-cloud-upload",
+	});
 });
 
 // Destroy CKEditor element before unloading page
