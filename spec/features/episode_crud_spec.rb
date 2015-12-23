@@ -5,6 +5,7 @@ describe "create episode", js: true do
   before(:example) { visit new_course_episode_path(episode.course) }
 
   it "succeeds with valid attributes" do
+    attach_file "episode_image"            , "app/assets/images/anonymous.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
     fill_in_ckeditor "episode_description" , with: episode.description
@@ -17,6 +18,7 @@ describe "create episode", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "episode_image"            , nil
     fill_in "episode_en_title"             , with: nil
     fill_in "episode_ar_title"             , with: nil
     fill_in_ckeditor "episode_description" , with: nil
@@ -33,6 +35,7 @@ describe "update episode", js: true do
 
   it "succeeds with valid attributes" do
     episode = build(:episode)
+    attach_file "episode_image"            , "app/assets/images/anonymous.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
     fill_in_ckeditor "episode_description" , with: episode.description
@@ -45,6 +48,7 @@ describe "update episode", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "episode_image"            , nil
     fill_in "episode_en_title"             , with: nil
     fill_in "episode_ar_title"             , with: nil
     fill_in_ckeditor "episode_description" , with: nil
