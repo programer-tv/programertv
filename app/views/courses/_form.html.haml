@@ -5,6 +5,12 @@
       .grid-body.no-border
         = simple_form_for @course do |f|
           .row
+            .form-group.col-lg-6
+              = image_tag @course.image.url(:original)
+          .row
+            .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
+              = f.input :image, as: :file, label: false, class: "filestyle"
+          .row
             .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
               = f.input :en_title
             .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12

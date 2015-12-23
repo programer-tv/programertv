@@ -7,5 +7,7 @@ FactoryGirl.define do
     video_id    { rand(99999..999999) }
     premium     true
     active      true
+    image Rack::Test::UploadedFile.new("app/assets/images/anonymous.png",
+                                       "image/png")
   end
 end

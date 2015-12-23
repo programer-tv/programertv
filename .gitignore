@@ -21,4 +21,11 @@
 .ruby-gemset
 
 # Ignore SimpleCov files
-coverage/
+/coverage
+
+# Ignore CKEditor assets
+/public/ckeditor_assets
+
+# Ignore Paperclip assets
+/public/system
+/public/images

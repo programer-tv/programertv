@@ -5,6 +5,7 @@ describe "create course", js: true do
   before(:example) { visit new_course_path }
 
   it "succeeds with valid attributes" do
+    attach_file "course_image"            , "app/assets/images/anonymous.png"
     fill_in "course_ar_title"             , with: course.ar_title
     fill_in "course_en_title"             , with: course.en_title
     fill_in_ckeditor "course_description" , with: course.description
@@ -18,6 +19,7 @@ describe "create course", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "course_image"            , nil
     fill_in "course_ar_title"             , with: nil
     fill_in "course_en_title"             , with: nil
     fill_in_ckeditor "course_description" , with: nil
@@ -32,11 +34,12 @@ describe "update course", js: true do
   before(:example) { visit edit_course_path(create(:course)) }
 
   it "succeeds with valid attribures" do
-    fill_in "course_ar_title"     , with: course.ar_title
-    fill_in "course_en_title"     , with: course.en_title
-    fill_in_ckeditor "course_description", with: course.description
-    select course.video_host.to_s , from: "course_video_host"
-    fill_in "course_video_id"     , with: course.video_id
+    attach_file "course_image"            , "app/assets/images/anonymous.png"
+    fill_in "course_ar_title"             , with: course.ar_title
+    fill_in "course_en_title"             , with: course.en_title
+    fill_in_ckeditor "course_description" , with: course.description
+    select course.video_host.to_s         , from: "course_video_host"
+    fill_in "course_video_id"             , with: course.video_id
     check "course_premium"
     check "course_active"
     click_on "submit"
@@ -45,6 +48,7 @@ describe "update course", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "course_image"            , nil
     fill_in "course_ar_title"             , with: nil
     fill_in "course_en_title"             , with: nil
     fill_in_ckeditor "course_description" , with: nil
