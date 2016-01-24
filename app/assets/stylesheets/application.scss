@@ -96,6 +96,59 @@ body {
 		}
 	}
 
+  #episode-list {
+    .grid-body {
+      .episode {
+        overflow: hidden;
+
+        .episode-txt {
+          margin-top: 5px;
+        }
+
+        &:hover {
+          .episode-img {
+            .bg-img {
+              opacity: 0.5;
+            }
+
+            .play {
+              opacity: 1.0;
+            }
+          }
+        }
+
+        .episode-img {
+          float: right;
+          position: relative;
+          background: black;
+          margin: 0 0 10px 10px;
+
+          .bg-img {
+						opacity: 1.0;
+						-webkit-transition: all 0.3s ease-in-out;
+						-moz-transition: all 0.3s ease-in-out;
+						-o-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+          }
+
+					.play {
+						position: absolute;
+						opacity: 0.0;
+						top: 22%;
+						width: 50px;
+						margin: 0 auto;
+						left: 0px;
+						right: 0px;
+						-webkit-transition: all 0.3s ease-in-out;
+						-moz-transition: all 0.3s ease-in-out;
+						-o-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+					}
+        }
+      }
+    }
+  }
+
   .sweet-alert {
     direction: ltr;
 

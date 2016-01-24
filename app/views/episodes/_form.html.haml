@@ -34,16 +34,16 @@
             - if @episode.new_record?
               = button_tag type: "submit", class: "btn btn-success btn-cons",
                            id: "submit" do
-                = fa_icon "plus"
-                %span &nbsp;Add
+                = fa_icon "check"
+                %span &nbsp;OK
               = link_to @course, class: "btn btn-danger btn-cons" do
                 = fa_icon "close"
                 %span &nbsp;Cancel
             - else
-              = button_tag type: "submit", class: "btn btn-warning btn-cons",
+              = button_tag type: "submit", class: "btn btn-success btn-cons",
                            id: "submit" do
-                = fa_icon "pencil"
-                %span &nbsp;Edit
+                = fa_icon "check"
+                %span &nbsp;OK
               = link_to course_episode_path(@course, @episode),
                         class: "btn btn-danger btn-cons" do
                 = fa_icon "close"

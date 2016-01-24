@@ -16,4 +16,14 @@ describe Course, type: :model do
     it { should validate_attachment_content_type(:image).allowing("image/jpeg",
                                                                   "image/png") }
   end
+
+  context "episode order" do
+    it "retrieves episodes sequentially in ascending order" do
+      course = create(:course)
+      create(:episode, course: course, sequence: 2)
+      create(:episode, course: course, sequence: 3)
+      create(:episode, course: course, sequence: 1)
+      expect(course.get_sequential_episodes.map(&:sequence)).to match([1, 2, 3])
+    end
+  end
 end

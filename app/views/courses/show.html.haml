@@ -33,7 +33,7 @@
         = disqus_comments
 
   .col-lg-4
-    .grid.simple.horizontal.yellow
+    #episode-list.grid.simple.horizontal.yellow
       .grid-title
         %h4
           %span.semi-bold Episodes
@@ -42,17 +42,23 @@
           %a{ href: "javascript:;", class: "reload" }
           %a{ href: "javascript:;", class: "remove" }
       .grid-body
-        - @course.episodes.each do |episode|
-          %p= link_to episode.ar_title, course_episode_path(@course, episode),
-                      id: "#{dom_id(episode)}"
+        - @course.get_sequential_episodes.each do |episode|
+          = link_to course_episode_path(@course, episode),
+                    id: "#{dom_id(episode)}" do
+            .episode
+              .episode-img
+                = image_tag episode.image.url, size: "120x90", class: "bg-img"
+                = image_tag "logo_play.png", class: "play"
+              .episode-txt= episode.ar_title
+        %br
+        = link_to new_course_episode_path(@course),
+                  class: "btn btn-success btn-cons" do
+          = fa_icon "plus"
+          %span &nbsp;Add Episode
 
 .row
   .col-lg-12
     .grid.simple.transparent
-      = link_to new_course_episode_path(@course),
-                class: "btn btn-success btn-cons" do
-        = fa_icon "plus"
-        %span &nbsp;Add Episode
       = link_to edit_course_path, class: "btn btn-warning btn-cons" do
         = fa_icon "pencil"
         %span &nbsp;Edit Course

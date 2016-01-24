@@ -39,15 +39,15 @@
               = button_tag type: "submit", id: "submit",
                            class: "btn btn-success btn-cons" do
                 = fa_icon "check"
-                %span &nbsp;Create
+                %span &nbsp;OK
               = link_to courses_path, class: "btn btn-danger btn-cons" do
                 = fa_icon "close"
                 %span &nbsp;Cancel
             - else
               = button_tag type: "submit", id: "submit",
-                           class: "btn btn-warning btn-cons" do
-                = fa_icon "pencil"
-                %span &nbsp;Edit
+                           class: "btn btn-success btn-cons" do
+                = fa_icon "check"
+                %span &nbsp;OK
               = link_to @course, class: "btn btn-danger btn-cons" do
                 = fa_icon "close"
                 %span &nbsp;Cancel
