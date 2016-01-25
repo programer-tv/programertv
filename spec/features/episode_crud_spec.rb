@@ -1,10 +1,13 @@
 require "rails_helper"
 
 describe "create episode", js: true do
-  let(:episode) { build(:episode) }
+  let!(:course) { create(:course) }
+  let(:episode) { build(:episode, course: course) }
 
   before(:example) do
-    visit new_course_episode_path(episode.course)
+    visit courses_path
+    click_on "course_#{course.id}"
+    click_on "add_new_course_episode_link"
     # remove overlapping element
     page.execute_script("document.getElementById('episode_image')." +
                         "style.position = 'relative';")
@@ -39,7 +42,8 @@ describe "update episode", js: true do
   let(:episode) { create(:episode) }
 
   before(:example) do
-    visit edit_course_episode_path(episode.course, episode)
+    visit course_episode_path(episode.course, episode)
+    click_on "edit_course_episode_link"
     # remove overlapping element
     page.execute_script("document.getElementById('episode_image')." +
                         "style.position = 'relative';")

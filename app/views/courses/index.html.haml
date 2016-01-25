@@ -1,5 +1,25 @@
-%h1 Courses
-- @courses.each do |course|
-  %p= link_to course.ar_title, course, id: "#{dom_id(course)}"
+.row
+  .col-lg-12
+    %h3 الدورات
 
-= link_to "Add New Course", new_course_path
+.row.courses.center-block
+  - @courses.each do |course|
+    .course
+      = link_to course, id: "#{dom_id(course)}" do
+        .widget-item
+          .tiles.white
+            .course-img.tiles-body
+              = image_tag course.image.url,
+                          class: "center-block img-responsive hover-effect-img"
+          .tiles.white
+            .course-txt.tiles-body
+              .p-l-15.p-t-10.p-r-20
+                %h5.text-center= course.ar_title
+
+.row
+  .col-lg-12
+    %br
+    = link_to new_course_path, class: "btn btn-success btn-cons",
+              id: "add_new_course_link" do
+      = fa_icon "plus"
+      %span &nbsp;إنشاء دورة

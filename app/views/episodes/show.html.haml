@@ -59,12 +59,13 @@
   .col-lg-12
     .grid.simple.transparent
       = link_to edit_course_episode_path(@course, @episode),
-                class: "btn btn-warning btn-cons" do
+                class: "btn btn-warning btn-cons",
+                id: "edit_course_episode_link" do
         = fa_icon "pencil"
         %span &nbsp;Edit Episode
       = link_to course_episode_path(@course, @episode),
                 class: "btn btn-danger btn-cons",
-                id: "delete_episode_button",
+                id: "delete_course_episode_link",
                 method: :delete,
                 data: { "confirm": "Are you sure?",
                         "confirm-button-text": "Yes",

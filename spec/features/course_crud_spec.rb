@@ -4,7 +4,8 @@ describe "create course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
-    visit new_course_path
+    visit courses_path
+    click_on "add_new_course_link"
     # remove overlapping element
     page.execute_script("document.getElementById('course_image')." +
                         "style.position = 'relative';")
@@ -39,12 +40,14 @@ describe "update course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
-    visit edit_course_path(create(:course))
+    c = create(:course)
+    visit courses_path
+    click_on "course_#{c.id}"
+    click_on "edit_course_link"
     # remove overlapping element
     page.execute_script("document.getElementById('course_image')." +
                         "style.position = 'relative';")
   end
-
 
   it "succeeds with valid attribures" do
     attach_file "course_image"            , "app/assets/images/anonymous.png"

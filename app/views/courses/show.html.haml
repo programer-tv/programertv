@@ -52,14 +52,16 @@
               .episode-txt= episode.ar_title
         %br
         = link_to new_course_episode_path(@course),
-                  class: "btn btn-success btn-cons" do
+                  class: "btn btn-success btn-cons",
+                  id: "add_new_course_episode_link" do
           = fa_icon "plus"
           %span &nbsp;Add Episode
 
 .row
   .col-lg-12
     .grid.simple.transparent
-      = link_to edit_course_path, class: "btn btn-warning btn-cons" do
+      = link_to edit_course_path, class: "btn btn-warning btn-cons",
+                id: "edit_course_link" do
         = fa_icon "pencil"
         %span &nbsp;Edit Course
       = link_to course_path, class: "btn btn-danger btn-cons",
