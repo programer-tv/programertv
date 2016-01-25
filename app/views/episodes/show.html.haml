@@ -4,11 +4,13 @@
   .col-lg-12
     %ul.breadcrumb
       %li
-        %p= link_to @course.ar_title, course_path(@course)
+        %p= link_to "الدورات", courses_path
       %li
-        %p
-          &nbsp;
-          = @episode.ar_title
+        %p= link_to @course.ar_title, course_path(@course)
+      -# %li
+      -#   %p
+      -#     &nbsp;
+      -#     = @episode.ar_title
 
 .row
   .col-lg-8
@@ -53,7 +55,7 @@
               .episode-img
                 = image_tag episode.image.url, size: "120x90", class: "bg-img"
                 = image_tag "logo_play.png", class: "play"
-              %p= episode.ar_title
+              .episode-txt= episode.ar_title
 
 .row
   .col-lg-12
