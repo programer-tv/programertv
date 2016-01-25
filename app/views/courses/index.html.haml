@@ -1,6 +1,8 @@
 .row
   .col-lg-12
-    %h3 الدورات
+    .page-title
+      = fa_icon "arrow-circle-o-left"
+      %h3 الدورات
 
 .row.courses.center-block
   - @courses.each do |course|
