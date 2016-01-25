@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
       flash[:success] = "Course created successfully!"
       redirect_to @course
     else
-      flash[:error] = "Something went wrong!"
+      flash.now[:error] = "Something went wrong!"
       render :new
     end
   end
@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
       flash[:success] = "Course updated successfully!"
       redirect_to @course
     else
-      flash[:error] = "Something went wrong!"
+      flash.now[:error] = "Something went wrong!"
       render :edit
     end
   end

@@ -12,7 +12,7 @@ class EpisodesController < ApplicationController
       flash[:success] = "Episode created successfully!"
       redirect_to course_episode_path(@course, @episode)
     else
-      flash[:error] = "Something went wrong!"
+      flash.now[:error] = "Something went wrong!"
       render :new
     end
   end
@@ -28,7 +28,7 @@ class EpisodesController < ApplicationController
       flash[:success] = "Episode updated successfully!"
       redirect_to course_episode_path(@course, @episode)
     else
-      flash[:error] = "Something went wrong!"
+      flash.now[:error] = "Something went wrong!"
       render :edit
     end
   end
