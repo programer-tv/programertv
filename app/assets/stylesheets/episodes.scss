@@ -1,0 +1,6 @@
+// Using max-width
+@media only screen and (max-width : 768px) {
+  .breadcrumb li:last-child {
+    display: none;
+  }
+}

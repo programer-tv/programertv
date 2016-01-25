@@ -4,7 +4,7 @@ $(window).on("load", function() {
     $(".courses").masonry({
         itemSelector: ".course",
         fitWidth: true,
-        gutter: 30,
+        gutter: 20,
         originLeft: false,
     });
 });

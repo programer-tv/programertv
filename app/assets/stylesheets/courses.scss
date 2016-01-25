@@ -1,15 +1,16 @@
 .courses {
   .course {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    width: 220px;
 
     .course-img {
       padding: 0;
       overflow: hidden;
 
       img {
-        margin: 0 auto;
-        height: auto;
-        width: 100%
+        // margin: 0 auto;
+        // height: auto;
+        // width: 100%
       }
     }
   }
