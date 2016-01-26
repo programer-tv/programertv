@@ -53,7 +53,8 @@
         - @course.get_sequential_episodes.each do |episode|
           = link_to course_episode_path(@course, episode),
                     id: "#{dom_id(episode)}" do
-            .episode
+            .episode{ class: ("active" if current_page?(                |
+                              course_episode_path(@course, episode))) } |
               .episode-img
                 = image_tag episode.image.url, size: "120x90", class: "bg-img"
                 = image_tag "logo_play.png", class: "play"
