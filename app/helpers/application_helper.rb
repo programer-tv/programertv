@@ -27,6 +27,45 @@ module ApplicationHelper
     end
   end
 
+  def twitter_script
+    render_haml("<script>" +
+      "!function(d,s,id){" +
+      "var js,fjs=d.getElementsByTagName(s)[0]," +
+      "p=/^http:/.test(d.location)?'http':'https';" +
+      "if(!d.getElementById(id)){" +
+      "js=d.createElement(s);" +
+      "js.id=id;" +
+      "js.src=p+'://platform.twitter.com/widgets.js';" +
+      "fjs.parentNode.insertBefore(js,fjs);}}" +
+      "(document, 'script', 'twitter-wjs');</script>")
+  end
+
+  def twitter_button(page_path, title)
+    render_haml("<a href='https://twitter.com/share' "+
+      "class='twitter-share-button' " +
+      "data-url='#{page_path}' " +
+      "data-text='أنا أشاهد \"#{title}\"' " +
+      "data-via='ProgramerTV' data-lang='ar'></a>")
+  end
+
+  def facebook_script
+    render_haml("<div id='fb-root'></div>" +
+      "<script>(function(d, s, id) {" +
+      "var js, fjs = d.getElementsByTagName(s)[0];" +
+      "if (d.getElementById(id)) return;" +
+      "js = d.createElement(s); js.id = id;" +
+      "js.src = 'https://connect.facebook.net/ar_AR/sdk.js#xfbml=1" +
+      "&version=v2.5';" +
+      "fjs.parentNode.insertBefore(js, fjs);" +
+      "}(document, 'script', 'facebook-jssdk'));</script>")
+  end
+
+  def facebook_button(page_path)
+    render_haml("<div class='fb-like' data-href='#{page_path}' " +
+                "data-layout='button' data-action='like' " +
+                "data-show-faces='false' data-share='false'></div>")
+  end
+
 	private
 
   def render_haml(code)

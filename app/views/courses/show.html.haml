@@ -1,4 +1,6 @@
 = disqus_script
+= twitter_script
+= facebook_script
 
 .row
   .col-lg-12
@@ -15,6 +17,9 @@
     .grid.simple.transparent
       .embed-responsive.embed-responsive-16by9
         = video_iframe @course
+      .social-buttons
+        %span= facebook_button(request.original_url)
+        %span= twitter_button(request.original_url, @course.ar_title)
 
     .grid.simple.horizontal.green
       .grid-title

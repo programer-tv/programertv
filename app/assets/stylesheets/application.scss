@@ -86,7 +86,7 @@ body {
 
 				span {
 					display: inline-block;
-					width: 90px;
+          margin-left: 2px;
 				}
 
 				.twitter-share-button[style] {
@@ -126,7 +126,7 @@ body {
           float: right;
           position: relative;
           background: black;
-          margin-left: 10px;
+          margin-left: 5px;
 
           .bg-img {
 						opacity: 1.0;
@@ -151,7 +151,7 @@ body {
 					}
         }
 
-        &.active {
+				&.active {
           background: #F0F0F0;
           border-radius: 5px;
 
