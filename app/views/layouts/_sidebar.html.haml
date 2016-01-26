@@ -18,29 +18,16 @@
       الأقسام
 
     %ul
-      -# %li.start
-      -#   = link_to authenticated_root_path, "data-no-turbolink": true do
-      -#     = fa_icon "th-large", style: "font-size: 15px;"
-      -#     %span.title
-      -#       الرئيسية
+      %li.start
+        = link_to root_path, "data-no-turbolink": true do
+          = fa_icon "th-large", style: "font-size: 15px;"
+          %span.title
+            الرئيسية
       %li
         = link_to courses_path do
           = fa_icon "graduation-cap"
           %span.title
             الدورات
-
-        -# = link_to "javascript:;" do
-        -#   = fa_icon "graduation-cap"
-        -#   %span.title
-        -#     الدورات
-        -#   %span.arrow
-        -# %ul.sub-menu
-        -#   %li
-        -#     = link_to "الكل", courses_path
-        -#   %li
-        -#     = link_to "الويب", "#"
-        -#   %li
-        -#     = link_to "الحاسب", "#"
       %li
         = link_to "#", "data-no-turbolink": true do
           = fa_icon "video-camera"

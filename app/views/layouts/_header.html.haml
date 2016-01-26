@@ -40,9 +40,9 @@
               .iconset.top-reload
           %li.quicklinks
             %span.h-seperate
-          -# %li.quicklinks
-          -#   = link_to authenticated_root_path, "data-no-turbolink": true do
-          -#     .iconset.top-tiles
+          %li.quicklinks
+            = link_to root_path, "data-no-turbolink": true do
+              .iconset.top-tiles
           %li.m-r-10.input-prepend.inside.search-form.no-boarder
             = form_tag courses_path, method: :get, class: "pull-right",
                        style: "width:250px; direction:rtl;" do
