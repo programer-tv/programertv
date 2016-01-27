@@ -21,6 +21,7 @@ gem 'sweet-alert-confirm',  '~> 0.4.1'
 gem 'figaro',               '~> 1.1',   '>= 1.1.1'
 gem 'paperclip',            '~> 4.3',   '>= 4.3.2'
 gem 'ckeditor',             '~> 4.1',   '>= 4.1.5'
+gem 'unicorn',              '~> 5.0',   '>= 5.0.1'
 
 group :development, :test do
   gem 'byebug'
@@ -41,7 +42,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console',    '~> 2.0'
+  gem 'web-console',          '~> 2.0'
   gem 'spring'
-  gem 'better_errors',  '~> 2.1',  '>= 2.1.1'
+  gem 'better_errors',        '~> 2.1',   '>= 2.1.1'
+  gem 'capistrano-rails',     '~> 1.1',   '>= 1.1.6'
+  gem 'capistrano-rvm',       '~> 0.1.2'
+  gem 'capistrano3-unicorn',  '~> 0.2.1'
 end
