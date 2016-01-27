@@ -9,4 +9,14 @@ module SessionHelpers
         ckeditor.updateElement()
     SCRIPT
   end
+
+  def signup(user)
+  end
+
+  def signin(user)
+		visit new_user_session_path
+    fill_in "user_login", with: user.username
+    fill_in "user_password", with: user.password
+    click_on "user_signin_button"
+  end
 end

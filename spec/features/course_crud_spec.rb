@@ -4,6 +4,7 @@ describe "create course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
+    signin(create(:user))
     visit courses_path
     click_on "add_new_course_link"
     # remove overlapping element
@@ -40,6 +41,7 @@ describe "update course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
+    signin(create(:user))
     c = create(:course)
     visit courses_path
     click_on "course_#{c.id}"

@@ -1,0 +1,39 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-rtl-3.3.4/bootstrap-rtl";
+@import "font-awesome";
+@import "pace/pace-theme-flash";
+@import "jquery-scrollbar/jquery.scrollbar";
+@import "animate/animate";
+@import "sweet-alert";
+@import "webarch/rtl/style";
+@import "webarch/rtl/responsive";
+@import "fonts";
+
+html * {
+  font-family: "droid-sans" !important;
+}
+
+.column-seperation > div[class*="col-"] {
+  border-right: none;
+}
+.column-seperation > div[class*="col-"]:last-child {
+  border-left: none;
+  border-right: 1px solid #ddd;
+}
+
+.login-container {
+  margin-top: 0;
+}
+
+.login-img {
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width : 992px) {
+  .login-img {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+}

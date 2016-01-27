@@ -106,4 +106,7 @@ RSpec.configure do |config|
 
   # Include Paperclip Shoulda matchers
   config.include Paperclip::Shoulda::Matchers
+
+  # Include Devise test helpers
+  config.include Devise::TestHelpers, type: :controller
 end

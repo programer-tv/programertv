@@ -76,4 +76,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Configure Action Mailer
+  config.action_mailer.default_url_options = { host: 'https://programer.tv' }
+  config.action_mailer.asset_host = 'https://programer.tv'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 587,
+    domain: 'https://programer.tv',
+    user_name: ENV['sendgrid_username'],
+    password: ENV['sendgrid_password'],
+    authentication: 'plain',
+    enable_starttls_auto: true,
+  }
 end

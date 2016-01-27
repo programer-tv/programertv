@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    = favicon_link_tag "/favicon.ico?version=1"
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=no" }
+    %title programer.tv
+    = stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'devise', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body.rtl.error-body.no-top
+    .container.animated.fadeIn
+      - flash.each do |key, value|
+        .flash-message{ key: key, value: value }
+      = yield

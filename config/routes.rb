@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+	authenticated :user do
+    root "courses#index", as: :authenticated_root
+  end
+
   root "static_pages#home"
 
   mount Ckeditor::Engine => '/ckeditor'

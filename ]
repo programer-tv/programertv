@@ -1,0 +1,34 @@
+.login-img
+  = image_tag "logo_and_text_devise.png", alt: "logo",
+              class: "img-responsive center-block"
+
+.row.login-container.column-seperation
+  .col-md-5.col-md-offset-1
+    %h2 تسجيل
+    %p
+      مرحبا بك في programer.tv إذا كانت هذه أول مرة لك بأن تقوم بزيارتنا فيمكنك
+      تعبئة بياناتك والتسجيل للدخول أما إذا سبق وأن سجلت فيمكنك
+      = link_to "الدخول هنا", new_user_session_path
+      أو يمكنك تسجيل الدخل عبر Facebook أو Twitter.
+    %br
+    = link_to "تسجيل الدخول عبر Facebook", "#",
+              class: "btn btn-block btn-info col-md-12"
+    = link_to "تسجيل الدخول عبر Twitter", "#",
+              class: "btn btn-block btn-success col-md-12"
+
+  .col-md-5
+    %br
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = f.error_notification
+      -# - if devise_error_messages!
+      - if resource.errors.any?
+        = flash[:notice] = "Something went wrong!"
+      .form-inputs
+        = f.input :username, required: true, autofocus: true,
+                  label: "إسم المستخدم"
+        = f.input :email, required: true, label: "البريد الإلكتروني"
+        = f.input :password, required: true, label: "كلمة المرور"
+        = f.input :password_confirmation, required: true,
+                  label: "تأكيد كلمة المرور"
+        = f.button :submit, "تسجيل", id: "user_signup_button",
+                  class: "btn btn-primary btn-cons"

@@ -1,0 +1,33 @@
+.login-img
+  = image_tag "logo_and_text_devise.png", alt: "logo",
+              class: "img-responsive center-block"
+
+.row.login-container.column-seperation
+  .col-md-5.col-md-offset-1
+    %h2 دخول
+    %p
+      مرحبا بك في programer.tv إذا لم يسبق لك وأن سجلت في موقعنا فيمكنك
+      = link_to "التسجيل هنا", new_user_registration_path
+      أو يمكنك تسجيل الدخول عبر Facebook أو Twitter.
+    %br
+    = link_to "تسجيل الدخول عبر Facebook", "#",
+              class: "btn btn-block btn-info col-md-12"
+    = link_to "تسجيل الدخول عبر Twitter", "#",
+              class: "btn btn-block btn-success col-md-12"
+
+  .col-md-5
+    %br
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-inputs
+        = f.input :login, required: true, autofocus: true,
+                  label: "إسم المستخدم أو البريد الإلكتروني"
+        = f.input :password, required: true, label: "كلمة المرور"
+        = f.input_field :remember_me, inline_label: "\u00A0تذكرني",
+                        as: :boolean if devise_mapping.rememberable?
+        %br
+        = f.button :submit, "دخول", id: "user_signin_button",
+                   class: "btn btn-primary btn-cons"
+
+      .grid.transparent
+        .grid-body.no-border
+          = link_to "هل نسيت كلمة المرور؟", new_user_password_path

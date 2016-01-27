@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe CoursesController, type: :controller do
+  before(:example) { sign_in(create(:user)) }
+
   describe "GET #index" do
     before(:example) { get :index }
 

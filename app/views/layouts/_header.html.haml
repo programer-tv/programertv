@@ -63,8 +63,8 @@
                   = link_to "hello", "hello"
                 %li
                   = link_to "hello", "hello"
-                -# %li
-                -#   = link_to destroy_user_session_path, method: :delete,
-                -#             class: "text-right", id: "user_signout_link" do
-                -#     Sign Out &nbsp;
-                -#     = fa_icon "sign-out flip-horizontal"
+                %li
+                  = link_to destroy_user_session_path, method: :delete,
+                            class: "text-right", id: "user_signout_link" do
+                    Sign Out &nbsp;
+                    = fa_icon "sign-out flip-horizontal"
