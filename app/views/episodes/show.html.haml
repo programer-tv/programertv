@@ -77,7 +77,7 @@
     .grid.simple.transparent
       = link_to edit_course_episode_path(@course, @episode),
                 class: "btn btn-warning btn-cons",
-                id: "edit_course_episode_link" do
+                id: "edit_course_episode_link", "data-no-turbolink": true do
         = fa_icon "pencil"
         %span &nbsp;Edit Episode
       = link_to course_episode_path(@course, @episode),

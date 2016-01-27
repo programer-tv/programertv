@@ -22,6 +22,6 @@
   .col-lg-12
     %br
     = link_to new_course_path, class: "btn btn-success btn-cons",
-              id: "add_new_course_link" do
+              id: "add_new_course_link", "data-no-turbolink": true do
       = fa_icon "plus"
       %span &nbsp;إنشاء دورة
