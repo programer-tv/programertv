@@ -1,0 +1,98 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-rtl-3.3.4/bootstrap-rtl";
+@import "font-awesome";
+@import "owl-carousel/owl.carousel";
+@import "owl-carousel/owl.theme";
+@import "owl-carousel/owl.transitions";
+@import "magnific-popup/magnific-popup";
+@import "background/background";
+@import "animate/animate";
+@import "sweet-alert.css";
+@import "vitality/vitality-blue";
+@import "fonts";
+
+html * {
+  font-family: "droid-sans";
+}
+
+nav {
+  &.navbar-inverse {
+    background-color: #1b1e24;
+    border-bottom: 0;
+  }
+
+  .logo {
+    height: 60px;
+    margin-top: -5px;
+  }
+
+  .notice, .alert {
+    margin-right: 20px;
+    color: white;
+  }
+}
+
+header {
+  background-color: #1f2228;
+
+  .placeholder {
+    min-height: 200px;
+  }
+
+  .fs-background-container {
+    .fs-background-media.fs-background-animated {
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+aside {
+  &.cta-quote {
+    background-image: image-url("home_parallex.png");
+  }
+}
+
+section {
+  &.portfolio-carousel {
+    direction: ltr;
+
+    span {
+      direction: rtl;
+      text-align: right;
+    }
+
+    hr {
+      margin: 20px 0 20px auto !important;
+    }
+
+    a {
+      direction: rtl;
+      float: right;
+    }
+
+    #ruby {
+      background-image: image-url("bg_red.png");
+    }
+
+    #rails {
+      background-image: image-url("bg_green.png");
+    }
+
+    .owl-controls {
+      .owl-prev, .owl-next {
+        background-color: #1b1e24 !important;
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .navbar .container .navbar-brand {
+    padding-right: 0;
+    margin-right: -14px;
+  }
+}

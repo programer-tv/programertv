@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  root "static_pages#home"
+
   mount Ckeditor::Engine => '/ckeditor'
-  root "courses#index"
+
+  # get 'static_pages/home'
+
   resources :courses do
     resources :episodes, except: [:index]
   end

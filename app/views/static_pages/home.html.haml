@@ -1,0 +1,173 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top.navbar-expanded
+  .container
+    .navbar-header
+      = button_tag class: "navbar-toggle", "data-toggle": "collapse",
+                   "data-target": "#collapsed-navs" do
+        %span.sr-only
+          Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "#page-top", class: "navbar-brand page-scroll" do
+        = image_tag "logo.png", class: "logo"
+
+    #collapsed-navs.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-left
+        %li.hidden.active
+          = link_to "#page-top", class: "page-scroll"
+        %li
+          = link_to "نبذة", "#about", class: "page-scroll"
+        %li
+          = link_to "طريقتنا", "#process", class: "page-scroll"
+        %li
+          = link_to "الدورات", "#courses", class: "page-scroll"
+        -# %li
+        -#   = link_to "دخول", new_user_session_path
+
+    #collapsed-navs.collapse.navbar-collapse
+
+%header.video.fs-background-element.fs-background
+  .scroll-down.page-scroll
+    = link_to "#about", class: "btn page-scroll" do
+      = fa_icon "angle-down"
+
+  .placeholder
+
+  .fs-background-container
+    .fs-background-media.fs-background-animated
+      = video_tag "header_video.mp4", loop: true, autoplay: true
+
+%section#about
+  .container-fluid
+    .row.text-center
+      .col-lg-12.wow.animated.fadeIn
+        %h1 موقع المبرمج العربي
+        %p الموقع المثالي لهواة ومحترفو البرمجة العرب.
+        %hr.colored
+
+    .row.text-center.content-row
+      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
+        .about-content
+          = fa_icon "eye 4x"
+          %h3 شاهد بنقاوة عالية
+          %p
+            شاهد العديد من الفيديوهات التعليمية لأقوى لغات وأدوات البرمجة مشروحة
+            لك باللغة العربية و بنقاوة 1080p HD العالية الجودة.
+
+      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
+        .about-content
+          = fa_icon "users 4x"
+          %h3 تعلم من الأفضل
+          %p
+            تعلم مباشرة من أفضل المبرمجون العرب ذوو الخبرات والكفائات العالية
+            في مهارات الحاسب و البرمجة على النطاقين الإحترافي والأكاديمي.
+
+      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
+        .about-content
+          = fa_icon "smile-o 4x"
+          %h3 تعلم بأسلوب مرح
+          %p
+            من أهم أهدافنا أن نوصل إليك المعلومات والمبادئ الصعبة بأسلوب سهل و
+            مرح بحيث يسهل عليك فهمها و إستخدامها.
+
+      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".8s" }
+        .about-content
+          = fa_icon "code 4x"
+          %h3 طبق ما تتعلم
+          %p
+            لا نكتفي بسرد المعلومات النظرية فقط بل نأخذك خطوة بخطوة عبر مشاريع
+            عملية وواقعية لكي تتكون لديك فكرة شاملة وواضحة.
+
+%aside.cta-quote
+%section#process.services
+  .container
+    .row.text-center
+      .col-lg-12.wow.animated.fadeIn
+        %h2
+          طريقتنا
+        %hr.colored
+        %p
+          نظرة عامة حول كيفية شرح الدورات.
+
+    .row.content-row
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
+        .media
+          .pull-right
+            = fa_icon "clipboard"
+          .media-body
+            %h3.media-heading
+              الخطة
+            %ul
+              %li
+                مقدمة تعريفية
+              %li
+                أهداف الدورة
+              %li
+                الأدوات المستخدمة
+
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
+        .media
+          .pull-right
+            = fa_icon "cog"
+          .media-body
+            %h3.media-heading
+              التحضير
+            %ul
+              %li
+                تقديم خلفية نظرية
+              %li
+                إنشاء بيئة عمل
+              %li
+                شرح أمثلة
+
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
+        .media
+          .pull-right
+            = fa_icon "rocket"
+          .media-body
+            %h3.media-heading
+              التنفيذ
+            %ul
+              %li
+                تطبيق خطوة بخطوة
+              %li
+                كتابة برامج واقعية
+              %li
+                تعرف على المزيد
+
+%section#courses.bg-gray
+  .container.text-center.wow.animated.fadeIn
+    %h2
+      الدورات
+    %hr.colored
+    %p
+      بعض الدورات اللتي نقدمها.
+
+%section.portfolio-carousel.wow.fadeIn
+  #ruby.item
+    .container-fluid
+      .row
+        .col-md-8.col-md-push-4.hidden-xs
+          = image_tag "ruby_course_ad.png", class: "img-responsive portfolio-image"
+        .col-md-4
+          .project-details
+            %span.project-name
+              Ruby
+            %span.project-description
+              تعلم برمجة الحاسب بلغة روبي
+            %hr.colored
+            = link_to "#", class: "btn btn-outline-light" do
+              سجل الآن
+              = fa_icon "long-arrow-left fw"
+
+  #rails.item
+    .container-fluid
+      .row
+        .col-md-8.hidden-xs
+          = image_tag "bg_green.png", class: "img-responsive portfolio-image"
+        .col-md-4.col-md-push-8
+          .project-details
+            %span.project-name
+              Ruby
+            %span.project-description
+              Hello World
