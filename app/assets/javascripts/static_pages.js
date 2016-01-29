@@ -24,33 +24,34 @@ $(document).ready(function(e){
     window.scrollTo(0, 1);
     window.scrollTo(0, 0);
 
-    // show flash messages if any
-    if($(".flash-message").length){
+    // Show flash messages
+    if($(".flash-message").length) {
         var key = $(".flash-message").attr("key");
         var value = $(".flash-message").attr("value");
-        showNotificationMessage(key, value);
+        showFlashMessage(key, value);
     }
 });
 
-function showNotificationMessage(key, value){
-    if(key === "success" || key === "notice"){
+function showFlashMessage(key, value) {
+    if(key === "success") {
         swal({
             title: value,
             type: "success",
-            timer: 3000,
-            showConfirmButton: false,
-            allowOutsideClick: true
+            allowOutsideClick: true,
+            confirmButtonColor: "#0090D9",
         });
     }
-    else{
-        swal({
-            title: value,
-            type: "error",
-            timer: 3000,
-            showConfirmButton: false,
-            allowOutsideClick: true
-        });
+    else {
+        if(key === "error" || key === "notice") {
+            swal({
+                title: value,
+                type: "error",
+                allowOutsideClick: true,
+                confirmButtonColor: "#0090D9",
+            });
+        }
     }
 }
+
 
 //= require turbolinks
