@@ -62,13 +62,33 @@ function showFlashMessage(key, value) {
         });
     }
     else {
-        if(key === "error" || key === "notice") {
+        if(key === "error") {
             swal({
                 title: value,
                 type: "error",
                 allowOutsideClick: true,
                 confirmButtonColor: "#0090D9",
             });
+        }
+        else {
+            if(key === "notice") {
+                swal({
+                    title: value,
+                    type: "info",
+                    allowOutsideClick: true,
+                    confirmButtonColor: "#0090D9",
+                });
+            }
+            else {
+                if(key === "alert") {
+                    swal({
+                        title: value,
+                        type: "warning",
+                        allowOutsideClick: true,
+                        confirmButtonColor: "#0090D9",
+                    });
+                }
+            }
         }
     }
 }
