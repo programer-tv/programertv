@@ -89,10 +89,26 @@ section {
   }
 }
 
+// Using min-width
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
   .navbar .container .navbar-brand {
     padding-right: 0;
-    margin-right: -14px;
+    margin-right: -5px;
+  }
+}
+
+// Using max-width
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .navbar .container .navbar-brand {
+    padding-right: 0;
+    margin-right: -5px;
+  }
+
+  .logo {
+    height: 45px !important;
+    width: 187.5px !important;
+    margin-top: 3px !important;
   }
 }

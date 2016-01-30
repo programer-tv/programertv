@@ -213,3 +213,13 @@ body {
 		display: none;
 	}
 }
+
+// Using max-width
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .logo {
+    height: 45px !important;
+    width: 187.5px !important;
+    margin-top: 8px !important;
+  }
+}
