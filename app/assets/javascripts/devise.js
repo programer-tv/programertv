@@ -15,6 +15,12 @@
 //= require webarch/chat
 
 $(document).ready(function() {
+    "use strict";
+
+    // Force load
+    window.scrollTo(0, 1);
+    window.scrollTo(0, 0);
+
     // show flash messages if any
     if($(".flash-message").length) {
         var key = $(".flash-message").attr("key");
