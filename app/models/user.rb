@@ -8,13 +8,12 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: true
 
-	def self.find_first_by_auth_conditions(warden_conditions)
-    conditions = warden_conditions.dup
-    if login = conditions.delete(:login)
-      where(conditions.to_hash).where(["lower(username) = :value OR " +
-        "lower(email) = :value", { value: login.downcase }]).first
-    else
-      where(conditions.to_hash).first
-    end
+	def self.find_for_database_authentication(warden_conditions)
+		conditions = warden_conditions.dup
+		if login = conditions.delete(:login)
+			where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+		elsif conditions.has_key?(:username) || conditions.has_key?(:email)
+			where(conditions.to_hash).first
+		end
 	end
 end

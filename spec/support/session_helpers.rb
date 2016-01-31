@@ -16,9 +16,4 @@ module SessionHelpers
     fill_in "user_password", with: user.password
     click_on "user_signin_link"
   end
-
-  def signout
-    click_on "user-settings"
-    click_on "user_signout_link"
-  end
 end

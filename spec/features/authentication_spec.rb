@@ -69,6 +69,8 @@ RSpec.describe 'Devise authenticaion', js: true do
       click_on "OK"
       click_on "user-settings"
       click_on "user_signout_link"
+      expect(page).to have_selector(".sweet-alert",
+                                    text: "Signed out successfully.")
     end
   end
 
