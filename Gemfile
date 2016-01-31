@@ -43,10 +43,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console',          '~> 2.0'
+  gem 'web-console',            '~> 2.0'
   gem 'spring'
-  gem 'better_errors',        '~> 2.1',   '>= 2.1.1'
-  gem 'capistrano-rails',     '~> 1.1',   '>= 1.1.6'
-  gem 'capistrano-rvm',       '~> 0.1.2'
-  gem 'capistrano3-unicorn',  '~> 0.2.1'
+  gem 'better_errors',          '~> 2.1',   '>= 2.1.1'
+  gem 'capistrano-rails',       '~> 1.1',   '>= 1.1.6'
+  gem 'capistrano-rvm',         '~> 0.1.2'
+  gem 'capistrano3-unicorn',    '~> 0.2.1'
+  gem 'capistrano-figaro-yml',  '~> 1.0',   '>= 1.0.2'
 end

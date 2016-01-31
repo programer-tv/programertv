@@ -4,9 +4,10 @@ require 'capistrano/setup'
 # Include default deployment tasks
 require 'capistrano/deploy'
 
-require 'capistrano/rails'
-require 'capistrano/rvm'
-require 'capistrano3/unicorn'
+require "capistrano/rails"
+require "capistrano/rvm"
+require "capistrano3/unicorn"
+require "capistrano/figaro_yml"
 
 # Include tasks from other gems included in your Gemfile
 #
