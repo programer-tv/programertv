@@ -18,14 +18,15 @@
             %ul.dropdown-menu.pull-right{ role: "menu",
                                           "aria-labelledby": "user-options" }
               %li
-                = link_to "hello", "hello"
+                = link_to "hello", "#", class: "text-right"
               %li
-                = link_to "hello", "hello"
-              -# %li
-              -#   = link_to destroy_user_session_path, method: :delete,
-              -#             class: "text-right", id: "user_signout_link" do
-              -#     Sign Out &nbsp;
-              -#     = fa_icon "sign-out flip-horizontal"
+                = link_to "hello", "#", class: "text-right"
+              %li.divider
+              %li
+                = link_to destroy_user_session_path, method: :delete,
+                          class: "text-right", id: "user_signout_link" do
+                  Sign Out &nbsp;
+                  = fa_icon "sign-out flip-horizontal"
 
     .header-quick-nav
       .pull-left
@@ -60,9 +61,10 @@
               %ul.dropdown-menu.pull-right{ role: "menu",
                                             "aria-labelledby": "user-options" }
                 %li
-                  = link_to "hello", "hello"
+                  = link_to "hello", "#", class: "text-right"
                 %li
-                  = link_to "hello", "hello"
+                  = link_to "hello", "#", class: "text-right"
+                %li.divider
                 %li
                   = link_to destroy_user_session_path, method: :delete,
                             class: "text-right", id: "user_signout_link" do
