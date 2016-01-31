@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Devise authenticaion', js: true do
+RSpec.describe 'devise authenticaion', js: true do
   describe 'signup' do
     let(:user) { build(:user) }
     before(:example) do
@@ -73,7 +73,22 @@ RSpec.describe 'Devise authenticaion', js: true do
                                     text: "Signed out successfully.")
     end
   end
+end
 
-  describe 'forgot password' do
+RSpec.describe 'password reset', type: :mailer do
+  before(:example) { ActionMailer::Base.deliveries.clear }
+  let(:user) { create(:user) }
+
+  it "sends reset password instructions email" do
+    expect(ActionMailer::Base.deliveries.size).to eq(0)
+    visit root_path
+    click_on "user_signin_link"
+    click_on "password_reset_link"
+    fill_in "user_email", with: user.email
+    click_on "reset_password_link"
+    expect(ActionMailer::Base.deliveries.size).to eq(1)
+    email = ActionMailer::Base.deliveries.first
+    expect(email.from).to match(["no-reply@programer.tv"])
+    expect(email.subject).to eq("Reset password instructions")
   end
 end

@@ -1,8 +1,27 @@
-%h2 Forgot your password?
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Send me reset password instructions"
-= render "devise/shared/links"
+.login-img
+  = image_tag "logo_and_text_devise.png", alt: "logo",
+              class: "img-responsive center-block"
+
+.row.login-container.column-seperation
+  .col-md-5.col-md-offset-1
+    %h2 هل نسيت كلمة المرور؟
+    %p
+      في حال نسيان أو فقدان كلمة المرور فيمكنك إدخال بريدك اللكتروني المسجل في
+      الخانة الموضحة و سنقوم بإرسال تعليمات إنشاء كلمة مرور جديدة على بريدك
+      الإلكتروني.
+
+  .col-md-5
+    %br
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email, required: true, autofocus: true,
+                  label: "البريد الإلكتروني"
+        = f.button :submit, "إرسال تعليمات إنشاء كلمة مرور جديدة",
+                   class: "btn btn-primary btn-cons", id: "reset_password_link"
+
+      .grid.transparent
+        .grid-body.no-border
+          = link_to "دخول", new_user_session_path
+          %br
+          = link_to "تسجيل", new_user_registration_path

@@ -1,11 +1,29 @@
-%h2 Change your password
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
-  = f.error_notification
-  = f.input :reset_password_token, as: :hidden
-  = f.full_error :reset_password_token
-  .form-inputs
-    = f.input :password, label: "New password", required: true, autofocus: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, label: "Confirm your new password", required: true
-  .form-actions
-    = f.button :submit, "Change my password"
-= render "devise/shared/links"
+.login-img
+  = image_tag "logo_and_text_devise.png", alt: "logo",
+              class: "img-responsive center-block"
+
+.row.login-container.column-seperation
+  .col-md-5.col-md-offset-1
+    %h2 تغيير كلمة المرور
+    %p
+      قم بإدخال كلمة مرور جديدة و من ثم تأكيدها.
+
+  .col-md-5
+    %br
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+      = f.error_notification
+      = f.input :reset_password_token, as: :hidden
+      = f.full_error :reset_password_token
+      .form-inputs
+        = f.input :password, label: "كلمة المرور الجديدة", required: true,
+                  autofocus: true
+        = f.input :password_confirmation, label: "تأكيد كلمة المرور الجديدة",
+                  required: true
+        = f.button :submit, "تغيير كلمة المرور",
+                   class: "btn btn-primary btn-cons"
+
+    .grid.transparent
+      .grid-body.no-border
+        = link_to "دخول", new_user_session_path
+        %br
+        = link_to "تسجيل", new_user_registration_path
