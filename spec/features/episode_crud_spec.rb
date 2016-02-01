@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "create episode", js: true do
+RSpec.describe "create episode", js: true do
   let!(:course) { create(:course) }
   let(:episode) { build(:episode, course: course) }
 
@@ -39,7 +39,7 @@ describe "create episode", js: true do
   end
 end
 
-describe "update episode", js: true do
+RSpec.describe "update episode", js: true do
   let(:episode) { create(:episode) }
 
   before(:example) do
@@ -77,12 +77,16 @@ describe "update episode", js: true do
   end
 end
 
-describe "delete episode" do
+RSpec.describe "delete episode", js: true do
   it "succeeds" do
+    signin(create(:user))
     episode = create(:episode)
-    visit course_episode_path(episode.course, episode)
-    page.driver.submit :delete, "/courses/#{episode.course.id}" +
-                                "/episodes/#{episode.id}", nil
+    visit courses_path
+    click_on "course_#{episode.course.id}"
+    click_on "episode_#{episode.id}"
+    click_on "delete_course_episode_link"
+    sleep(1)            # must sleep to allow modal to appear
+    click_on("Yes")
     expect(page).not_to have_selector("#episode_#{episode.id}")
   end
 end

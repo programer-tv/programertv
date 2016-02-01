@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "create course", js: true do
+RSpec.describe "create course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
@@ -37,7 +37,7 @@ describe "create course", js: true do
   end
 end
 
-describe "update course", js: true do
+RSpec.describe "update course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
@@ -77,11 +77,15 @@ describe "update course", js: true do
   end
 end
 
-describe "delete course" do
+RSpec.describe "delete course", js: true do
   it "succeeds" do
+    signin(create(:user))
     course = create(:course)
-    visit course_path(course)
-    page.driver.submit :delete, "/courses/#{course.id}", nil
+    visit courses_path
+    click_on "course_#{course.id}"
+    click_on "delete_course_link"
+    sleep(1)            # must sleep to allow modal to appear
+    click_on("Yes")
     expect(page).not_to have_selector("#course_#{course.id}")
   end
 end

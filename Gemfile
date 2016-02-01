@@ -36,6 +36,7 @@ group :development, :test do
   gem 'database_cleaner',           '~> 1.5',     '>= 1.5.1'
   gem 'shoulda-matchers',           '~> 3.0',     '>= 3.0.1'
   gem 'ffaker',                     '~> 2.1'
+  gem 'launchy',                    '~> 2.4',     '>= 2.4.3'
   gem 'simplecov',                  '~> 0.11.1'
   gem 'guard-rspec',                '~> 4.6',     '>= 4.6.4',  require: false
   gem 'guard-livereload',           '~> 2.5',     '>= 2.5.1',  require: false
