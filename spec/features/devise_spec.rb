@@ -79,16 +79,29 @@ RSpec.describe 'password reset', type: :mailer do
   before(:example) { ActionMailer::Base.deliveries.clear }
   let(:user) { create(:user) }
 
-  it "sends reset password instructions email" do
-    expect(ActionMailer::Base.deliveries.size).to eq(0)
-    visit root_path
-    click_on "user_signin_link"
-    click_on "password_reset_link"
-    fill_in "user_email", with: user.email
-    click_on "reset_password_link"
-    expect(ActionMailer::Base.deliveries.size).to eq(1)
-    email = ActionMailer::Base.deliveries.first
-    expect(email.from).to match(["no-reply@programer.tv"])
-    expect(email.subject).to eq("Reset password instructions")
+  context "with valid attributes" do
+    it "sends reset password instructions email" do
+      expect(ActionMailer::Base.deliveries.size).to eq(0)
+      visit root_path
+      click_on "user_signin_link"
+      click_on "password_reset_link"
+      fill_in "user_email", with: user.email
+      click_on "reset_password_link"
+      expect(ActionMailer::Base.deliveries.size).to eq(1)
+      email = ActionMailer::Base.deliveries.first
+      expect(email.from).to match(["no-reply@programer.tv"])
+      expect(email.subject).to eq("Reset password instructions")
+    end
+  end
+
+  context "with invalid attributes" do
+    it "fails and prompts user to fix errors", js: true do
+      visit root_path
+      click_on "user_signin_link"
+      click_on "password_reset_link"
+      fill_in "user_email", with: nil
+      click_on "reset_password_link"
+      expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
+    end
   end
 end
