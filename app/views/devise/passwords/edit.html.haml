@@ -11,7 +11,8 @@
   .col-md-5
     %br
     = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
-      = f.error_notification
+      - if resource.errors.any?
+        .flash-message{ key: :error, value: 'هناك خطأ ما!' }
       = f.input :reset_password_token, as: :hidden
       = f.full_error :reset_password_token
       .form-inputs
