@@ -17,8 +17,8 @@
           = link_to "#page-top", class: "page-scroll"
         %li
           = link_to "نبذة", "#about", class: "page-scroll"
-        %li
-          = link_to "طريقتنا", "#process", class: "page-scroll"
+        -# %li
+        -#   = link_to "طريقتنا", "#process", class: "page-scroll"
         %li
           = link_to "الدورات", "#courses", class: "page-scroll"
         %li
@@ -79,62 +79,62 @@
             عملية وواقعية لكي تتكون لديك فكرة شاملة وواضحة.
 
 %aside.cta-quote
-%section#process.services
-  .container
-    .row.text-center
-      .col-lg-12.wow.animated.fadeIn
-        %h2
-          طريقتنا
-        %hr.colored
-        %p
-          نظرة عامة حول كيفية شرح الدورات.
-
-    .row.content-row
-      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
-        .media
-          .pull-right
-            = fa_icon "clipboard"
-          .media-body
-            %h3.media-heading
-              الخطة
-            %ul
-              %li
-                مقدمة تعريفية
-              %li
-                أهداف الدورة
-              %li
-                الأدوات المستخدمة
-
-      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
-        .media
-          .pull-right
-            = fa_icon "cog"
-          .media-body
-            %h3.media-heading
-              التحضير
-            %ul
-              %li
-                تقديم خلفية نظرية
-              %li
-                إنشاء بيئة عمل
-              %li
-                شرح أمثلة
-
-      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
-        .media
-          .pull-right
-            = fa_icon "rocket"
-          .media-body
-            %h3.media-heading
-              التنفيذ
-            %ul
-              %li
-                تطبيق خطوة بخطوة
-              %li
-                كتابة برامج واقعية
-              %li
-                تعرف على المزيد
-
+-# %section#process.services
+-#   .container
+-#     .row.text-center
+-#       .col-lg-12.wow.animated.fadeIn
+-#         %h2
+-#           طريقتنا
+-#         %hr.colored
+-#         %p
+-#           نظرة عامة حول كيفية شرح الدورات.
+-#
+-#     .row.content-row
+-#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
+-#         .media
+-#           .pull-right
+-#             = fa_icon "clipboard"
+-#           .media-body
+-#             %h3.media-heading
+-#               الخطة
+-#             %ul
+-#               %li
+-#                 مقدمة تعريفية
+-#               %li
+-#                 أهداف الدورة
+-#               %li
+-#                 الأدوات المستخدمة
+-#
+-#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
+-#         .media
+-#           .pull-right
+-#             = fa_icon "cog"
+-#           .media-body
+-#             %h3.media-heading
+-#               التحضير
+-#             %ul
+-#               %li
+-#                 تقديم خلفية نظرية
+-#               %li
+-#                 إنشاء بيئة عمل
+-#               %li
+-#                 شرح أمثلة
+-#
+-#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
+-#         .media
+-#           .pull-right
+-#             = fa_icon "rocket"
+-#           .media-body
+-#             %h3.media-heading
+-#               التنفيذ
+-#             %ul
+-#               %li
+-#                 تطبيق خطوة بخطوة
+-#               %li
+-#                 كتابة برامج واقعية
+-#               %li
+-#                 تعرف على المزيد
+-#
 %section#courses.bg-gray
   .container.text-center.wow.animated.fadeIn
     %h2
@@ -171,3 +171,30 @@
               Ruby
             %span.project-description
               Hello World
+
+%footer.footer
+  .container.text-center
+    .row
+      .col-lg-12.contact-details
+        %h4
+          = fa_icon "envelope"
+          البريد الإلكتروني
+        %p= mail_to "admin@programer.tv", "admin@programer.tv"
+    .row.social
+      .col-lg-12
+        %ul.list-inline
+          %li
+            = link_to "https://twitter.com/programertv", target: "_blank" do
+              = fa_icon "twitter fw 2x"
+          %li
+            = link_to "https://www.facebook.com/pages/programertv/862069363830166", target: "_blank" do
+              = fa_icon "facebook fw 2x"
+          %li
+            = link_to "https://www.youtube.com/channel/UC1EMOb-HOci0nW-pK9FP2Tg", target: "_blank" do
+              = fa_icon "youtube fw 2x"
+    .row.copyright
+      .col-lg-12
+        %p.small
+          ©
+          = Time.new.year
+          programer.tv
