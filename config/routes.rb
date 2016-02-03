@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
 
 	authenticated :user do
     root "courses#index", as: :authenticated_root
   end
 
-  root "static_pages#home"
-
-  mount Ckeditor::Engine => '/ckeditor'
-
-  # get 'static_pages/home'
+  unauthenticated :user do
+    root "static_pages#home"
+  end
 
   resources :courses do
     resources :episodes, except: [:index]
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

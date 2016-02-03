@@ -23,6 +23,7 @@ gem 'paperclip',            '~> 4.3',   '>= 4.3.2'
 gem 'ckeditor',             '~> 4.1',   '>= 4.1.5'
 gem 'unicorn',              '~> 5.0',   '>= 5.0.1'
 gem 'devise',               '~> 3.5',   '>= 3.5.5'
+gem 'omniauth-facebook',    '~> 3.0'
 
 group :development, :test do
   gem 'byebug'

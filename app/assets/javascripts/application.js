@@ -22,6 +22,10 @@ $(document).ready(function() {
     window.scrollTo(0, 1);
     window.scrollTo(0, 0);
 
+    // Remove facebook callback weird characters
+    if (window.location.hash.search('#_') >= 0)
+        window.location.hash = "";
+
     $("#layout-condensed-toggle").click(function(e) {
         e.preventDefault();
     });
