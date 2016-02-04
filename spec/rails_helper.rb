@@ -109,4 +109,15 @@ RSpec.configure do |config|
 
   # Include Devise test helpers
   config.include Devise::TestHelpers, type: :controller
+
+  # Turn ON test mode for omniauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
+    provider: "facebook",
+    uid: "12345",
+    info: {
+      email: "user@example.com",
+      name: "facebook user",
+    }
+  })
 end

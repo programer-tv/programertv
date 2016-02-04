@@ -13,6 +13,7 @@
     %br
     = link_to "تسجيل الدخول عبر Facebook",
               user_omniauth_authorize_path(:facebook),
+              id: "facebook_login_link",
               class: "btn btn-block btn-info col-md-12"
     = link_to "تسجيل الدخول عبر Twitter", "#",
               class: "btn btn-block btn-success col-md-12"
