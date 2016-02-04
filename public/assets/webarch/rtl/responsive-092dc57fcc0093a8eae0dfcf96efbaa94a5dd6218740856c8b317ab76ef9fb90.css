@@ -1,0 +1,2206 @@
+/*!
+* direction.less v0.1.0
+*/
+@media only screen and (min-width: 1824px) {
+  /* line 6, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body {
+    height: 100%;
+  }
+
+  /* line 9, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-container {
+    height: 100%;
+  }
+
+  /** Side bar widget **/
+  /* line 13, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .footer-widget {
+    position: fixed;
+  }
+
+  /** Tables **/
+  /* line 17, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table th {
+    font-size: 14px;
+  }
+
+  /* line 20, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table td {
+    font-size: 14px;
+  }
+
+  /* line 23, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table td.small-cell,
+  .table th.small-cell {
+    width: 42px;
+  }
+
+  /** Controls **/
+  /* line 28, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .checkbox label:before {
+    top: 0.5px;
+  }
+
+  /** Tiles **/
+  /* line 32, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles.margin-reset {
+    margin-left: 51px;
+  }
+
+  /** Only Demo Purpose **/
+  /* line 36, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .demo-map {
+    min-height: 100%;
+  }
+
+  /* line 39, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .error-main {
+    margin-top: 40%;
+  }
+
+  /* line 42, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .visible-xlg {
+    display: block !important;
+  }
+
+  /* line 45, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .hidden-xlg {
+    display: none !important;
+  }
+
+  /* line 48, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .cbp_tmtimeline > li .cbp_tmtime {
+    width: 24%;
+  }
+}
+@media (min-width: 1600px) {
+  /* line 53, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .visible-xlg {
+    display: block !important;
+  }
+
+  /* line 56, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .hidden-xlg {
+    display: none !important;
+  }
+}
+@media (max-width: 1400px) {
+  /* line 61, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .sales-graph-heading {
+    padding-left: 17px;
+    padding-top: 30px;
+  }
+}
+/*** Desktops & Laptops ***/
+@media (min-width: 980px) {
+  /*** Page sidebar ***/
+  /* line 69, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.bottom-header .page-sidebar {
+    margin-top: 0;
+    margin-bottom: 58px;
+  }
+
+  /* line 73, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .menu-non-fixed .page-sidebar {
+    margin-top: 0;
+    padding-top: 58px;
+  }
+
+  /* line 77, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    display: inline-block;
+    float: left;
+    position: fixed;
+    width: 250px;
+    margin-top: 58px;
+    padding-bottom: 105px;
+  }
+
+  /* line 85, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .menu-non-fixed .footer-widget {
+    z-index: 100;
+  }
+
+  /* line 88, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper {
+    display: inline-block;
+    float: right;
+    height: 100%;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  /* line 95, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.fixed {
+    position: fixed;
+  }
+
+  /* line 98, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar ul {
+    width: 250px;
+  }
+
+  /*** Page content ***/
+  /* line 102, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content {
+    margin-right: 250px;
+    min-height: 100%;
+  }
+
+  /* line 106, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content.no-min-height {
+    min-height: auto;
+  }
+
+  /* line 109, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .full-width-page .page-content {
+    margin-left: 0px !important;
+  }
+
+  /* line 112, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu {
+    padding-top: 60px;
+  }
+
+  /** Const size button for medium devices **/
+  /* line 116, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .btn-cons-md {
+    min-width: 120px;
+  }
+
+  /* line 119, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .boxed-layout {
+    background-color: #f6f7f8;
+  }
+
+  /* line 122, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .boxed-layout .container {
+    position: relative;
+  }
+
+  /* line 125, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .boxed-layout .chat-window-wrapper {
+    position: absolute;
+  }
+
+  /* line 128, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .boxed-layout .chat-window-wrapper .inner-content .chat-window-wrapper {
+    margin-right: 0;
+  }
+
+  /* line 131, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .header-seperation {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 0\0) {
+  /* line 136, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-container {
+    position: relative;
+    left: -260px;
+  }
+
+  /* line 140, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .header {
+    left: -260px;
+  }
+
+  /* line 143, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .footer-widget {
+    left: -260px;
+  }
+
+  /* line 146, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .scrollup {
+    display: none !important;
+  }
+
+  /* line 149, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content .admin-bar {
+    left: -260px;
+  }
+}
+/*** General tablets and phones ***/
+@media (max-width: 979px) {
+  /*** Body ***/
+  /* line 156, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body {
+    margin: 0px !important;
+  }
+
+  /* line 159, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .page-content {
+    margin-left: 0px;
+  }
+
+  /*** Page header ***/
+  /* line 163, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header {
+    margin: 0 !important;
+  }
+
+  /* line 166, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav li.dropdown i {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    right: 0px;
+  }
+
+  /* line 172, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav {
+    margin-bottom: 0px !important;
+  }
+
+  /*** Page container ***/
+  /* line 176, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* line 180, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .fixed-top .page-container {
+    margin-top: 0px !important;
+  }
+
+  /*** Page content ***/
+  /* line 184, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content {
+    margin-top: 0;
+  }
+
+  /* line 187, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* line 190, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-messages {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* line 193, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles {
+    margin-right: 0px;
+  }
+
+  /* line 196, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles.added-margin {
+    margin-right: 0px;
+  }
+
+  /* line 199, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .admin-bar .admin-bar-inner {
+    margin-right: 0px;
+  }
+
+  /* line 202, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    left: 235px;
+  }
+
+  /* line 205, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.condense-menu .page-content {
+    margin-left: 0;
+  }
+}
+/* Landscape view of all tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 211, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .page-content {
+    margin-left: 0px;
+  }
+
+  /* line 214, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .page-content .content {
+    margin-top: 26px;
+  }
+
+  /*** Body ***/
+  /* line 218, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body {
+    background-color: #0aa699;
+    padding-top: 0px;
+  }
+
+  /* line 222, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened {
+    background-color: #1b1e24 !important;
+    height: auto;
+    font-family: 'Open Sans';
+    width: 250px;
+    margin-top: 60px;
+  }
+
+  /* line 229, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .outer-tab-nav-section {
+    display: inline-block;
+    width: 45px;
+    position: absolute;
+    height: 100%;
+    background-color: #0aa699 !important;
+  }
+
+  /* line 236, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .inner-menu {
+    display: inline-block;
+    width: 200px;
+  }
+
+  /* line 240, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a {
+    color: #8b91a0;
+  }
+
+  /* line 243, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li:last-child > a {
+    border-bottom: 1px solid transparent !important;
+  }
+
+  /* line 246, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li a i {
+    color: #8b91a0;
+    width: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  /* line 253, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li:hover > a {
+    background: #1b1e24;
+    /* border-left:4px solid  #0aa699;*/
+    padding: 11.5px 31px;
+    color: #fff;
+  }
+
+  /* line 261, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.open > a i,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a:hover i,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li:hover > a i {
+    color: #fff;
+  }
+
+  /* line 266, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.active > a {
+    border-top-color: transparent !important;
+    color: #fff;
+  }
+
+  /* line 270, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.active i {
+    color: #fff;
+  }
+
+  /* line 273, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a.open {
+    background: #313131;
+  }
+
+  /* line 276, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper ul > li > a > .arrow:before,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a > .arrow.open:before {
+    color: #919091 !important;
+  }
+
+  /* line 280, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper ul > li.active > a .arrow:before,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.active > a .arrow.open:before {
+    color: #fff !important;
+  }
+
+  /* line 284, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu > li > a {
+    margin-left: 0px;
+    padding-left: 5px;
+  }
+
+  /* line 288, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu > li:first-child > a {
+    border-top: 0px !important;
+  }
+
+  /* line 291, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu > li.active > a {
+    font-weight: 600;
+  }
+
+  /* line 294, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu > li > a:hover {
+    background: #1b1e24 !important;
+  }
+
+  /* 3rd level sub menu */
+  /* line 298, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu li > ul.sub-menu > li.active > a,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu li > ul.sub-menu > li > a:hover,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu li.open > a {
+    color: #fff !important;
+  }
+
+  /* line 303, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu a .arrow:before,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu a .arrow.open:before {
+    color: #919091  !important;
+  }
+
+  /* line 307, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened ul.folders {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+  }
+
+  /* line 312, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened ul.folders > li {
+    border: 0 none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 318, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened ul.folders > li > a {
+    padding: 5px 31px;
+    font-size: 13px;
+    color: #fff;
+    display: block;
+    position: relative;
+  }
+
+  /* line 325, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened ul.folders > li > a:hover {
+    text-decoration: none;
+  }
+
+  /* line 328, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened ul.folders > li > input {
+    margin: 5px 31px;
+    font-size: 13px;
+    width: 150px;
+  }
+
+  /* line 333, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul {
+    width: 250px;
+    padding-top: 0;
+  }
+
+  /* line 337, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a {
+    padding: 10px 25px 10px 21px;
+  }
+
+  /* line 340, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li:hover > a {
+    padding: 10px 25px 10px 21px;
+  }
+
+  /* line 345, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .user-info {
+    display: block;
+  }
+
+  /* line 348, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > p {
+    display: block;
+  }
+
+  /* line 351, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > .status-widget {
+    display: block;
+  }
+
+  /* line 354, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > .notification-alert {
+    display: inline-block;
+  }
+
+  /* line 357, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul li span.title {
+    display: inline-block;
+  }
+
+  /* line 360, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul li span.arrow {
+    display: inline;
+  }
+
+  /* line 363, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul li ul li span.title {
+    display: inline;
+  }
+
+  /* line 366, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul li ul li span.arrow {
+    display: inline;
+  }
+
+  /* line 369, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul li span.badge {
+    display: inline-block;
+  }
+
+  /* line 372, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper ul li span.label {
+    display: inline-block;
+  }
+
+  /* line 375, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .profile-wrapper {
+    display: block;
+  }
+
+  /* line 378, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .slimScrollDiv {
+    overflow: hidden !important;
+  }
+
+  /* line 381, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .slimScrollDiv .page-sidebar-wrapper {
+    overflow: hidden !important;
+  }
+
+  /* line 384, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.opened .page-sidebar-wrapper > ul > li > ul.sub-menu {
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
+    z-index: 10;
+  }
+
+  /* line 391, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu {
+    padding-top: 60px;
+  }
+
+  /*** Page sidebar ***/
+  /* line 395, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .btn-navbar.collapsed .arrow {
+    display: none;
+  }
+
+  /* line 398, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .btn-navbar .arrow {
+    position: absolute;
+    right: 25px;
+    width: 0;
+    height: 0;
+    top: 50px;
+    border-bottom: 15px solid #5f646b;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  /* line 408, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header-seperation {
+    display: none !important;
+  }
+
+  /* line 411, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    position: absolute;
+    width: 50px;
+    margin: 0;
+    overflow: visible;
+    z-index: 90;
+  }
+
+  /* line 418, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper {
+    overflow: visible !important;
+  }
+
+  /* line 421, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul {
+    width: 50px;
+    margin: 0;
+    padding-top: 60px;
+  }
+
+  /* line 426, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li > a {
+    padding: 13px;
+    color: #fff;
+  }
+
+  /* line 430, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li a i {
+    color: #fff;
+  }
+
+  /* line 433, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .user-info {
+    display: none;
+  }
+
+  /* line 436, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > p {
+    display: none;
+  }
+
+  /* line 439, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > .status-widget {
+    display: none;
+  }
+
+  /* line 442, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > .notification-alert {
+    display: none;
+  }
+
+  /* line 445, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.title {
+    display: none;
+  }
+
+  /* line 448, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.arrow {
+    display: none;
+  }
+
+  /* line 451, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li ul li span.title {
+    display: inline;
+  }
+
+  /* line 454, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li ul li span.arrow {
+    display: inline;
+  }
+
+  /* line 457, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.badge {
+    display: none;
+  }
+
+  /* line 460, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper ul li span.label {
+    display: none;
+  }
+
+  /* line 463, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .profile-wrapper {
+    display: none;
+  }
+
+  /* line 466, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    background-color: #0aa699 !important;
+  }
+
+  /* line 469, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    background: #0b9c8f;
+  }
+
+  /* line 474, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    padding: 13px;
+  }
+
+  /* line 479, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li > ul.sub-menu {
+    position: absolute;
+    margin-top: -46px;
+    margin-right: 50px;
+    width: auto;
+    z-index: 100;
+    min-width: 250px;
+  }
+
+  /* line 487, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > .side-bar-widgets {
+    display: none;
+  }
+
+  /* line 490, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .footer-widget {
+    display: none !important;
+  }
+
+  /* line 493, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper {
+    display: inline-block;
+    float: right;
+    width: 50px;
+    height: 100%;
+  }
+
+  /* line 499, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .inner-menu {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* line 505, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-content {
+    margin-right: 250px;
+  }
+
+  /*** Page content ***/
+  /* line 509, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content {
+    margin-right: 50px;
+    margin-top: 0px;
+    min-height: 100%;
+  }
+
+  /* line 514, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .content {
+    padding-top: 95px;
+  }
+
+  /* line 517, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-layout .page-content {
+    margin-left: 250px;
+  }
+
+  /* line 520, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu {
+    margin-left: 50px;
+  }
+
+  /* line 523, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .visible-tablet {
+    display: block !important;
+  }
+
+  /* line 526, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    right: 36px;
+  }
+
+  /* line 529, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table td.small-cell,
+  .table th.small-cell {
+    width: 40px;
+  }
+}
+/* Portrait view of all tablet devices */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* line 536, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body {
+    background-color: #1b1e24;
+  }
+
+  /* line 539, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .header {
+    width: 100%;
+  }
+
+  /* line 542, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .page-content .content {
+    padding-top: 93px;
+  }
+
+  /* line 545, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper {
+    display: inline-block;
+    float: left;
+    width: 250px;
+    height: 100%;
+  }
+
+  /* line 551, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper {
+    background-color: #0aa699 !important;
+  }
+
+  /* line 554, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .slimScrollDiv {
+    overflow: visible !important;
+  }
+
+  /* line 557, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .slimScrollDiv .page-sidebar-wrapper {
+    overflow: visible !important;
+  }
+
+  /* line 560, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul {
+    width: 50px;
+    margin: 0;
+    padding-top: 60px;
+  }
+
+  /* line 565, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a {
+    padding: 13px !important;
+    color: #fff;
+  }
+
+  /* line 569, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li a i {
+    color: #fff;
+  }
+
+  /* line 572, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .user-info {
+    display: none;
+  }
+
+  /* line 575, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > p {
+    display: none;
+  }
+
+  /* line 578, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .status-widget {
+    display: none;
+  }
+
+  /* line 581, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .notification-alert {
+    display: none;
+  }
+
+  /* line 584, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.title {
+    display: none;
+  }
+
+  /* line 587, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.arrow {
+    display: none;
+  }
+
+  /* line 590, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li ul li span.title {
+    display: inline;
+  }
+
+  /* line 593, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li ul li span.arrow {
+    display: inline;
+  }
+
+  /* line 596, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.badge {
+    display: none;
+  }
+
+  /* line 599, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper ul li span.label {
+    display: none;
+  }
+
+  /* line 602, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .profile-wrapper {
+    display: none;
+  }
+
+  /* line 605, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    background: #0b9c8f;
+  }
+
+  /* line 609, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    padding: 13px;
+  }
+
+  /* line 614, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > ul.sub-menu {
+    position: absolute;
+    margin-top: -46px;
+    margin-right: 50px;
+    width: auto;
+    z-index: 100;
+    min-width: 250px;
+  }
+
+  /* line 622, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .side-bar-widgets {
+    display: none;
+  }
+
+  /* line 625, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .inner-menu {
+    margin-top: 15px;
+  }
+
+  /* line 628, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-content {
+    margin-right: 0;
+  }
+
+  /* line 631, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header-seperation {
+    width: 100% !important;
+    display: block !important;
+    position: fixed;
+    z-index: 999;
+    text-align: center;
+  }
+
+  /* line 638, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 18px;
+  }
+
+  /* line 643, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header-quick-nav {
+    display: none;
+  }
+
+  /* line 646, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .notifcation-center {
+    margin-left: 15px;
+  }
+
+  /* line 649, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .content {
+    padding-top: 95px;
+  }
+
+  /* line 652, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    position: fixed;
+    width: 260px;
+    background-color: #1b1e24 !important;
+    z-index: auto;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    overflow-y: hidden;
+  }
+
+  /* line 663, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .user-info {
+    display: inline-block;
+  }
+
+  /* line 666, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar > p {
+    display: block;
+  }
+
+  /* line 669, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar > .status-widget {
+    display: block;
+  }
+
+  /* line 672, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar > .notification-alert {
+    display: inline-block;
+  }
+
+  /* line 675, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.title {
+    display: inline-block;
+  }
+
+  /* line 678, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.arrow {
+    display: inline-block;
+    float: right;
+  }
+
+  /* line 682, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul li span.badge {
+    display: inline-block;
+  }
+
+  /* line 685, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper ul li span.label {
+    display: inline-block;
+  }
+
+  /* line 688, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul {
+    width: 260px;
+    padding-top: 0px !important;
+  }
+
+  /* line 692, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .profile-wrapper {
+    display: inline-block;
+  }
+
+  /* line 695, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > .side-bar-widgets {
+    display: block;
+    width: 250px;
+  }
+
+  /* line 699, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .footer-widget {
+    display: block;
+  }
+
+  /* line 702, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li > a {
+    padding: 11.5px 31px 11.5px 31px;
+    color: #8B91A0;
+  }
+
+  /* line 706, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    background: #1b1e24;
+  }
+
+  /* line 711, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    padding: 11.5px 31px 11.5px 31px;
+  }
+
+  /* line 716, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li > a i {
+    color: #8B91A0;
+  }
+
+  /* line 719, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper > ul > li > ul.sub-menu {
+    position: relative;
+    margin: 0px;
+  }
+
+  /* line 723, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.mini-mobile .side-bar-widgets {
+    display: none;
+  }
+
+  /* line 726, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* line 729, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
+
+  /* line 733, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-layout .page-content {
+    margin-left: 200px;
+  }
+
+  /* line 736, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    left: 244px;
+  }
+
+  /* line 739, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    overflow-y: hidden;
+  }
+
+  /* line 746, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content {
+    margin: 0px;
+  }
+
+  /* line 749, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .content {
+    padding: 25px;
+    padding-top: 95px;
+  }
+
+  /* line 753, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .widget {
+    margin-right: 0px;
+  }
+
+  /* line 756, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .column-seperation > div[class*="col-"] {
+    border-right: none;
+  }
+
+  /** Profile Page **/
+  /* line 760, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-profile-pic {
+    text-align: center;
+  }
+
+  /* line 763, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-mini-description h3,
+  .user-mini-description h5 {
+    text-align: center;
+  }
+
+  /** Login Page **/
+  /* line 768, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .login-container {
+    padding: 0 10px;
+  }
+
+  /* line 771, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .spacing-bottom-sm {
+    margin-bottom: 20px;
+  }
+
+  /* line 774, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .error-wrapper {
+    margin-bottom: 0px;
+    padding: auto;
+  }
+
+  /* line 778, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .widget-item.narrow-margin {
+    margin-right: auto;
+  }
+
+  /* line 781, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content.condensed {
+    margin-left: 0px;
+  }
+
+  /* line 784, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .header {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  /* line 788, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 796, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .header {
+    width: 100%;
+  }
+
+  /* line 799, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .page-content .content {
+    padding-top: 93px;
+  }
+
+  /* line 802, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar .page-sidebar-wrapper {
+    display: inline-block;
+    float: right;
+    width: 260px;
+    height: 100%;
+  }
+
+  /* line 808, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper {
+    width: 50px;
+    overflow: visible;
+  }
+
+  /* line 812, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper ul {
+    background-color: #0aa699;
+  }
+
+  /* line 815, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .slimScrollDiv {
+    overflow: visible !important;
+  }
+
+  /* line 818, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .slimScrollDiv .page-sidebar-wrapper {
+    overflow: visible !important;
+  }
+
+  /* line 821, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul {
+    width: 50px;
+    margin: 0;
+    padding-top: 17px;
+    height: 100%;
+  }
+
+  /* line 827, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a {
+    padding: 13px !important;
+    color: #fff;
+  }
+
+  /* line 831, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li a i {
+    color: #fff;
+  }
+
+  /* line 834, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .user-info {
+    display: none;
+  }
+
+  /* line 837, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > p {
+    display: none;
+  }
+
+  /* line 840, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .status-widget {
+    display: none;
+  }
+
+  /* line 843, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .notification-alert {
+    display: none;
+  }
+
+  /* line 846, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.title {
+    display: none;
+  }
+
+  /* line 849, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.arrow {
+    display: none;
+  }
+
+  /* line 852, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li ul li span.title {
+    display: inline;
+  }
+
+  /* line 855, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li ul li span.arrow {
+    display: inline;
+  }
+
+  /* line 858, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul li span.badge {
+    display: none;
+  }
+
+  /* line 861, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper ul li span.label {
+    display: none;
+  }
+
+  /* line 864, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .profile-wrapper {
+    display: none;
+  }
+
+  /* line 867, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    background: #0b9c8f;
+  }
+
+  /* line 871, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li.open > a,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > a:hover,
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li:hover > a {
+    padding: 13px;
+  }
+
+  /* line 876, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > ul > li > ul.sub-menu {
+    position: absolute;
+    margin-top: -46px;
+    margin-right: 50px;
+    width: auto;
+    z-index: 100;
+    min-width: 250px;
+  }
+
+  /* line 884, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper > .side-bar-widgets {
+    display: none;
+  }
+
+  /* line 887, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .inner-menu {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+  }
+
+  /* line 892, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-content {
+    margin-right: 0;
+  }
+
+  /* line 895, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu {
+    display: none;
+  }
+
+  /* line 898, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.mini-mobile {
+    width: 260px;
+  }
+
+  /*** Page header ***/
+  /* line 902, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .navbar-inner .container-fluid {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+  /* line 906, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .top-nav .nav {
+    margin-top: 0px;
+    margin-right: 5px;
+  }
+
+  /* line 910, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.notification:after,
+  .header .nav > li > .dropdown-menu.notification:before {
+    margin-right: 180px;
+  }
+
+  /* line 914, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.notification {
+    margin-right: -180px;
+  }
+
+  /* line 917, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.inbox:after,
+  .header .nav > li > .dropdown-menu.inbox:before {
+    margin-right: 140px;
+  }
+
+  /* line 921, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.inbox {
+    margin-right: -140px;
+  }
+
+  /* line 924, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.tasks:after,
+  .header .nav > li > .dropdown-menu.tasks:before {
+    margin-right: 90px;
+  }
+
+  /* line 928, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li > .dropdown-menu.tasks {
+    margin-right: -90px;
+  }
+
+  /* line 931, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header-seperation {
+    width: 100% !important;
+    z-index: 999;
+    text-align: center;
+    min-height: 60px;
+    display: block !important;
+  }
+
+  /* line 938, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .notifcation-center {
+    margin-left: 15px;
+  }
+
+  /* line 941, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 16px;
+  }
+
+  /* line 946, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header-quick-nav {
+    display: none;
+  }
+
+  /* line 949, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    position: fixed;
+    z-index: auto;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /*** Page content ***/
+  /* line 961, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .content {
+    padding: 8px;
+    padding-top: 95px;
+  }
+
+  /*** Page title ***/
+  /* line 966, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-title {
+    margin-bottom: 20px;
+  }
+
+  /*** Portlet form action ***/
+  /* line 970, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .portlet-body.form .form-actions {
+    padding-left: 15px;
+  }
+
+  /* line 973, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    right: 50px;
+    left: auto;
+    bottom: 35px;
+  }
+
+  /* line 978, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .footer-widget {
+    display: none;
+  }
+
+  /* line 981, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .form-horizontal .form-actions {
+    padding-left: 180px;
+  }
+
+  /* line 984, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-margin-grid .row-fluid [class*="span"] {
+    width: 100% !important;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  /* line 989, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles.margin-reset {
+    margin-left: 0px;
+  }
+
+  /** Profile Page **/
+  /* line 993, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-profile-pic {
+    text-align: center;
+  }
+
+  /* line 996, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-mini-description h3,
+  .user-mini-description h5 {
+    text-align: center;
+  }
+
+  /** email **/
+  /* line 1001, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .email-body {
+    padding: 8px !important;
+  }
+
+  /** Login Page **/
+  /* line 1005, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .login-container {
+    padding: 0 10px;
+  }
+
+  /* line 1008, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table td.small-cell,
+  .table th.small-cell {
+    width: 42px;
+  }
+
+  /* line 1012, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .error-wrapper {
+    margin-bottom: 0px;
+    min-height: 624px;
+    height: 624px;
+  }
+
+  /* line 1017, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .widget-item.narrow-margin {
+    margin-right: auto;
+  }
+
+  /* line 1020, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content.condensed {
+    margin-left: 0px;
+  }
+
+  /* line 1023, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    display: none;
+  }
+
+  /* line 1026, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .header {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  /* line 1030, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .container {
+    padding: 0;
+    width: 100%;
+  }
+
+  /* line 1034, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .user-info-wrapper {
+    display: none;
+  }
+
+  /* line 1037, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .inner-menu-always-open .page-sidebar .page-sidebar-wrapper {
+    height: auto;
+  }
+
+  /** Horizontal Menu **/
+  /* line 1041, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar {
+    display: none;
+  }
+
+  /*** Horizontal Menu **/
+  /* line 1045, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar {
+    background-color: #fff;
+  }
+
+  /* line 1048, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner {
+    display: block;
+    max-height: 400px;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* line 1054, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner > ul > li {
+    display: block;
+  }
+
+  /* line 1057, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner > ul > li .classic {
+    position: relative;
+    background-color: transparent;
+    top: 0;
+  }
+
+  /* line 1062, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner > ul > li .mega,
+  .horizontal-menu .bar .bar-inner > ul > li.horizontal {
+    position: relative;
+  }
+
+  /* line 1066, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner > ul > li > .horizontal {
+    position: relative;
+    top: 0;
+    border-bottom: 0;
+  }
+
+  /* line 1071, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .horizontal-menu .bar .bar-inner > ul > li > .horizontal li {
+    display: block;
+  }
+
+  /* line 1074, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  }
+}
+/*** Phones ***/
+@media (max-width: 480px) {
+  /* line 1082, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .header {
+    width: 100%;
+  }
+
+  /* line 1085, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.hide-top-content-header .page-content .content {
+    padding-top: 93px;
+  }
+
+  /* line 1088, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-title h3 {
+    width: 80%;
+  }
+
+  /* line 1091, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-content .content {
+    padding: 8px;
+    padding-top: 93px;
+    overflow-x: hidden;
+  }
+
+  /* line 1096, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles.margin-reset {
+    margin-left: 0px;
+  }
+
+  /* line 1099, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .column-seperation > div[class*="span"] {
+    border-right: none;
+  }
+
+  /* line 1102, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  table th.unseen,
+  table td.unseen {
+    display: none !important;
+  }
+
+  /* line 1106, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .row-fluid {
+    margin-bottom: 10px;
+  }
+
+  /* line 1109, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .small {
+    width: 100px !important;
+  }
+
+  /* line 1112, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .medium {
+    width: 150px !important;
+  }
+
+  /* line 1115, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .large {
+    width: 200px !important;
+  }
+
+  /* line 1118, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .huge {
+    width: 246px !important;
+    font-size: 24px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    padding: 22px 8px !important;
+  }
+
+  /* line 1125, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  select.small {
+    width: 114px !important;
+  }
+
+  /* line 1128, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  select.medium {
+    width: 164px !important;
+  }
+
+  /* line 1131, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  select.large {
+    width: 214px !important;
+  }
+
+  /* line 1134, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .btn-cons {
+    min-width: 110px;
+  }
+
+  /* line 1137, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .btn-large {
+    padding: 9px 15px;
+  }
+
+  /* Force table to not be like tables anymore */
+  /* line 1141, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables table,
+  .no-more-tables thead,
+  .no-more-tables tbody,
+  .no-more-tables th,
+  .no-more-tables td,
+  .no-more-tables tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  /* line 1150, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* line 1155, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables.table-bordered td {
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* line 1159, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables td {
+    /* Behave like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* line 1167, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /*
+  Label the data
+  */
+  /* line 1182, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables td:before {
+    content: attr(data-title);
+  }
+
+  /* line 1185, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .no-more-tables .text-right,
+  .no-more-tables .text-center {
+    text-align: left !important;
+  }
+
+  /* line 1189, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll .cf:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  /* line 1197, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll * html .cf {
+    zoom: 1;
+  }
+
+  /* line 1200, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll *:first-child + html .cf {
+    zoom: 1;
+  }
+
+  /* line 1203, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* line 1208, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll th {
+    width: auto !important;
+    border-radius: 0px !important;
+  }
+
+  /* line 1212, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll th,
+  .table-flip-scroll td {
+    margin: 0;
+    vertical-align: top;
+  }
+
+  /* line 1217, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll th {
+    text-align: left;
+  }
+
+  /* line 1220, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll table {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  /* line 1225, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll thead {
+    display: block;
+    float: left;
+  }
+
+  /* line 1229, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* line 1236, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll thead tr {
+    display: block;
+  }
+
+  /* line 1239, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll th {
+    display: block;
+  }
+
+  /* line 1242, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* line 1246, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+
+  /* sort out borders */
+  /* line 1252, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll th {
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  /* line 1256, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll td {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0px !important;
+  }
+
+  /* line 1262, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .table-flip-scroll tbody tr {
+    border-left: 1px solid #babcbf;
+  }
+
+  /** Profile Page **/
+  /* line 1266, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-profile-pic {
+    text-align: center;
+  }
+
+  /* line 1269, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .user-mini-description h3,
+  .user-mini-description h5 {
+    text-align: center;
+  }
+
+  /** email **/
+  /* line 1274, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .email-body {
+    padding: 8px !important;
+  }
+
+  /** lockscreen **/
+  /* line 1278, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .lockscreen-wrapper .profile-wrapper {
+    margin-bottom: 8px;
+  }
+
+  /* line 1281, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .image-responsive-width {
+    width: auto;
+  }
+
+  /* line 1284, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .xs-image-responsive-width {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  /* line 1289, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .header .nav > li.dropdown .dropdown-toggle {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+/*** Retina Display Images **/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 200 / 100), only screen and (min-device-pixel-ratio: 2) {
+  /* line 1296, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .grid.simple .grid-title .tools a {
+    background: url(/assets/webarch/icon/portlet-tray-2x-7c0d67a7361bbfbda20f45cfa8ec8ae2091e6f6bb850a11d90e7eb6b8045b7f0.png);
+    background-size: 199px 57px;
+  }
+
+  /* line 1300, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .tiles .controller a {
+    position: relative;
+    background: url(/assets/webarch/icon/portlet-tray-2x-7c0d67a7361bbfbda20f45cfa8ec8ae2091e6f6bb850a11d90e7eb6b8045b7f0.png);
+    background-size: 199px 57px;
+  }
+
+  /* line 1305, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .widget-item .controller a {
+    position: relative;
+    background: url(/assets/webarch/icon/portlet-tray-2x-7c0d67a7361bbfbda20f45cfa8ec8ae2091e6f6bb850a11d90e7eb6b8045b7f0.png);
+    background-size: 199px 57px;
+  }
+
+  /* line 1310, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .iconset {
+    background: url(/assets/webarch/icon/top-trayx2-b9bb51515a2c0e6b11dd7fb456ac5dab1095703cf304d7b99fc3177c0017e30c.png) no-repeat;
+    background-size: 394px 29px;
+  }
+
+  /* line 1314, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .status-icon {
+    background: url(/assets/webarch/icon/status2x-07c2ed9d162680a47f403622ad08f60dcb3055c76fdfe7cd98a251ca7b4af19c.png);
+    background-size: 79px 16px;
+  }
+
+  /* line 1318, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .scrollup {
+    background: url(/assets/webarch/pullup2x-efd496f6285b2903d4ebc1fecc36fd41fbb3a517850958e8b3a0f5c151a0bf6a.png);
+    background-size: 57px 27px;
+  }
+
+  /* line 1322, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .alert .close {
+    background: url(/assets/webarch/icon/noti-cross-2x-d5cfe4dc0c3a019d773a84dde210cd6c2aa7aaad5827addc889991a19357f2bc.png) no-repeat scroll 0 0 transparent;
+    background-position: -9px -10px;
+    width: 10px;
+    height: 9px;
+    position: relative;
+    opacity: 0.8;
+    background-size: 114px 29px;
+  }
+
+  /* line 1331, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .checkbox label::after {
+    top: 1.5px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* line 1336, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .select2-search input,
+  .select2-search-choice-close,
+  .select2-container .select2-choice abbr,
+  .select2-container .select2-choice .select2-arrow b {
+    background-image: none;
+    background-repeat: no-repeat !important;
+    background-size: none !important;
+  }
+
+  /* line 1344, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .select2-search input {
+    background-position: none !important;
+  }
+}
+@media (min-width: 980px) {
+  /* line 1349, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content {
+    position: relative;
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    transform: translateX(-260px);
+  }
+
+  /* line 1355, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .header {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    transform: translateX(-260px);
+  }
+
+  /* line 1360, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-sidebar {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    transform: translateX(-260px);
+  }
+
+  /* line 1365, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .footer-widget {
+    -webkit-transform: translateX(-260px);
+    -moz-transform: translateX(-260px);
+    transform: translateX(-260px);
+  }
+
+  /* line 1370, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .scrollup {
+    display: none !important;
+  }
+
+  /* line 1373, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.rtl.open-menu-right .page-content {
+    position: relative;
+    -webkit-transform: translateX(260px);
+    -moz-transform: translateX(260px);
+    transform: translateX(260px);
+  }
+
+  /* line 1379, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.rtl.open-menu-right .header {
+    -webkit-transform: translateX(260px);
+    -moz-transform: translateX(260px);
+    transform: translateX(260px);
+  }
+
+  /* line 1384, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.rtl.open-menu-right .page-sidebar {
+    -webkit-transform: translateX(260px);
+    -moz-transform: translateX(260px);
+    transform: translateX(260px);
+  }
+
+  /* line 1389, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.rtl.open-menu-right .footer-widget {
+    -webkit-transform: translateX(260px);
+    -moz-transform: translateX(260px);
+    transform: translateX(260px);
+  }
+
+  /* line 1394, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.rtl.open-menu-right .scrollup {
+    display: none !important;
+  }
+}
+/*** General tablets and phones ***/
+@media (max-width: 979px) {
+  /* line 1400, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-left .page-content {
+    -webkit-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
+  }
+
+  /* line 1404, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-left .header {
+    -webkit-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
+  }
+
+  /* line 1408, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content {
+    -webkit-transform: translate3d(-260px, 0, 0);
+    transform: translate3d(-260px, 0, 0);
+  }
+
+  /* line 1412, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .header {
+    -webkit-transform: translate3d(-260px, 0, 0);
+    transform: translate3d(-260px, 0, 0);
+  }
+
+  /* line 1416, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content .admin-bar {
+    display: none;
+  }
+}
+/* Landscape view of all tablet devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 1422, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content {
+    -webkit-transform: translateX(-260px);
+    transform: translateX(-260px);
+    left: auto;
+  }
+
+  /* line 1427, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .header {
+    -webkit-transform: translateX(-260px);
+    transform: translateX(-260px);
+    left: auto;
+  }
+
+  /* line 1432, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .page-content .admin-bar {
+    display: none;
+  }
+
+  /* line 1435, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout {
+    background-color: #f6f7f8;
+  }
+
+  /* line 1438, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .container {
+    position: relative;
+  }
+
+  /* line 1441, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.boxed-layout .chat-window-wrapper {
+    position: absolute;
+    margin-right: 15px;
+  }
+}
+/* Portrait view of all tablet devices */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* line 1448, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper {
+    display: none;
+  }
+
+  /* line 1451, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper.visible {
+    display: block;
+  }
+
+  /* line 1454, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    display: none;
+  }
+
+  /* line 1457, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.visible {
+    display: block;
+  }
+
+  /* line 1460, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-left .page-sidebar {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  /* line 1465, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .chat-window-wrapper {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1472, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper {
+    display: none;
+  }
+
+  /* line 1475, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .chat-window-wrapper.visible {
+    display: block;
+  }
+
+  /* line 1478, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar {
+    display: none;
+  }
+
+  /* line 1481, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  .page-sidebar.visible {
+    display: block;
+  }
+
+  /* line 1484, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-right .chat-window-wrapper {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  /* line 1489, /Users/moeabdol/Documents/programertv/vendor/assets/stylesheets/webarch/rtl/responsive.scss */
+  body.open-menu-left .page-sidebar {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+    -webkit-backface-visibility: hidden;
+  }
+}

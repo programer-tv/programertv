@@ -1,0 +1,65 @@
+/* Fonts */
+/* Droid Sans */
+@font-face {
+  font-family: "droid-sans";
+  src: url(/assets/fontface/droid-sans/droid-sans-2414ddcce37258395ff3b274aa928c19b8e29d2cc1149b3f405fd4b256310152.eot);
+  src: url(/assets/fontface/droid-sans/droid-sans-2414ddcce37258395ff3b274aa928c19b8e29d2cc1149b3f405fd4b256310152.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/droid-sans/droid-sans-3363dae74c54ef319cea283d3a7b9398f96a1bca5678fe2bb5357a55dea7e6fa.woff) format("woff"), url(/assets/fontface/droid-sans/droid-sans-52199b734c6185bc42e12d48157dfde4f344d5465e99ed77168b802f802b4415.ttf) format("truetype"), url(/assets/fontface/droid-sans/droid-sans-763498aa197c1345aecaa3427d7fac97e65f35255c17430d88fa77d584e76b3e.svg#droid-sans) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Asmaa */
+@font-face {
+  font-family: "asmaa";
+  src: url(/assets/fontface/asmaa/asmaa-d6a55d8fd188b63836503b3f526c1e8d0310e4692ea470635c872b4afab0e47f.eot);
+  src: url(/assets/fontface/asmaa/asmaa-d6a55d8fd188b63836503b3f526c1e8d0310e4692ea470635c872b4afab0e47f.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/asmaa/asmaa-73673b186bcd4c90c5cbdd1a149cd43bcd8ee443086a1d4bb60ff55d953a6c22.woff) format("woff"), url(/assets/fontface/asmaa/asmaa-2a6710c48ccda6133324cac41beb3938ba9fab623d0c0478a1d30c5053590c42.ttf) format("truetype"), url(/assets/fontface/asmaa/asmaa-7f2b04e2a33edd15afa63f6b018f0dcad2116faed8835eb3f5441d316afa0214.svg#asmaa) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Barabics */
+@font-face {
+  font-family: "barabics";
+  src: url(/assets/fontface/barabics/barabics-60daf33e58f092310058aa06760925f03434c2ce86516c3b09e42c841396784d.eot);
+  src: url(/assets/fontface/barabics/barabics-60daf33e58f092310058aa06760925f03434c2ce86516c3b09e42c841396784d.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/barabics/barabics-6766f907a7b58c677f5027f41c98f1849259b92e8c71a521fb9ee3a8b347c2c2.woff) format("woff"), url(/assets/fontface/barabics/barabics-91787b889f1e989d9a7b9959b93f04b38c0362dc4917d22461379aa12f43f756.ttf) format("truetype"), url(/assets/fontface/barabics/barabics-ad9674f49db020dc2e957386d81e4d56e2c91782ee6fa371b0824ce0e9391368.svg#barabics) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Boutros-ads */
+@font-face {
+  font-family: "boutros-ads";
+  src: url(/assets/fontface/boutros-ads/boutros-ads-bb4557974da38dba8702f1821195d708084f2e9bf57fab30533c25404707e1ee.eot);
+  src: url(/assets/fontface/boutros-ads/boutros-ads-bb4557974da38dba8702f1821195d708084f2e9bf57fab30533c25404707e1ee.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/boutros-ads/boutros-ads-9f48f13794133fb38d0119f4969498f4f7e9b5243c909d164b5ce18c343e860b.woff) format("woff"), url(/assets/fontface/boutros-ads/boutros-ads-927d9da542d413e2aabeb09145dcef70647a7e4538760bababa27f0c70f0a090.ttf) format("truetype"), url(/assets/fontface/boutros-ads/boutros-ads-c768756b8d9dbe8264ec38380bd31e6883333187cd774dbba5a6e309b91098eb.svg#boutros-ads) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Droid Kufi */
+@font-face {
+  font-family: "droid-kufi";
+  src: url(/assets/fontface/droid-kufi/droid-kufi-1ced8e603c2a2615f87543b3de3f535d5a07f19a325a8763ef2fb4e1347d3ee1.eot);
+  src: url(/assets/fontface/droid-kufi/droid-kufi-1ced8e603c2a2615f87543b3de3f535d5a07f19a325a8763ef2fb4e1347d3ee1.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/droid-kufi/droid-kufi-a6aa4e2bde3b37ac586cfcdea5f9e93724fc072372e032f1dc586488e9b3e0d7.woff) format("woff"), url(/assets/fontface/droid-kufi/droid-kufi-603929cf2a0112e6460758c26a6b1c2c71a1ed2ff5a8ce17d3ab5dd298231bd6.ttf) format("truetype"), url(/assets/fontface/droid-kufi/droid-kufi-a4e96f4b9a5b7f041a367f7b2eb1fef94ebcb1db2006f21ef8f01fb71fafdf26.svg#droid-kufi) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fanni */
+@font-face {
+  font-family: "fanni";
+  src: url(/assets/fontface/fanni/fanni-1dda04092eb6a68b29e475894e812560a757d33291aca2a46ecf87b2b4b75af9.eot);
+  src: url(/assets/fontface/fanni/fanni-1dda04092eb6a68b29e475894e812560a757d33291aca2a46ecf87b2b4b75af9.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/fanni/fanni-b6101d8ed8ceeb5965af78dacabafef57f8cc50362858f72642ae6a41657e560.woff) format("woff"), url(/assets/fontface/fanni/fanni-7e1524194ff4f67375d272922e66ba9acf20cb01e19a919d820e81cd28922703.ttf) format("truetype"), url(/assets/fontface/fanni/fanni-5657fb4d69008b62b71848d5d2a56a4bd8493a719a227d8a985b87d4c0a6c20d.svg#fanni) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Hala */
+@font-face {
+  font-family: "hala";
+  src: url(/assets/fontface/hala/hala-a6a6154dfa44e9f026d57a5a956474c0a1e5e4a42de87553056a77d18a7664fb.eot);
+  src: url(/assets/fontface/hala/hala-a6a6154dfa44e9f026d57a5a956474c0a1e5e4a42de87553056a77d18a7664fb.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/hala/hala-08942014bd0e775100125afe0b920215cc2e7c65ae525c5d50c3092a92052033.woff) format("woff"), url(/assets/fontface/hala/hala-527e3413e1b0f453235f477a55a79ea4178f8982fb6fa46b82ec58cfc2cd00dd.ttf) format("truetype"), url(/assets/fontface/hala/hala-bf060c338fe35db64c15f9acf180377a3aed24813daded45ab73ee6a0b065dee.svg#hala) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Jazeera */
+@font-face {
+  font-family: "jazeera";
+  src: url(/assets/fontface/jazeera/jazeera-3a6ede6564b466db638ee3256ad9f7f7ed2074967f463f8fb7fd8b0460d5c942.eot);
+  src: url(/assets/fontface/jazeera/jazeera-3a6ede6564b466db638ee3256ad9f7f7ed2074967f463f8fb7fd8b0460d5c942.eot?#iefix) format("embedded-opentype"), url(/assets/fontface/jazeera/jazeera-62f197c126b612c359745bbbe93220a6176f49c3f0a56bd5aa8c5c5af5dd7df2.woff) format("woff"), url(/assets/fontface/jazeera/jazeera-75363480b6e42ccdde85fef84abae1c6a12743fa6ce9a34472a856722fab81ed.ttf) format("truetype"), url(/assets/fontface/jazeera/jazeera-60976e7d2e0be8743970b1667629a5cd60e04bc14ab4c27d30ee7938d05bf21c.svg#jazeera) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

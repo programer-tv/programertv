@@ -1,0 +1,10 @@
+/* line 2, /Users/moeabdol/Documents/programertv/app/assets/stylesheets/courses.scss */
+.courses .course {
+  margin-bottom: 20px;
+  width: 220px;
+}
+/* line 6, /Users/moeabdol/Documents/programertv/app/assets/stylesheets/courses.scss */
+.courses .course .course-img {
+  padding: 0;
+  overflow: hidden;
+}

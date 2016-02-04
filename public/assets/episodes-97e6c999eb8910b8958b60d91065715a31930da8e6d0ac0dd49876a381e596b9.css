@@ -1,0 +1,6 @@
+@media only screen and (max-width: 768px) {
+  /* line 3, /Users/moeabdol/Documents/programertv/app/assets/stylesheets/episodes.scss */
+  .breadcrumb li:last-child {
+    display: none;
+  }
+}
