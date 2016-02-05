@@ -35,7 +35,8 @@
 
   .fs-background-container
     .fs-background-media.fs-background-animated
-      = video_tag "header_video.mp4", loop: true, autoplay: true
+      = video_tag "header_video.mp4", "header_video.ogv", "header_video.webm",
+                  loop: true, autoplay: true, controls: false
 
 %section#about
   .container-fluid
