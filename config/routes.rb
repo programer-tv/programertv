@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     resources :episodes, except: [:index]
   end
 
+  get "home", to: "static_pages#home"
+  get "privacy", to: "static_pages#privacy"
+  get "terms", to: "static_pages#terms"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation: first created -> highest priority.

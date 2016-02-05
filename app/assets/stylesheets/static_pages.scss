@@ -16,6 +16,10 @@ html * {
   font-family: "droid-sans";
 }
 
+body {
+  background-color: #1f2228;
+}
+
 nav {
   &.navbar-inverse {
     background-color: #1b1e24;
@@ -87,10 +91,41 @@ section {
       }
     }
   }
+
+  &#about {
+    background-color: white;
+  }
+
+  &#privacy, &#terms {
+    padding-top: 25px;
+    color: #BCBDBF;
+    background-image: image-url("logo_bg_big.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    background-size: 35% auto;
+
+    .arb {
+      direction: rtl;
+    }
+
+    .eng {
+      direction: ltr;
+      font-family: "helvetica";
+    }
+  }
 }
 
 footer {
-  background-image: image-url("footer_bg.png") !important;
+  color: #BCBDBF;
+
+  &.footer {
+    background-image: image-url("footer_bg.png") !important;
+  }
+
+  a {
+    color: #BCBDBF;
+  }
 
   .contact-details {
     p {
@@ -129,5 +164,11 @@ footer {
     height: 45px !important;
     width: 187.5px !important;
     margin-top: 3px !important;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  #privacy, #terms {
+    background-size: 80% auto !important;
   }
 }
