@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     resources :episodes, except: [:index]
   end
 
-  get "home", to: "static_pages#home"
   get "privacy", to: "static_pages#privacy"
   get "terms", to: "static_pages#terms"
 
