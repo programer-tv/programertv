@@ -90,6 +90,18 @@ RSpec.describe "authenticaion", js: true do
           text: "Successfully authenticated from Facebook account.")
       end
     end
+
+    context "twitter" do
+      it "login succeeds" do
+        Rails.application.env_config["devise.mapping"] = Devise.mappings["user"]
+        Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+        visit root_path
+        click_on "user_signin_link"
+        click_on "twitter_login_link"
+        expect(page).to have_selector(".sweet-alert",
+          text: "Successfully authenticated from Twitter account.")
+      end
+    end
   end
 end
 

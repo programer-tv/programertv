@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook]
+         :omniauthable, omniauth_providers: [:facebook, :twitter]
 
   validates :username, presence: true, uniqueness: true
 
@@ -20,17 +20,28 @@ class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      if auth.provider == "facebook"
+        user.username = auth.info.name
+      elsif auth.provider == "twitter"
+        user.username = auth.info.nickname
+      end
       user.email = auth.info.email
-      user.username = auth.info.name
       user.password = Devise.friendly_token[8, 20]
     end
   end
 
   def self.new_with_session(params, session)
     super.tap do |user|
-      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
-        user.username = data["name"]
+      if session["devise.facebook_data"]
+        if data = session["devise.facebook_data"]
+          user.email = data["email"] if user.email.blank?
+          user.username = data["name"]
+        end
+      elsif session["devise.twitter_data"]
+        if data = session["devise.twitter_data"]
+          user.email = data["email"] if user.email.blank?
+          user.username = data["nickname"]
+        end
       end
     end
   end

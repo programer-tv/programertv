@@ -24,6 +24,7 @@ gem 'ckeditor',             '~> 4.1',   '>= 4.1.5'
 gem 'unicorn',              '~> 5.0',   '>= 5.0.1'
 gem 'devise',               '~> 3.5',   '>= 3.5.5'
 gem 'omniauth-facebook',    '~> 3.0'
+gem 'omniauth-twitter',     '~> 1.2',   '>= 1.2.1'
 
 group :development, :test do
   gem 'byebug'

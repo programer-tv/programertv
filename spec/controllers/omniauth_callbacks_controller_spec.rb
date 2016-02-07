@@ -32,4 +32,36 @@ RSpec.describe Users::OmniauthCallbacksController, type: :controller do
       expect(assigns(:user)).to be_present
     end
   end
+
+  describe "GET #twitter" do
+    before(:example) do
+      request.env["devise.mapping"] = Devise.mappings[:user]
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+      get :twitter
+    end
+
+    it "returns https redirect" do
+      expect(response).to have_http_status(:redirect)
+    end
+
+    it "assigns @user" do
+      expect(assigns(:user)).to be_present
+    end
+  end
+
+  describe "POST #twitter" do
+    before(:example) do
+      request.env["devise.mapping"] = Devise.mappings[:user]
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:twitter]
+      post :twitter
+    end
+
+    it "returns https redirect" do
+      expect(response).to have_http_status(:redirect)
+    end
+
+    it "assigns @user" do
+      expect(assigns(:user)).to be_present
+    end
+  end
 end
