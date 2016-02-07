@@ -42,11 +42,11 @@ class EpisodesController < ApplicationController
   private
 
   def find_course
-    @course = Course.find(params[:course_id])
+    @course = Course.friendly.find(params[:course_id])
   end
 
   def find_episode
-    @episode = Episode.find(params[:id])
+    @episode = Episode.friendly.find(params[:id])
   end
 
   def episode_params

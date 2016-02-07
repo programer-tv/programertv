@@ -4,6 +4,9 @@ class Course < ActiveRecord::Base
 	has_attached_file :image, styles: { original: "300x300" },
 										default_url: "/images/original/missing.png"
 
+  extend FriendlyId
+  friendly_id :en_title, use: :slugged
+
   validates :ar_title,     presence: true
   validates :en_title,     presence: true,  uniqueness: true
   validates :description,  presence: true

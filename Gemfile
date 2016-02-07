@@ -26,6 +26,7 @@ gem 'devise',                      '~> 3.5',   '>= 3.5.5'
 gem 'omniauth-facebook',           '~> 3.0'
 gem 'omniauth-twitter',            '~> 1.2',   '>= 1.2.1'
 gem 'activerecord-session_store',  '~> 0.1.2'
+gem 'friendly_id',                 '~> 5.1'
 
 group :development, :test do
   gem 'byebug'
