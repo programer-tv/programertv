@@ -31,6 +31,8 @@ ar:
         video_id: معرف الفيديو
         video_host: موفر الفيديو
         image: الصورة
+        premium: متميز
+        active: نشط
       episode:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية

@@ -29,9 +29,9 @@
                         input_html: { ckeditor: { toolbar: "Full" } }
           .row
             .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
-              = f.input_field :premium, as: :boolean, inline_label: "Premium"
+              = f.input_field :premium, as: :boolean, inline_label: "متميز"
             .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
-              = f.input_field :active, as: :boolean, inline_label: "Active"
+              = f.input_field :active, as: :boolean, inline_label: "نشط"
 
           .form-actions
             - if @course.new_record?
