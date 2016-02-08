@@ -62,7 +62,7 @@
             .episode{ class: ("active" if current_page?(                |
                               course_episode_path(@course, episode))) } |
               .episode-img
-                = image_tag episode.image.url, size: "120x90", class: "bg-img"
+                = image_tag episode.image.url, class: "bg-img"
                 = image_tag "logo_play.png", class: "play"
               .episode-txt= episode.ar_title
         %br

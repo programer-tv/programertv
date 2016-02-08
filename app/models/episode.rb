@@ -1,7 +1,7 @@
 class Episode < ActiveRecord::Base
   belongs_to :course
 
-	has_attached_file :image, styles: { original: "300x300" },
+	has_attached_file :image, styles: { original: "120x90>" },
 										default_url: "/images/original/missing.png"
 
   extend FriendlyId

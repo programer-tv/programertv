@@ -100,8 +100,9 @@ body {
     .grid-body {
       .episode {
         overflow: hidden;
-        height: 102px;
-        padding: 5px;
+        // height: 100px;
+        padding: 5px 5px 5px 0;
+        margin: 5px 0 5px 0;
 
         .episode-txt {
           margin-top: 5px;
@@ -139,7 +140,7 @@ body {
 					.play {
 						position: absolute;
 						opacity: 0.0;
-						top: 22%;
+						top: 12%;
 						width: 50px;
 						margin: 0 auto;
 						left: 0px;
