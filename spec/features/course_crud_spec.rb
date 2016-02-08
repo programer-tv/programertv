@@ -23,7 +23,7 @@ RSpec.describe "create course", js: true do
     check "course_active"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
-                                  text: "Course created successfully!")
+                                  text: "تم إنشاء الدورة بنجاح.")
   end
 
   it "fails with invalid attributes" do
@@ -33,7 +33,7 @@ RSpec.describe "create course", js: true do
     fill_in_ckeditor "course_description" , with: nil
     fill_in "course_video_id"             , with: nil
     click_on "submit"
-    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
+    expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
   end
 end
 
@@ -62,7 +62,7 @@ RSpec.describe "update course", js: true do
     check "course_active"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
-                                  text: "Course updated successfully!")
+                                  text: "تم تعديل الدورة بنجاح.")
   end
 
   it "fails with invalid attributes" do
@@ -73,7 +73,7 @@ RSpec.describe "update course", js: true do
     select course.video_host.to_s         , from: "course_video_host"
     fill_in "course_video_id"             , with: nil
     click_on "submit"
-    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
+    expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
   end
 end
 
@@ -85,7 +85,7 @@ RSpec.describe "delete course", js: true do
     click_on "course_#{course.id}"
     click_on "delete_course_link"
     sleep(1)            # must sleep to allow modal to appear
-    click_on("Yes")
+    click_on("نعم")
     expect(page).not_to have_selector("#course_#{course.id}")
   end
 end

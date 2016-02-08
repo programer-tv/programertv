@@ -24,7 +24,7 @@ RSpec.describe "create episode", js: true do
     fill_in "episode_video_id"             , with: episode.video_id
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
-                                  text: "Episode created successfully!")
+                                  text: "تم إنشاء الحلقة بنجاح.")
   end
 
   it "fails with invalid attributes" do
@@ -35,7 +35,7 @@ RSpec.describe "create episode", js: true do
     fill_in "episode_sequence"             , with: nil
     fill_in "episode_video_id"             , with: nil
     click_on "submit"
-    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
+    expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
   end
 end
 
@@ -62,7 +62,7 @@ RSpec.describe "update episode", js: true do
     fill_in "episode_video_id"             , with: episode.video_id
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
-                                  text: "Episode updated successfully!")
+                                  text: "تم تعديل الحلقة بنجاح.")
   end
 
   it "fails with invalid attributes" do
@@ -73,7 +73,7 @@ RSpec.describe "update episode", js: true do
     fill_in "episode_sequence"             , with: nil
     fill_in "episode_video_id"             , with: nil
     click_on "submit"
-    expect(page).to have_selector(".sweet-alert", text: "Something went wrong!")
+    expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
   end
 end
 
@@ -86,7 +86,7 @@ RSpec.describe "delete episode", js: true do
     click_on "episode_#{episode.id}"
     click_on "delete_course_episode_link"
     sleep(1)            # must sleep to allow modal to appear
-    click_on("Yes")
+    click_on("نعم")
     expect(page).not_to have_selector("#episode_#{episode.id}")
   end
 end

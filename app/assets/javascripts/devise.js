@@ -36,6 +36,7 @@ function showFlashMessage(key, value) {
             type: "success",
             allowOutsideClick: true,
             confirmButtonColor: "#0090D9",
+            confirmButtonText: "تم",
         });
     }
     else {
@@ -45,6 +46,7 @@ function showFlashMessage(key, value) {
                 type: "error",
                 allowOutsideClick: true,
                 confirmButtonColor: "#0090D9",
+                confirmButtonText: "تم",
             });
         }
         else {
@@ -54,6 +56,7 @@ function showFlashMessage(key, value) {
                     type: "info",
                     allowOutsideClick: true,
                     confirmButtonColor: "#0090D9",
+                    confirmButtonText: "تم",
                 });
             }
             else {
@@ -63,6 +66,7 @@ function showFlashMessage(key, value) {
                         type: "warning",
                         allowOutsideClick: true,
                         confirmButtonColor: "#0090D9",
+                        confirmButtonText: "تم",
                     });
                 }
             }

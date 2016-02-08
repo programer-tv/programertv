@@ -18,7 +18,7 @@ RSpec.describe "authenticaion", js: true do
         fill_in 'user_password_confirmation', with: user.password
         click_on 'user_signup_link'
         expect(page).to have_selector('.sweet-alert',
-          text: 'Welcome! You have signed up successfully.')
+          text: "تمّ إنشاء الحساب بنجاح، أهلًا بك!")
       end
 
       it 'fails with invalid attributes' do
@@ -45,7 +45,7 @@ RSpec.describe "authenticaion", js: true do
           fill_in "user_password", with: user.password
           click_on "user_signin_link"
           expect(page).to have_selector(".sweet-alert",
-                                        text: "Signed in successfully.")
+                                        text: "تمّ تسجيل الدخول بنجاح.")
         end
 
         it "succeeds when signing in using email" do
@@ -53,7 +53,7 @@ RSpec.describe "authenticaion", js: true do
           fill_in "user_password", with: user.password
           click_on "user_signin_link"
           expect(page).to have_selector(".sweet-alert",
-                                        text: "Signed in successfully.")
+                                        text: "تمّ تسجيل الدخول بنجاح.")
         end
       end
 
@@ -62,18 +62,18 @@ RSpec.describe "authenticaion", js: true do
         fill_in "user_password", with: user.password
         click_on "user_signin_link"
         expect(page).to have_selector(".sweet-alert",
-                                      text: "Invalid login or password.")
+          text: "إسم المستخدم أو البريد الإلكتروني أو كلمة المرور غير صحيح.")
       end
     end
 
     describe "signout" do
       it "successfully signs out user" do
         signin(create(:user))
-        click_on "OK"
+        click_on "تم"
         click_on "user-settings"
         click_on "user_signout_link"
         expect(page).to have_selector(".sweet-alert",
-                                      text: "Signed out successfully.")
+                                      text: "تمّ تسجيل الخروج بنجاح.")
       end
     end
   end
@@ -87,7 +87,7 @@ RSpec.describe "authenticaion", js: true do
         click_on "user_signin_link"
         click_on "facebook_login_link"
         expect(page).to have_selector(".sweet-alert",
-          text: "Successfully authenticated from Facebook account.")
+          text: "تمّ المُصادقة بنجاح باستخدام فيسبوك.")
       end
     end
 
@@ -99,7 +99,7 @@ RSpec.describe "authenticaion", js: true do
         click_on "user_signin_link"
         click_on "twitter_login_link"
         expect(page).to have_selector(".sweet-alert",
-          text: "Successfully authenticated from Twitter account.")
+          text: "تمّ المُصادقة بنجاح باستخدام تويتر.")
       end
     end
   end
@@ -120,7 +120,7 @@ RSpec.describe 'password reset', type: :mailer do
       expect(ActionMailer::Base.deliveries.size).to eq(1)
       email = ActionMailer::Base.deliveries.first
       expect(email.from).to match(["no-reply@programer.tv"])
-      expect(email.subject).to eq("Reset password instructions")
+      expect(email.subject).to eq("تعليمات إعادة تعيين كلمة المرور")
     end
   end
 

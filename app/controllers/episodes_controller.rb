@@ -9,10 +9,10 @@ class EpisodesController < ApplicationController
   def create
     @episode = @course.episodes.build(episode_params)
     if @episode.save
-      flash[:success] = "Episode created successfully!"
+      flash[:success] = t("episode.create.success")
       redirect_to course_episode_path(@course, @episode)
     else
-      flash.now[:error] = "Something went wrong!"
+      flash.now[:error] = t("episode.create.error")
       render :new
     end
   end
@@ -25,17 +25,17 @@ class EpisodesController < ApplicationController
 
   def update
     if @episode.update(episode_params)
-      flash[:success] = "Episode updated successfully!"
+      flash[:success] = t("episode.update.success")
       redirect_to course_episode_path(@course, @episode)
     else
-      flash.now[:error] = "Something went wrong!"
+      flash.now[:error] = t("episode.update.error")
       render :edit
     end
   end
 
   def destroy
     @episode.destroy
-    flash[:success] = "Episode deleted successfully!"
+    flash[:success] = t("episode.destroy.success")
     redirect_to @course
   end
 
