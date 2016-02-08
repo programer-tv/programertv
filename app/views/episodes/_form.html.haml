@@ -34,16 +34,16 @@
               = button_tag type: "submit", class: "btn btn-success btn-cons",
                            id: "submit" do
                 = fa_icon "check"
-                %span &nbsp;OK
+                %span &nbsp;تم
               = link_to @course, class: "btn btn-danger btn-cons" do
                 = fa_icon "close"
-                %span &nbsp;Cancel
+                %span &nbsp;إلغاء
             - else
               = button_tag type: "submit", class: "btn btn-success btn-cons",
                            id: "submit" do
                 = fa_icon "check"
-                %span &nbsp;OK
+                %span &nbsp;تم
               = link_to course_episode_path(@course, @episode),
                         class: "btn btn-danger btn-cons" do
                 = fa_icon "close"
-                %span &nbsp;Cancel
+                %span &nbsp;إلغاء

@@ -35,7 +35,7 @@
     .grid.simple.horizontal.blue
       .grid-title
         %h4
-          %span.semi-bold Comments
+          %span.semi-bold التعليقات
         .tools
           %a{ href: "javascript:;", class: "collapse" }
           %a{ href: "javascript:;", class: "reload" }
@@ -47,7 +47,7 @@
     #episode-list.grid.simple.horizontal.yellow
       .grid-title
         %h4
-          %span.semi-bold Episodes
+          %span.semi-bold الحلقات
         .tools
           %a{ href: "javascript:;", class: "collapse" }
           %a{ href: "javascript:;", class: "reload" }
@@ -66,7 +66,7 @@
                   class: "btn btn-success btn-cons",
                   id: "add_new_course_episode_link" do
           = fa_icon "plus"
-          %span &nbsp;Add Episode
+          %span &nbsp;إضافة حلقة
 
 .row
   .col-lg-12
@@ -74,7 +74,7 @@
       = link_to edit_course_path, class: "btn btn-warning btn-cons",
                 id: "edit_course_link" do
         = fa_icon "pencil"
-        %span &nbsp;Edit Course
+        %span &nbsp;تعديل
       = link_to course_path,
                 class: "btn btn-danger btn-cons",
                 id: "delete_course_link",
@@ -84,4 +84,4 @@
                         "cancel-button-text": "لا",
                         "confirm-button-color": "#F35958" } do
         = fa_icon "trash-o"
-        %span &nbsp;Delete Course
+        %span &nbsp;حذف
