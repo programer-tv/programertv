@@ -7,6 +7,9 @@
           .row
             .form-group.col-lg-6
               = image_tag @episode.image.url(:original)
+              %br
+              %br
+              * لأفضل النتائج يرجى تحميل صورة ذات أبعاد 1280x720
           .row
             .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
               = f.input :image, as: :file, label: false, class: "filestyle"
