@@ -41,7 +41,7 @@ $(document).ready(function() {
 	$(":file").filestyle({
 		// input: false,
 		buttonBefore: true,
-		buttonText: "&nbsp;File Upload",
+		buttonText: "&nbsp;تحميل ملف",
 		buttonName: "btn btn-success btn-cons",
 		iconName: "glyphicon-cloud-upload",
 	});
