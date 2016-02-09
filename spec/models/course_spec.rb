@@ -9,6 +9,8 @@ describe Course, type: :model do
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:video_host) }
     it { should validate_presence_of(:video_id) }
+    it { should validate_presence_of(:slug) }
+    it { should validate_uniqueness_of(:slug) }
     it { should have_attached_file(:image) }
     it { should validate_attachment_presence(:image) }
     it { should validate_attachment_size(:image).in(0..2.megabytes) }

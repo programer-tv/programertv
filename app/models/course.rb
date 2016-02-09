@@ -12,6 +12,7 @@ class Course < ActiveRecord::Base
   validates :description,  presence: true
   validates :video_host,   presence: true
   validates :video_id,     presence: true
+  validates :slug,         presence: true,  uniqueness: true
 	validates_attachment :image, presence: true, size: { in: 0..2.megabytes },
                        content_type: { content_type: %w(image/jpeg image/png) }
 
