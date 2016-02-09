@@ -133,6 +133,7 @@ describe EpisodesController, type: :controller do
       end
 
       it "redirects to show page" do
+        episode = assigns(:episode)
         expect(response).to redirect_to(course_episode_path(episode.course,
                                                             episode))
       end

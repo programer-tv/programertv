@@ -17,4 +17,8 @@ class Episode < ActiveRecord::Base
   validates :slug, presence: true, uniqueness: { scope: :course_id }
 	validates_attachment :image, presence: true, size: { in: 0..2.megabytes },
                        content_type: { content_type: %w(image/jpeg image/png) }
+
+  def should_generate_new_friendly_id?
+    en_title_changed?
+  end
 end

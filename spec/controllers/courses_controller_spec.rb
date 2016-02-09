@@ -121,6 +121,7 @@ describe CoursesController, type: :controller do
       end
 
       it "redirects to show page" do
+        course = assigns(:course)
         expect(response).to redirect_to(course)
       end
     end

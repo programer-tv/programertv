@@ -19,4 +19,8 @@ class Course < ActiveRecord::Base
   def get_sequential_episodes
     episodes.order("sequence ASC")
   end
+
+  def should_generate_new_friendly_id?
+    en_title_changed?
+  end
 end
