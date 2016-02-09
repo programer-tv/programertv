@@ -116,16 +116,18 @@ RSpec.configure do |config|
     provider: "facebook",
     uid: "12345",
     info: {
-      email: "user@example.com",
       name: "facebook user",
+      email: "user@example.com",
+      image: "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
     }
   })
   OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
     provider: "twitter",
     uid: "12345",
     info: {
-      email: "user@example.com",
       nickname: "twitter user",
+      email: "user@example.com",
+      image: "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
     }
   })
 end

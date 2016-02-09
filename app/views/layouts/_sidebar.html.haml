@@ -2,7 +2,7 @@
   #main-menu-wrapper.page-sidebar-wrapper.scrollbar-dynamic
     .user-info-wrapper
       .profile-wrapper
-        = image_tag "anonymous.png"
+        = get_user_avatar(current_user)
       .user-info
         .greeting
           مرحبا

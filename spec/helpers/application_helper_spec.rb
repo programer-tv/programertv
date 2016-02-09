@@ -140,4 +140,25 @@ describe ApplicationHelper, type: :helper do
       end
     end
   end
+
+  context "user avatar" do
+    it "renders facebook avatar" do
+      user = create(:user, provider: "facebook",
+                    image_link: "https://example.com")
+      expect(get_user_avatar(user)).to eq("<img src='https://example.com' />\n")
+    end
+
+    it "renders twitter avatar" do
+      user = create(:user, provider: "twitter",
+                    image_link: "https://example.com")
+      expect(get_user_avatar(user)).to eq("<img src='https://example.com' />\n")
+    end
+
+    it "renders gravatar avatar" do
+      user = create(:user, email: "user@example.com")
+      expect(get_user_avatar(user)).to \
+        eq("<img src='https://gravatar.com/avatar/" +
+           "b58996c504c5638798eb6b511e6f49af?d=mm' />\n")
+    end
+  end
 end

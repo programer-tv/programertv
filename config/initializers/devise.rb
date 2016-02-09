@@ -242,11 +242,15 @@ Devise.setup do |config|
   config.omniauth :facebook,
                   ENV["FACEBOOK_API_KEY"],
                   ENV["FACEBOOK_API_SECRET"],
-                  call_back_url: ENV["FACEBOOK_CALLBACK_URL"]
+                  call_back_url: ENV["FACEBOOK_CALLBACK_URL"],
+                  image_size: "large",
+                  secure_image_url: true
 
   config.omniauth :twitter,
                   ENV["TWITTER_API_KEY"],
-                  ENV["TWITTER_API_SECRET"]
+                  ENV["TWITTER_API_SECRET"],
+                  image_size: "original",
+                  secure_image_url: true
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

@@ -66,6 +66,14 @@ module ApplicationHelper
                 "data-show-faces='false' data-share='false'></div>")
   end
 
+  def get_user_avatar(user)
+    if not user.provider.nil? and not user.image_link.nil?
+      get_social_avatar(user)
+    else
+      get_gravatar(user)
+    end
+  end
+
 	private
 
   def render_haml(code)
@@ -92,5 +100,14 @@ module ApplicationHelper
     "msallowfullscreen: true, " +
     "allowfullscreen: true, " +
     "class: 'center-block' }"
+  end
+
+  def get_social_avatar(user)
+    render_haml("<img src='#{user.image_link}' />")
+  end
+
+  def get_gravatar(user)
+    digest = Digest::MD5.hexdigest(user.email)
+    render_haml("<img src='https://gravatar.com/avatar/#{digest}?d=mm' />")
   end
 end
