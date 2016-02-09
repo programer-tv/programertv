@@ -15,7 +15,7 @@ RSpec.describe "create episode", js: true do
   end
 
   it "succeeds with valid attributes" do
-    attach_file "episode_image"            , "app/assets/images/anonymous.png"
+    attach_file "episode_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
     fill_in_ckeditor "episode_description" , with: episode.description
@@ -53,7 +53,7 @@ RSpec.describe "update episode", js: true do
 
   it "succeeds with valid attributes" do
     episode = build(:episode)
-    attach_file "episode_image"            , "app/assets/images/anonymous.png"
+    attach_file "episode_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
     fill_in_ckeditor "episode_description" , with: episode.description

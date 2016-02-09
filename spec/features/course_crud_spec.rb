@@ -13,7 +13,7 @@ RSpec.describe "create course", js: true do
   end
 
   it "succeeds with valid attributes" do
-    attach_file "course_image"            , "app/assets/images/anonymous.png"
+    attach_file "course_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "course_ar_title"             , with: course.ar_title
     fill_in "course_en_title"             , with: course.en_title
     fill_in_ckeditor "course_description" , with: course.description
@@ -52,7 +52,7 @@ RSpec.describe "update course", js: true do
   end
 
   it "succeeds with valid attribures" do
-    attach_file "course_image"            , "app/assets/images/anonymous.png"
+    attach_file "course_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "course_ar_title"             , with: course.ar_title
     fill_in "course_en_title"             , with: course.en_title
     fill_in_ckeditor "course_description" , with: course.description
