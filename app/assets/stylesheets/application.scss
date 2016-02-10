@@ -65,6 +65,10 @@ body {
 	}
 
 	.grid.simple {
+    .grid-body {
+      color: black;
+    }
+
 		&.horizontal {
 			&.blue {
 				.grid-title {

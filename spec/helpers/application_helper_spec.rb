@@ -105,14 +105,25 @@ describe ApplicationHelper, type: :helper do
             "(document, 'script', 'twitter-wjs');</script>\n")
 			end
 
-      it "renders button correctly" do
+      it "renders tweet video button correctly" do
         page_path = "https://programer.tv"
         title = "this is a test title"
-        expect(twitter_button(page_path, title)).to \
+        expect(tweet_video_button(page_path, title)).to \
           eq("<a href='https://twitter.com/share' "+
             "class='twitter-share-button' " +
             "data-url='https://programer.tv' " +
             "data-text='أنا أشاهد \"this is a test title\"' " +
+            "data-via='ProgramerTV' data-lang='ar'></a>\n")
+      end
+
+      it "renders tweet article button correctly" do
+        page_path = "https://programer.tv"
+        title = "this is a test title"
+        expect(tweet_article_button(page_path, title)).to \
+          eq("<a href='https://twitter.com/share' "+
+            "class='twitter-share-button' " +
+            "data-url='https://programer.tv' " +
+            "data-text='أنا أقرأ \"this is a test title\"' " +
             "data-via='ProgramerTV' data-lang='ar'></a>\n")
       end
     end

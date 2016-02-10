@@ -17,12 +17,22 @@ ar:
       error: "هناك خطأ ما!"
     destroy:
       success: "تم حذف الحلقة بنجاح."
+  article:
+    create:
+      success: "تم إنشاء المقال بنجاح."
+      error: "هناك خطأ ما!"
+    update:
+      success: "تم تعديل المقال بنجاح."
+      error: "هناك خطأ ما!"
+    destroy:
+      success: "تم حذف المقال بنجاح."
 
   activerecord:
     models:
       course: الدورة
       episode: الحلقة
       user: المستخدم
+      article: المقال
     attributes:
       course:
         ar_title: العنوان بالعربية
@@ -46,6 +56,12 @@ ar:
         email: البريد الإلكتروني
         password: كلمة المرور
         password_confirmation: تأكيد كلمة المرور
+      article:
+        ar_title: العنوان بالعربية
+        en_title: العنوان بالإنجليزية
+        author: الكاتب
+        content: المحتوى
+        active: نشط
     errors:
       messages:
         record_invalid: 'فشل التحقّق من: %{errors}'

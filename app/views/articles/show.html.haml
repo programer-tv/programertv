@@ -1,0 +1,60 @@
+= disqus_script
+= twitter_script
+= facebook_script
+
+.row
+  .col-lg-12
+    %ul.breadcrumb
+      %li
+        %p= link_to "المدونة", articles_path
+      %li
+        %p
+          &nbsp;
+          = @article.ar_title
+
+.row
+  .col-lg-10.col-lg-offset-1
+    .grid.simple.transparent
+      .grid-title
+        %h4
+          %span.semi-bold= @article.ar_title
+      .grid-body
+        %p#course_description= @article.content.html_safe
+        %p
+          الكاتب:
+          = @article.author
+          %br
+          تاريخ النشر:
+          = @article.created_at.strftime("%d-%m-%Y")
+        .social-buttons
+          %span= facebook_button(request.original_url)
+          %span= tweet_article_button(request.original_url, @article.ar_title)
+
+    .grid.simple.horizontal.blue
+      .grid-title
+        %h4
+          %span.semi-bold التعليقات
+        .tools
+          %a{ href: "javascript:;", class: "collapse" }
+          %a{ href: "javascript:;", class: "reload" }
+          %a{ href: "javascript:;", class: "remove" }
+      .grid-body
+        = disqus_comments
+
+.row
+  .col-lg-10
+    .grid.simple.transparent
+      = link_to edit_article_path, class: "btn btn-warning btn-cons",
+                id: "edit_course_link" do
+        = fa_icon "pencil"
+        %span &nbsp;تعديل
+      = link_to article_path,
+                class: "btn btn-danger btn-cons",
+                id: "delete_course_link",
+                method: :delete,
+                data: { "confirm": "هل أنت متأكد؟",
+                        "confirm-button-text": "نعم",
+                        "cancel-button-text": "لا",
+                        "confirm-button-color": "#F35958" } do
+        = fa_icon "trash-o"
+        %span &nbsp;حذف

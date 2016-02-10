@@ -19,16 +19,18 @@
     %ul
       %li.start
         = link_to root_path, "data-no-turbolink": true do
-          = fa_icon "th-large", style: "font-size: 15px;"
+          = fa_icon "th-large"
           %span.title
             الرئيسية
       %li
         = link_to courses_path do
           = fa_icon "graduation-cap"
-          %span.title
-            الدورات
+          %span.title الدورات
+      %li
+        = link_to articles_path do
+          = fa_icon "pencil"
+          %span.title المدونة
       %li
         = link_to "#" do
           = fa_icon "video-camera"
-          %span.title
-            مكتبة الفيديو
+          %span.title مكتبة الفيديو

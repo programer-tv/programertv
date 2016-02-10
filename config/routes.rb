@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks"
   }
@@ -15,6 +14,8 @@ Rails.application.routes.draw do
   resources :courses do
     resources :episodes, except: [:index]
   end
+
+  resources :articles
 
   get "privacy", to: "static_pages#privacy"
   get "terms", to: "static_pages#terms"

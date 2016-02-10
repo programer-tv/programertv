@@ -1,0 +1,39 @@
+.row
+  .col-lg-12
+    .grid.simple
+      .grid-title.no-border
+      .grid-body.no-border
+        = simple_form_for @article do |f|
+          .row
+            .form-group.col-lg-4.col-md-4
+              = f.input :en_title
+            .form-group.col-lg-4.col-md-4
+              = f.input :ar_title
+            .form-group.col-lg-4.col-md-4
+              = f.input :author
+          .row
+            .form-group.col-lg-12
+              = f.input :content,
+                        as: :ckeditor,
+                        input_html: { ckeditor: { toolbar: "Full" } }
+          .row
+            .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
+              = f.input_field :active, as: :boolean, inline_label: "نشط"
+
+          .form-actions
+            - if @article.new_record?
+              = button_tag type: "submit", id: "submit",
+                           class: "btn btn-success btn-cons" do
+                = fa_icon "check"
+                %span &nbsp;تم
+              = link_to articles_path, class: "btn btn-danger btn-cons" do
+                = fa_icon "close"
+                %span &nbsp;إلغاء
+            - else
+              = button_tag type: "submit", id: "submit",
+                           class: "btn btn-success btn-cons" do
+                = fa_icon "check"
+                %span &nbsp;تم
+              = link_to @article, class: "btn btn-danger btn-cons" do
+                = fa_icon "close"
+                %span &nbsp;إلغاء
