@@ -45,12 +45,12 @@
   .col-lg-10
     .grid.simple.transparent
       = link_to edit_article_path, class: "btn btn-warning btn-cons",
-                id: "edit_course_link" do
+                id: "edit_article_link" do
         = fa_icon "pencil"
         %span &nbsp;تعديل
       = link_to article_path,
                 class: "btn btn-danger btn-cons",
-                id: "delete_course_link",
+                id: "delete_article_link",
                 method: :delete,
                 data: { "confirm": "هل أنت متأكد؟",
                         "confirm-button-text": "نعم",
