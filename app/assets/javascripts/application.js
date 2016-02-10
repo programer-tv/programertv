@@ -12,6 +12,7 @@
 //= require jquery-block-ui/jqueryblockui.min
 //= require jquery-scrollbar/jquery.scrollbar.min
 //= require jquery-numberAnimate/jquery.animateNumbers.min
+//= require masonry/masonry.min
 //= require webarch/core
 //= require webarch/chat
 
@@ -54,6 +55,16 @@ $(document).on("beforeunload", function() {
 			CKEDITOR.instances[name].destroy();
 		}
 	}
+});
+
+// masonry boxes
+$(window).on("load", function() {
+    $(".boxes").masonry({
+        itemSelector: ".box",
+        fitWidth: true,
+        gutter: 20,
+        originLeft: false,
+    });
 });
 
 function showFlashMessage(key, value) {

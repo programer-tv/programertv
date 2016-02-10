@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   has_many :episodes, dependent: :destroy
 
-	has_attached_file :image, styles: { original: "300x300" },
+	has_attached_file :image, styles: { original: "200x200" },
 										default_url: "/images/original/missing.png"
 
   extend FriendlyId

@@ -4,19 +4,15 @@
       = fa_icon "graduation-cap lg"
       %h3 الدورات
 
-.row.courses.center-block
+.row.boxes.center-block
   - @courses.each do |course|
-    .course
+    .box
       = link_to course, id: "#{dom_id(course)}" do
         .widget-item
           .tiles.white
-            .course-img.tiles-body
+            .box-img.tiles-body
               = image_tag course.image.url,
                           class: "center-block img-responsive hover-effect-img"
-          .tiles.white
-            .course-txt.tiles-body
-              .p-l-15.p-t-10.p-r-20
-                %h5.text-center= course.ar_title
 
 .row
   .col-lg-12

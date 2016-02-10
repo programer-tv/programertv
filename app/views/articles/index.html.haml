@@ -4,13 +4,13 @@
       = fa_icon "pencil lg"
       %h3 المدونة
 
-.row.courses.center-block
+.row.boxes.center-block
   - @articles.each do |article|
-    .course
+    .box
       = link_to article, id: "#{dom_id(article)}" do
         .widget-item
           .tiles.white
-            .course-img.tiles-body
+            .box-img.tiles-body
           .tiles.white
             .course-txt.tiles-body
               .p-l-15.p-t-10.p-r-20
