@@ -7,7 +7,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :twitter]
 
-  validates :username, presence: true, uniqueness: true
+  validates :username,  presence: true,  uniqueness: true
+  validates :role,      presence: true
+
+  def admin?
+    role == "admin"
+  end
+
+  def regular?
+    role == "regular"
+  end
 
 	def self.find_for_database_authentication(warden_conditions)
 		conditions = warden_conditions.dup

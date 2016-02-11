@@ -16,8 +16,8 @@
 
 .row
   .col-lg-12
-    %br
-    = link_to new_course_path, class: "btn btn-success btn-cons",
-              id: "add_new_course_link" do
-      = fa_icon "plus"
-      %span &nbsp;إنشاء دورة
+    - if policy(Course).new?
+      = link_to new_course_path, class: "btn btn-success btn-cons",
+                id: "add_new_course_link" do
+        = fa_icon "plus"
+        %span &nbsp;إنشاء دورة

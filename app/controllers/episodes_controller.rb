@@ -1,6 +1,7 @@
 class EpisodesController < ApplicationController
   before_action :find_course
   before_action :find_episode, except: [:new, :create]
+  after_action { authorize @episode }
 
   def new
     @episode = @course.episodes.build

@@ -1,8 +1,10 @@
 class CoursesController < ApplicationController
   before_action :find_course, only: [:show, :edit, :update, :destroy]
+  after_action except: [:index] { authorize @course }
 
   def index
     @courses = Course.all.order("created_at DESC")
+    authorize @courses
   end
 
   def new

@@ -16,8 +16,8 @@
 
 .row
   .col-lg-12
-    %br
-    = link_to new_article_path, class: "btn btn-success btn-cons",
-              id: "add_new_article_link" do
-      = fa_icon "plus"
-      %span &nbsp;إنشاء مقال
+    -if policy(Article).new?
+      = link_to new_article_path, class: "btn btn-success btn-cons",
+                id: "add_new_article_link" do
+        = fa_icon "plus"
+        %span &nbsp;إنشاء مقال

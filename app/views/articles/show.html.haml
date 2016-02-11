@@ -44,17 +44,20 @@
 .row
   .col-lg-10
     .grid.simple.transparent
-      = link_to edit_article_path, class: "btn btn-warning btn-cons",
-                id: "edit_article_link" do
-        = fa_icon "pencil"
-        %span &nbsp;تعديل
-      = link_to article_path,
-                class: "btn btn-danger btn-cons",
-                id: "delete_article_link",
-                method: :delete,
-                data: { "confirm": "هل أنت متأكد؟",
-                        "confirm-button-text": "نعم",
-                        "cancel-button-text": "لا",
-                        "confirm-button-color": "#F35958" } do
-        = fa_icon "trash-o"
-        %span &nbsp;حذف
+      - if policy(@article).edit?
+        = link_to edit_article_path, class: "btn btn-warning btn-cons",
+                  id: "edit_article_link" do
+          = fa_icon "pencil"
+          %span &nbsp;تعديل
+
+      - if policy(@article).destroy?
+        = link_to article_path,
+                  class: "btn btn-danger btn-cons",
+                  id: "delete_article_link",
+                  method: :delete,
+                  data: { "confirm": "هل أنت متأكد؟",
+                          "confirm-button-text": "نعم",
+                          "cancel-button-text": "لا",
+                          "confirm-button-color": "#F35958" } do
+          = fa_icon "trash-o"
+          %span &nbsp;حذف

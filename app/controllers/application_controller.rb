@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  include Pundit
+  after_action :verify_authorized, unless: :devise_controller?
+
   before_action :authenticate_user!
   before_action :devise_user_params, if: :devise_controller?
 

@@ -3,5 +3,6 @@ FactoryGirl.define do
     username { FFaker::Internet.user_name }
     email    { FFaker::Internet.email }
     password { FFaker::Internet.password }
+    role     "regular"
   end
 end

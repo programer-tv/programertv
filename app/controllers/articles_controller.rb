@@ -1,8 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
+  after_action except: [:index] { authorize @article }
 
   def index
     @articles = Article.all.order("created_at DESC")
+    authorize @articles
   end
 
   def new

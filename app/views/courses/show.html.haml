@@ -61,27 +61,32 @@
                 = image_tag episode.image.url, class: "bg-img"
                 = image_tag "logo_play.png", class: "play"
               .episode-txt= episode.ar_title
-        %br
-        = link_to new_course_episode_path(@course),
-                  class: "btn btn-success btn-cons",
-                  id: "add_new_course_episode_link" do
-          = fa_icon "plus"
-          %span &nbsp;إضافة حلقة
+
+        - if policy(Episode).new?
+          %br
+          = link_to new_course_episode_path(@course),
+                    class: "btn btn-success btn-cons",
+                    id: "add_new_course_episode_link" do
+            = fa_icon "plus"
+            %span &nbsp;إضافة حلقة
 
 .row
   .col-lg-12
     .grid.simple.transparent
-      = link_to edit_course_path, class: "btn btn-warning btn-cons",
-                id: "edit_course_link" do
-        = fa_icon "pencil"
-        %span &nbsp;تعديل
-      = link_to course_path,
-                class: "btn btn-danger btn-cons",
-                id: "delete_course_link",
-                method: :delete,
-                data: { "confirm": "هل أنت متأكد؟",
-                        "confirm-button-text": "نعم",
-                        "cancel-button-text": "لا",
-                        "confirm-button-color": "#F35958" } do
-        = fa_icon "trash-o"
-        %span &nbsp;حذف
+      - if policy(@course).edit?
+        = link_to edit_course_path, class: "btn btn-warning btn-cons",
+                  id: "edit_course_link" do
+          = fa_icon "pencil"
+          %span &nbsp;تعديل
+
+      - if policy(@course).destroy?
+        = link_to course_path,
+                  class: "btn btn-danger btn-cons",
+                  id: "delete_course_link",
+                  method: :delete,
+                  data: { "confirm": "هل أنت متأكد؟",
+                          "confirm-button-text": "نعم",
+                          "cancel-button-text": "لا",
+                          "confirm-button-color": "#F35958" } do
+          = fa_icon "trash-o"
+          %span &nbsp;حذف
