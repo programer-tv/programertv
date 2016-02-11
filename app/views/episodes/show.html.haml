@@ -27,7 +27,8 @@
     .grid.simple.horizontal.green
       .grid-title
         %h4
-          %span.semi-bold= @episode.ar_title
+          %span.semi-bold
+            = @course.ar_title + " - " + @episode.ar_title
         .tools
           %a{ href: "javascript:;", class: "collapse" }
           %a{ href: "javascript:;", class: "reload" }

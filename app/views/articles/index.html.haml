@@ -11,10 +11,8 @@
         .widget-item
           .tiles.white
             .box-img.tiles-body
-          .tiles.white
-            .course-txt.tiles-body
-              .p-l-15.p-t-10.p-r-20
-                %h5.text-center= article.ar_title
+              = image_tag article.image.url,
+                          class: "center-block img-responsive hover-effect-img"
 
 .row
   .col-lg-12

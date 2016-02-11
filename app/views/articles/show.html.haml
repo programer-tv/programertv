@@ -20,9 +20,10 @@
           %span.semi-bold= @article.ar_title
         %br
         %span.small
-          = l(@article.created_at, format: "%B %d, %Y")
-          | بقلم:
+          بقلم:
           = @article.author
+          %br
+          = l(@article.created_at, format: "%B %d, %Y")
       .grid-body
         %p#course_description= @article.content.html_safe
         .social-buttons

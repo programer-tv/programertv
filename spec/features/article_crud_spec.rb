@@ -7,9 +7,13 @@ RSpec.describe "create article", js: true do
     signin(create(:user))
     visit articles_path
     click_on "add_new_article_link"
+    # remove overlapping element
+    page.execute_script("document.getElementById('article_image')." +
+                        "style.position = 'relative';")
   end
 
   it "succeeds with valid attributes" do
+    attach_file "article_image"        , "app/assets/images/logo_bg_big.png"
     fill_in "article_ar_title"         , with: article.ar_title
     fill_in "article_en_title"         , with: article.en_title
     fill_in "article_author"           , with: article.author
@@ -21,6 +25,7 @@ RSpec.describe "create article", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "article_image"        , nil
     fill_in "article_ar_title"         , with: nil
     fill_in "article_en_title"         , with: nil
     fill_in "article_author"           , with: nil
@@ -39,9 +44,13 @@ RSpec.describe "update article", js: true do
     visit articles_path
     click_on "article_#{a.id}"
     click_on "edit_article_link"
+    # remove overlapping element
+    page.execute_script("document.getElementById('article_image')." +
+                        "style.position = 'relative';")
   end
 
   it "succeeds with valid attribures" do
+    attach_file "article_image"        , "app/assets/images/logo_bg_big.png"
     fill_in "article_ar_title"         , with: article.ar_title
     fill_in "article_en_title"         , with: article.en_title
     fill_in "article_author"           , with: article.author
@@ -53,6 +62,7 @@ RSpec.describe "update article", js: true do
   end
 
   it "fails with invalid attributes" do
+    attach_file "article_image"        , nil
     fill_in "article_ar_title"         , with: nil
     fill_in "article_en_title"         , with: nil
     fill_in "article_author"           , with: nil
