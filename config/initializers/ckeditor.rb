@@ -40,3 +40,8 @@ Ckeditor.setup do |config|
   # Configure authorization with pundit
   config.authorize_with :pundit
 end
+
+# Skipt pundit authorization
+class Ckeditor::ApplicationController < ApplicationController
+  skip_after_action :verify_authorized
+end
