@@ -62,7 +62,7 @@ $(window).on("load", function() {
     $(".boxes").masonry({
         itemSelector: ".box",
         fitWidth: true,
-        gutter: 20,
+        gutter: 25,
         originLeft: false,
     });
 });

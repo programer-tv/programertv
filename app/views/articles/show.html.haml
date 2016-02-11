@@ -18,14 +18,13 @@
       .grid-title
         %h4
           %span.semi-bold= @article.ar_title
+        %br
+        %span.small
+          = l(@article.created_at, format: "%B %d, %Y")
+          | بقلم:
+          = @article.author
       .grid-body
         %p#course_description= @article.content.html_safe
-        %p
-          الكاتب:
-          = @article.author
-          %br
-          تاريخ النشر:
-          = @article.created_at.strftime("%d-%m-%Y")
         .social-buttons
           %span= facebook_button(request.original_url)
           %span= tweet_article_button(request.original_url, @article.ar_title)
