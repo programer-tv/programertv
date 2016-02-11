@@ -1,0 +1,9 @@
+ar:
+  ckeditor:
+    page_title: "مدير ملفات CKEditor"
+    confirm_delete: "حذف الملف؟"
+    buttons:
+      cancel: "إلغاء"
+      upload: "رفع"
+      delete: "حذف"
+      next: "التالي"
