@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe EpisodesController, type: :controller do
-  before(:example) { sign_in(create(:user)) }
+  before(:example) { sign_in(create(:admin)) }
 
   describe "GET #new" do
     let(:course) { create(:course) }

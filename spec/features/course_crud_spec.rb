@@ -1,10 +1,10 @@
 require "rails_helper"
 
-RSpec.describe "create course", js: true do
+RSpec.describe "admin create course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     visit courses_path
     click_on "add_new_course_link"
     # remove overlapping element
@@ -37,11 +37,11 @@ RSpec.describe "create course", js: true do
   end
 end
 
-RSpec.describe "update course", js: true do
+RSpec.describe "admin update course", js: true do
   let(:course) { build(:course) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     c = create(:course)
     visit courses_path
     click_on "course_#{c.id}"
@@ -77,9 +77,9 @@ RSpec.describe "update course", js: true do
   end
 end
 
-RSpec.describe "delete course", js: true do
+RSpec.describe "admin delete course", js: true do
   it "succeeds" do
-    signin(create(:user))
+    signin(create(:admin))
     course = create(:course)
     visit courses_path
     click_on "course_#{course.id}"

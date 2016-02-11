@@ -1,11 +1,11 @@
 require "rails_helper"
 
-RSpec.describe "create episode", js: true do
+RSpec.describe "admin create episode", js: true do
   let!(:course) { create(:course) }
   let(:episode) { build(:episode, course: course) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     visit courses_path
     click_on "course_#{course.id}"
     click_on "add_new_course_episode_link"
@@ -39,11 +39,11 @@ RSpec.describe "create episode", js: true do
   end
 end
 
-RSpec.describe "update episode", js: true do
+RSpec.describe "admin update episode", js: true do
   let(:episode) { create(:episode) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     visit course_episode_path(episode.course, episode)
     click_on "edit_course_episode_link"
     # remove overlapping element
@@ -77,9 +77,9 @@ RSpec.describe "update episode", js: true do
   end
 end
 
-RSpec.describe "delete episode", js: true do
+RSpec.describe "admin delete episode", js: true do
   it "succeeds" do
-    signin(create(:user))
+    signin(create(:admin))
     episode = create(:episode)
     visit courses_path
     click_on "course_#{episode.course.id}"

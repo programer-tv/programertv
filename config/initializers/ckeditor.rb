@@ -36,4 +36,7 @@ Ckeditor.setup do |config|
   # By default: nil (no limit)
   # config.assets_languages = ['en', 'uk']
   # config.assets_plugins = ['image', 'smiley']
+
+  # Configure authorization with pundit
+  config.authorize_with :pundit
 end

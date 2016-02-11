@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ArticlesController, type: :controller do
-  before(:example) { sign_in(create(:user)) }
+  before(:example) { sign_in(create(:admin)) }
 
   describe "GET #index" do
     before(:example) { get :index }

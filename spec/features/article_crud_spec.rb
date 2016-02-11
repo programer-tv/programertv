@@ -1,10 +1,10 @@
 require "rails_helper"
 
-RSpec.describe "create article", js: true do
+RSpec.describe "admin create article", js: true do
   let(:article) { build(:article) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     visit articles_path
     click_on "add_new_article_link"
     # remove overlapping element
@@ -35,11 +35,11 @@ RSpec.describe "create article", js: true do
   end
 end
 
-RSpec.describe "update article", js: true do
+RSpec.describe "admin update article", js: true do
   let(:article) { build(:article) }
 
   before(:example) do
-    signin(create(:user))
+    signin(create(:admin))
     a = create(:article)
     visit articles_path
     click_on "article_#{a.id}"
@@ -72,9 +72,9 @@ RSpec.describe "update article", js: true do
   end
 end
 
-RSpec.describe "delete article", js: true do
+RSpec.describe "admin delete article", js: true do
   it "succeeds" do
-    signin(create(:user))
+    signin(create(:admin))
     article = create(:article)
     visit articles_path
     click_on "article_#{article.id}"
