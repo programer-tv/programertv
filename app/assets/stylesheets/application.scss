@@ -6,6 +6,7 @@
 @import "sweet-alert";
 @import "jquery-scrollbar/jquery.scrollbar";
 @import "animate/animate";
+@import "highlight/railscasts";
 @import "webarch/rtl/style";
 @import "webarch/rtl/responsive";
 @import "fonts";
@@ -179,7 +180,6 @@ body {
       margin-bottom: 25px;
       width: 200px;
       height: 200px;
-
       .box-img {
         padding: 0;
         overflow: hidden;
@@ -189,10 +189,32 @@ body {
 
   .sweet-alert {
     direction: ltr;
-
     h2 {
       direction: rtl;
     }
+  }
+
+  pre, code {
+    white-space: pre;
+    overflow: scroll;
+    direction: ltr;
+  }
+
+  pre {
+    background-color: transparent;
+  }
+
+  code:hover {
+    background-color: #232323;
+  }
+
+  .hljs {
+    direction: ltr;
+    display: inline-block;
+    overflow-x: visible;
+    padding: 0.5em;
+    padding-right: 100%;
+    -webkit-text-size-adjust: none;
   }
 }
 

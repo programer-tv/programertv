@@ -7,6 +7,7 @@
 //= require bootstrap-filestyle/bootstrap-filestyle.min
 //= require ckeditor/init
 //= require ckeditor/config
+//= require highlight/highlight.pack
 //= require pace/pace.min
 //= require breakpoints/breakpoints.min
 //= require jquery-unveil/jquery.unveil.min
@@ -23,6 +24,9 @@ $(document).ready(function() {
     // Force load
     window.scrollTo(0, 1);
     window.scrollTo(0, 0);
+
+    // Load highlight.js
+    hljs.initHighlightingOnLoad();
 
     // Remove facebook callback weird characters
     if (window.location.hash.search('#_') >= 0)
