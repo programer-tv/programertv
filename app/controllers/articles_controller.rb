@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   after_action except: [:index] { authorize @article }
 
   def index
-    @articles = Article.all.order("created_at DESC")
+    @articles = Article.get_articles(current_user)
     authorize @articles
   end
 

@@ -27,4 +27,21 @@ describe Course, type: :model do
       expect(course.get_sequential_episodes.map(&:sequence)).to match([1, 2, 3])
     end
   end
+
+  it "gets all active/inactive courses if user is admin" do
+    admin_user = create(:admin)
+    create(:course, active: false)
+    create(:course, active: true)
+    create(:course, active: false)
+    expect(Course.get_courses(admin_user).map(&:active)). to \
+      match([false, true, false])
+  end
+
+  it " gets only active courses if regular user" do
+    regular_user = create(:user)
+    create(:course, active: false)
+    create(:course, active: true)
+    create(:course, active: false)
+    expect(Course.get_courses(regular_user).map(&:active)). to match([true])
+  end
 end

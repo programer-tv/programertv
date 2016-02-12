@@ -16,4 +16,21 @@ RSpec.describe Article, type: :model do
     it { should validate_attachment_content_type(:image).allowing("image/jpeg",
                                                                   "image/png") }
   end
+
+  it "gets all active/inactive articles if user is admin" do
+    admin_user = create(:admin)
+    create(:article, active: false)
+    create(:article, active: true)
+    create(:article, active: false)
+    expect(Article.get_articles(admin_user).map(&:active)). to \
+      match([false, true, false])
+  end
+
+  it " gets only active articles if regular user" do
+    regular_user = create(:user)
+    create(:article, active: false)
+    create(:article, active: true)
+    create(:article, active: false)
+    expect(Article.get_articles(regular_user).map(&:active)). to match([true])
+  end
 end

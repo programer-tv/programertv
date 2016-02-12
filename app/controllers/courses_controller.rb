@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
   after_action except: [:index] { authorize @course }
 
   def index
-    @courses = Course.all.order("created_at DESC")
+    @courses = Course.get_courses(current_user)
     authorize @courses
   end
 

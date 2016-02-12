@@ -20,6 +20,14 @@ class Course < ActiveRecord::Base
     episodes.order("sequence ASC")
   end
 
+  def self.get_courses(user)
+    if user.admin?
+      Course.all.order("created_at DESC")
+    else
+      Course.where(active: true).order("created_at DESC")
+    end
+  end
+
   def should_generate_new_friendly_id?
     en_title_changed?
   end
