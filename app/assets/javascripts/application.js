@@ -6,6 +6,7 @@
 //= require sweet-alert-confirm
 //= require bootstrap-filestyle/bootstrap-filestyle.min
 //= require ckeditor/init
+//= require ckeditor/config
 //= require pace/pace.min
 //= require breakpoints/breakpoints.min
 //= require jquery-unveil/jquery.unveil.min
