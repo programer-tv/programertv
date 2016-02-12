@@ -6,16 +6,16 @@
   .col-md-5.col-md-offset-1
     %h2 دخول
     %p
-      مرحبا بك في programer.tv إذا لم يسبق لك وأن سجلت في موقعنا فيمكنك
+      مرحبا بك في programer.tv إذا لم يسبق لك وأن سجلت فيمكنك
       = link_to "التسجيل هنا", new_user_registration_path,
                 id: "user_signup_link"
-      أو يمكنك تسجيل الدخول عبر Facebook أو Twitter.
+      أو يمكنك تسجيل الدخول عبر فيسبوك أو تويتر.
     %br
-    = link_to "تسجيل الدخول عبر Facebook",
+    = link_to "تسجيل الدخول عبر فيسبوك",
               user_omniauth_authorize_path(:facebook),
               id: "facebook_login_link",
               class: "btn btn-block btn-info col-md-12"
-    = link_to "تسجيل الدخول عبر Twitter",
+    = link_to "تسجيل الدخول عبر تويتر",
               user_omniauth_authorize_path(:twitter),
               id: "twitter_login_link",
               class: "btn btn-block btn-success col-md-12"
