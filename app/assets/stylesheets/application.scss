@@ -15,6 +15,10 @@ html * {
   font-family: "droid-sans";
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
 	.header {
 		.header-seperation {
@@ -215,6 +219,37 @@ body {
     padding: 0.5em;
     padding-right: 100%;
     -webkit-text-size-adjust: none;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  color: #BCBDBF;
+
+  &.footer {
+    p {
+      font-size: 11px;
+    }
+
+    a {
+      color: #BCBDBF !important;
+      font-size: 11px;
+      &:hover {
+        color: #505458 !important;
+      }
+    }
+  }
+
+  .copyright {
+    direction: ltr !important;
+    span {
+      font-size: 12px;
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      text-align: center;
+    }
   }
 }
 
