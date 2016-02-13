@@ -204,7 +204,7 @@ body {
 
   pre, code {
     white-space: pre;
-    overflow: scroll;
+    overflow: hidden;
     direction: ltr;
   }
 
@@ -219,7 +219,7 @@ body {
   .hljs {
     direction: ltr;
     display: inline-block;
-    overflow-x: visible;
+    overflow-x: hidden;
     padding: 0.5em;
     padding-right: 100%;
     -webkit-text-size-adjust: none;
