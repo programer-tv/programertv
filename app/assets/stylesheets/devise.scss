@@ -31,6 +31,37 @@ html * {
   margin-bottom: 30px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  color: #BCBDBF;
+
+  &.footer {
+    p {
+      font-size: 11px;
+    }
+
+    a {
+      color: #BCBDBF !important;
+      font-size: 11px;
+      &:hover {
+        color: #505458 !important;
+      }
+    }
+  }
+
+  .copyright {
+    direction: ltr !important;
+    span {
+      font-size: 12px;
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+      text-align: center;
+    }
+  }
+}
+
 @media only screen and (max-width : 992px) {
   .login-img {
     margin-top: 10px;

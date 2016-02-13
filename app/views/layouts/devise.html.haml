@@ -8,8 +8,21 @@
     = stylesheet_link_tag 'devise', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'devise', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body.rtl.error-body.no-top
-    .container.animated.fadeIn
+  %body.rtl.error-body.no-top.animated.fadeIn
+    .container
       - flash.each do |key, value|
         .flash-message{ key: key, value: value }
       = yield
+
+    %footer.footer
+      .container.text-center
+        .row.copyright
+          .col-lg-12
+            %span.small
+              = link_to "سياسة الخصوصية", privacy_path
+              &nbsp;|&nbsp;
+              = link_to "شروط الخدمة", terms_path
+              %br
+              ©
+              = Time.new.year
+              programer.tv
