@@ -119,7 +119,7 @@ RSpec.describe 'password reset', type: :mailer do
       click_on "reset_password_link"
       expect(ActionMailer::Base.deliveries.size).to eq(1)
       email = ActionMailer::Base.deliveries.first
-      expect(email.from).to match(["no-reply@programer.tv"])
+      expect(email.from).to match(["noreply@programer.tv"])
       expect(email.subject).to eq("تعليمات إعادة تعيين كلمة المرور")
     end
   end
