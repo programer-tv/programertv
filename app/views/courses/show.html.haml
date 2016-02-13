@@ -17,7 +17,17 @@
     .grid.simple.transparent
       .embed-responsive.embed-responsive-16by9
         = video_iframe @course
-      .social-buttons
+      .video-info-bar.pull-left
+        %span.small
+          المقدم:
+          = @course.instructor
+          %br
+          عدد الحلقات:
+          = @course.episodes.count
+          %br
+          مدة العرض:
+          -# = @course.duration
+      .social-buttons.pull-right
         %span= facebook_button(request.original_url)
         %span= tweet_video_button(request.original_url, @course.ar_title)
 

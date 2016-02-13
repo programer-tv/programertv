@@ -85,23 +85,27 @@ body {
 		&.transparent {
 			margin-bottom: 10px;
 
-			.social-buttons {
-				margin-top: 10px;
-				font-size: 1px;
+      .video-info-bar {
+        margin: 10px 0 10px 0;
+      }
 
-				iframe {
-					vertical-align: middle;
-				}
+      .social-buttons {
+        font-size: 1px;
+        margin: 10px 0 10px 0;
 
-				span {
-					display: inline-block;
-          margin-left: 2px;
-				}
+        iframe {
+          vertical-align: middle;
+        }
 
-				.twitter-share-button[style] {
-					vertical-align: text-bottom !important;
-				}
-			}
+        span {
+          display: inline-block;
+          margin-right: 2px;
+        }
+
+        .twitter-share-button[style] {
+          vertical-align: text-bottom !important;
+        }
+      }
 		}
 	}
 

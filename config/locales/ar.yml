@@ -37,6 +37,7 @@ ar:
       course:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية
+        instructor: المقدم
         description: الوصف
         video_id: معرف الفيديو
         video_host: موفر الفيديو
@@ -46,6 +47,7 @@ ar:
       episode:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية
+        duration: مدة العرض (بالثواني)
         description: الوصف
         video_id: معرف الفيديو
         video_host: موفر الفيديو

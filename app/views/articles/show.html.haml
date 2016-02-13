@@ -24,6 +24,9 @@
           = @article.author
           %br
           = l(@article.created_at, format: "%B %d, %Y")
+        .social-buttons
+          %span= facebook_button(request.original_url)
+          %span= tweet_article_button(request.original_url, @article.ar_title)
       .grid-body
         %p#course_description= @article.content.html_safe
         .social-buttons

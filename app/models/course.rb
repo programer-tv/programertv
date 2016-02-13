@@ -9,6 +9,7 @@ class Course < ActiveRecord::Base
 
   validates :ar_title,     presence: true
   validates :en_title,     presence: true,  uniqueness: true
+  validates :instructor,   presence: true
   validates :description,  presence: true
   validates :video_host,   presence: true
   validates :video_id,     presence: true
