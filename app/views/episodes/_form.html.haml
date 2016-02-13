@@ -9,7 +9,7 @@
               = image_tag @episode.image.url(:original)
               %br
               %br
-              * لأفضل النتائج يرجى تحميل صورة ذات أبعاد 1280x720
+              %span.small * لأفضل النتائج يرجى تحميل صورة ذات أبعاد 1280x720
           .row
             .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
               = f.input :image, as: :file, label: false, class: "filestyle"
@@ -31,6 +31,9 @@
               = f.input :description,
                         as: :ckeditor,
                         input_html: { ckeditor: { toolbar: "Full" } }
+              %span.small
+                * لأفضل النتائج يرجي إحتواء الشفرة المصدرية داخل &lt;pre&gt;&lt;
+                code class=&quot;ruby&quot;&gt;&lt;&#47;code&gt;&lt;&#47;pre&gt;
 
           .form-actions
             - if @episode.new_record?
