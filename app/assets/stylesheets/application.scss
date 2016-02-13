@@ -6,7 +6,7 @@
 @import "sweet-alert";
 @import "jquery-scrollbar/jquery.scrollbar";
 @import "animate/animate";
-@import "highlight/railscasts";
+@import "highlight/monokai-sublime";
 @import "webarch/rtl/style";
 @import "webarch/rtl/responsive";
 @import "fonts";
@@ -204,12 +204,11 @@ body {
 
   pre, code {
     white-space: pre;
-    overflow: hidden;
     direction: ltr;
-  }
-
-  pre {
-    background-color: transparent;
+    padding: 0;
+    overflow-x: scroll;
+    background-color: #232323;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
 
   code:hover {
