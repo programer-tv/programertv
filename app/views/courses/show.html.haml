@@ -26,7 +26,7 @@
           = @course.episodes.count
           %br
           مدة العرض:
-          -# = @course.duration
+          = @course.duration
       .social-buttons.pull-right
         %span= facebook_button(request.original_url)
         %span= tweet_video_button(request.original_url, @course.ar_title)
@@ -70,7 +70,10 @@
               .episode-img
                 = image_tag episode.image.url, class: "bg-img"
                 = image_tag "logo_play.png", class: "play"
-              .episode-txt= episode.ar_title
+              .episode-txt
+                = episode.ar_title
+                %br
+                %span.small.muted= distance_of_time_in_words(episode.duration)
 
         - if policy(Episode).new?
           %br

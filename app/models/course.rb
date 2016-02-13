@@ -1,4 +1,6 @@
 class Course < ActiveRecord::Base
+  include ActionView::Helpers::DateHelper
+
   has_many :episodes, dependent: :destroy
 
 	has_attached_file :image, styles: { original: "200x200" },
@@ -19,6 +21,14 @@ class Course < ActiveRecord::Base
 
   def get_sequential_episodes
     episodes.order("sequence ASC")
+  end
+
+  def duration
+    if episodes.any?
+      distance_of_time_in_words(episodes.map(&:duration).sum)
+    else
+      distance_of_time_in_words(0)
+    end
   end
 
   def self.get_courses(user)

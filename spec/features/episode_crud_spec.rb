@@ -18,6 +18,7 @@ RSpec.describe "admin create episode", js: true do
     attach_file "episode_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
+    fill_in "episode_duration"             , with: episode.duration
     fill_in_ckeditor "episode_description" , with: episode.description
     fill_in "episode_sequence"             , with: episode.sequence
     select episode.video_host.to_s         , from: "episode_video_host"
@@ -31,6 +32,7 @@ RSpec.describe "admin create episode", js: true do
     attach_file "episode_image"            , nil
     fill_in "episode_en_title"             , with: nil
     fill_in "episode_ar_title"             , with: nil
+    fill_in "episode_duration"             , with: nil
     fill_in_ckeditor "episode_description" , with: nil
     fill_in "episode_sequence"             , with: nil
     fill_in "episode_video_id"             , with: nil
@@ -56,6 +58,7 @@ RSpec.describe "admin update episode", js: true do
     attach_file "episode_image"            , "app/assets/images/logo_bg_big.png"
     fill_in "episode_en_title"             , with: episode.en_title
     fill_in "episode_ar_title"             , with: episode.ar_title
+    fill_in "episode_duration"             , with: episode.duration
     fill_in_ckeditor "episode_description" , with: episode.description
     fill_in "episode_sequence"             , with: episode.sequence
     select episode.video_host.to_s         , from: "episode_video_host"
@@ -69,6 +72,7 @@ RSpec.describe "admin update episode", js: true do
     attach_file "episode_image"            , nil
     fill_in "episode_en_title"             , with: nil
     fill_in "episode_ar_title"             , with: nil
+    fill_in "episode_duration"             , with: nil
     fill_in_ckeditor "episode_description" , with: nil
     fill_in "episode_sequence"             , with: nil
     fill_in "episode_video_id"             , with: nil

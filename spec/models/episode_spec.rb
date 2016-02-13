@@ -7,6 +7,7 @@ describe Episode, type: :model do
     it { should validate_uniqueness_of(:en_title).scoped_to(:course_id) }
     it { should validate_presence_of(:ar_title) }
     it { should validate_uniqueness_of(:ar_title).scoped_to(:course_id) }
+    it { should validate_presence_of(:duration) }
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:sequence) }
     it { should validate_numericality_of(:sequence).is_greater_than(0) }

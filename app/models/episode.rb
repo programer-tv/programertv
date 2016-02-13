@@ -9,6 +9,7 @@ class Episode < ActiveRecord::Base
 
   validates :en_title    , presence: true , uniqueness: { scope: :course_id }
   validates :ar_title    , presence: true , uniqueness: { scope: :course_id }
+  validates :duration    , presence: true
   validates :description , presence: true
   validates :sequence    , presence: true , numericality: { greater_than: 0 } ,
                            uniqueness: { scope: :course_id }
