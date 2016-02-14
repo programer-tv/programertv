@@ -14,15 +14,16 @@
         .flash-message{ key: key, value: value }
       = yield
 
-    %footer.footer
-      .container.text-center
-        .row.copyright
-          .col-lg-12
-            %span.small
-              = link_to "سياسة الخصوصية", privacy_path
-              &nbsp;|&nbsp;
-              = link_to "شروط الخدمة", terms_path
-              %br
-              ©
-              = Time.new.year
-              programer.tv
+      %div{ style: "height: 45px;" }
+      %footer.footer
+        .container.text-center
+          .row.copyright
+            .col-lg-12
+              %span.small
+                = link_to "سياسة الخصوصية", privacy_path
+                &nbsp;|&nbsp;
+                = link_to "شروط الخدمة", terms_path
+                %br
+                ©
+                = Time.new.year
+                programer.tv

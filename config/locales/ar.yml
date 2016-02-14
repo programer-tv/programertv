@@ -27,6 +27,10 @@ ar:
     destroy:
       success: "تم حذف المقال بنجاح."
 
+  recaptcha:
+    errors:
+      incorrect-captcha-sol: "لا يسمح بتسجيل برامج الروبوت."
+
   activerecord:
     models:
       course: الدورة

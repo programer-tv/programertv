@@ -29,6 +29,7 @@ gem 'omniauth-twitter',            '~> 1.2',   '>= 1.2.1'
 gem 'activerecord-session_store',  '~> 0.1.2'
 gem 'friendly_id',                 '~> 5.1'
 gem 'pundit',                      '~> 1.1'
+gem 'recaptcha',                   '~> 1.1',   require: "recaptcha/rails"
 
 group :development, :test do
   gem 'byebug'

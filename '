@@ -11,11 +11,11 @@
       = link_to "الدخول هنا", new_user_session_path
       أو يمكنك تسجيل الدخول عبر فيسبوك أو تويتر.
     %br
-    = link_to "تسجيل الدخول عبر فيسبوك",
+    = link_to "تسجيل الدخول عبر Facebook",
               user_omniauth_authorize_path(:facebook),
               id: "facebook_login_link",
               class: "btn btn-block btn-info col-md-12"
-    = link_to "تسجيل الدخول عبر تويتر",
+    = link_to "تسجيل الدخول عبر Twitter",
               user_omniauth_authorize_path(:twitter),
               id: "twitter_login_link",
               class: "btn btn-block btn-success col-md-12"
@@ -32,7 +32,6 @@
         = f.input :password, required: true, label: "كلمة المرور"
         = f.input :password_confirmation, required: true,
                   label: "تأكيد كلمة المرور"
-        = recaptcha_tags ssl: true, hl: "ar", theme: "light"
-        %br
+        = recaptcha_tags ssl: true, hl: "ar", theme: "dark"
         = f.button :submit, "تسجيل", id: "user_signup_link",
                   class: "btn btn-primary btn-cons"
