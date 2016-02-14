@@ -17,8 +17,6 @@
           = link_to "#page-top", class: "page-scroll"
         %li
           = link_to "نبذة", "#about", class: "page-scroll"
-        -# %li
-        -#   = link_to "طريقتنا", "#process", class: "page-scroll"
         %li
           = link_to "الدورات", "#courses", class: "page-scroll"
         %li
@@ -48,23 +46,15 @@
         %hr.colored
 
     .row.text-center.content-row
-      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
         .about-content
           = fa_icon "eye 4x"
           %h3 شاهد بنقاوة عالية
           %p
-            شاهد العديد من الفيديوهات التعليمية لأقوى لغات وأدوات البرمجة مشروحة
+            شاهد العديد من الفيديوهات التعليمية لأحدث لغات وأدوات البرمجة مشروحة
             لك باللغة العربية و بنقاوة 1080p HD العالية الجودة.
 
-      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
-        .about-content
-          = fa_icon "users 4x"
-          %h3 تعلم من الأفضل
-          %p
-            تعلم مباشرة من أفضل المبرمجون العرب ذوو الخبرات والكفائات العالية
-            في مهارات الحاسب و البرمجة على النطاقين الإحترافي والأكاديمي.
-
-      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
         .about-content
           = fa_icon "smile-o 4x"
           %h3 تعلم بأسلوب مرح
@@ -72,7 +62,7 @@
             من أهم أهدافنا أن نوصل إليك المعلومات والمبادئ الصعبة بأسلوب سهل و
             مرح بحيث يسهل عليك فهمها و إستخدامها.
 
-      .col-md-3.col-sm-6.wow.animated.fadeIn{ "data-wow-delay": ".8s" }
+      .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".8s" }
         .about-content
           = fa_icon "code 4x"
           %h3 طبق ما تتعلم
@@ -81,69 +71,14 @@
             عملية وواقعية لكي تتكون لديك فكرة شاملة وواضحة.
 
 %aside.cta-quote
--# %section#process.services
--#   .container
--#     .row.text-center
--#       .col-lg-12.wow.animated.fadeIn
--#         %h2
--#           طريقتنا
--#         %hr.colored
--#         %p
--#           نظرة عامة حول كيفية شرح الدورات.
--#
--#     .row.content-row
--#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".2s" }
--#         .media
--#           .pull-right
--#             = fa_icon "clipboard"
--#           .media-body
--#             %h3.media-heading
--#               الخطة
--#             %ul
--#               %li
--#                 مقدمة تعريفية
--#               %li
--#                 أهداف الدورة
--#               %li
--#                 الأدوات المستخدمة
--#
--#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".4s" }
--#         .media
--#           .pull-right
--#             = fa_icon "cog"
--#           .media-body
--#             %h3.media-heading
--#               التحضير
--#             %ul
--#               %li
--#                 تقديم خلفية نظرية
--#               %li
--#                 إنشاء بيئة عمل
--#               %li
--#                 شرح أمثلة
--#
--#       .col-md-4.wow.animated.fadeIn{ "data-wow-delay": ".6s" }
--#         .media
--#           .pull-right
--#             = fa_icon "rocket"
--#           .media-body
--#             %h3.media-heading
--#               التنفيذ
--#             %ul
--#               %li
--#                 تطبيق خطوة بخطوة
--#               %li
--#                 كتابة برامج واقعية
--#               %li
--#                 تعرف على المزيد
--#
+
 %section#courses.bg-gray
   .container.text-center.wow.animated.fadeIn
     %h2
       الدورات
     %hr.colored
     %p
-      بعض الدورات اللتي نقدمها.
+      بعض الدورات اللتي نقدمها
 
 %section.portfolio-carousel.wow.fadeIn
   #ruby.item
@@ -154,25 +89,29 @@
         .col-md-4
           .project-details
             %span.project-name
-              Ruby
+              روبي
             %span.project-description
               تعلم برمجة الحاسب بلغة روبي
-            %hr.colored
-            = link_to "#", class: "btn btn-outline-light" do
-              سجل الآن
+            %br
+            = link_to new_user_session_path, class: "btn btn-outline-light" do
+              تعلم الآن
               = fa_icon "long-arrow-left fw"
 
-  #rails.item
+  #commandline.item
     .container-fluid
       .row
         .col-md-8.hidden-xs
-          = image_tag "bg_green.png", class: "img-responsive portfolio-image"
-        .col-md-4.col-md-push-8
+          = image_tag "commandline_course_ad.png", class: "img-responsive portfolio-image"
+        .col-md-4
           .project-details
             %span.project-name
-              Ruby
+              سطر الأوامر
             %span.project-description
-              Hello World
+              تحكم بالحساب عبر سطر الأوامر
+            %br
+            = link_to new_user_session_path, class: "btn btn-outline-light" do
+              تعلم الآن
+              = fa_icon "long-arrow-left fw"
 
 %footer.footer
   .container.text-center
