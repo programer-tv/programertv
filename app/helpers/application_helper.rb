@@ -74,11 +74,11 @@ module ApplicationHelper
                 "data-show-faces='false' data-share='false'></div>")
   end
 
-  def get_user_avatar(user)
+  def get_user_avatar(user, size)
     if not user.provider.nil? and not user.image_link.nil?
-      get_social_avatar(user)
+      get_social_avatar(user, size)
     else
-      get_gravatar(user)
+      get_gravatar(user, size)
     end
   end
 
@@ -110,12 +110,14 @@ module ApplicationHelper
     "class: 'center-block' }"
   end
 
-  def get_social_avatar(user)
-    render_haml("<img src='#{user.image_link}' />")
+  def get_social_avatar(user, size)
+    # render_haml("<img src='#{user.image_link}' />")
+    image_tag user.image_link, size: size
   end
 
-  def get_gravatar(user)
+  def get_gravatar(user, size)
     digest = Digest::MD5.hexdigest(user.email)
-    render_haml("<img src='https://gravatar.com/avatar/#{digest}?d=mm' />")
+    # render_haml("<img src='https://gravatar.com/avatar/#{digest}?d=mm' />")
+    image_tag "https://gravatar.com/avatar/#{digest}?d=mm", size: size
   end
 end

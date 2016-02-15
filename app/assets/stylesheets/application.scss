@@ -7,6 +7,8 @@
 @import "jquery-scrollbar/jquery.scrollbar";
 @import "animate/animate";
 @import "highlight/monokai-sublime";
+@import "dataTables/jquery.dataTables";
+@import "dataTables/extras/dataTables.responsive";
 @import "webarch/rtl/style";
 @import "webarch/rtl/responsive";
 @import "fonts";
@@ -222,6 +224,22 @@ body {
     padding: 0.5em;
     padding-right: 100%;
     -webkit-text-size-adjust: none;
+  }
+
+  .dataTables_wrapper {
+    padding-top: 15px;
+  }
+  // .dataTables_length {
+  //   float: right !important;
+  // }
+  // .dataTables_filter {
+  //   float: left !important;
+  // }
+  .dataTables_info {
+    float: right !important;
+  }
+  .dataTables_paginate {
+    float: left !important;
   }
 }
 

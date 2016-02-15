@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder',      '~> 2.0'
 gem 'sdoc',          '~> 0.4.0',  group: :doc
 
-gem 'bootstrap-sass',              '~> 3.3',   '>= 3.3.6'
+gem 'bootstrap-sass',              '~> 3.3',                                 '>= 3.3.6'
 gem 'font-awesome-rails',          '~> 4.5'
 gem 'haml-rails',                  '~> 0.9.0'
 gem 'simple_form',                 '~> 3.2'
@@ -18,18 +18,19 @@ gem 'jquery-turbolinks',           '~> 2.1'
 gem 'sweet-alert',                 '~> 0.0.9'
 gem 'sweetalert-rails',            '~> 0.5.0'
 gem 'sweet-alert-confirm',         '~> 0.4.1'
-gem 'figaro',                      '~> 1.1',   '>= 1.1.1'
-gem 'paperclip',                   '~> 4.3',   '>= 4.3.2'
-gem 'ckeditor',                    '~> 4.1',   '>= 4.1.5'
-gem 'unicorn',                     '~> 5.0',   '>= 5.0.1'
-gem 'devise',                      '~> 3.5',   '>= 3.5.5'
+gem 'figaro',                      '~> 1.1',                                 '>= 1.1.1'
+gem 'paperclip',                   '~> 4.3',                                 '>= 4.3.2'
+gem 'ckeditor',                    '~> 4.1',                                 '>= 4.1.5'
+gem 'unicorn',                     '~> 5.0',                                 '>= 5.0.1'
+gem 'devise',                      '~> 3.5',                                 '>= 3.5.5'
 gem 'devise_security_extension',   '~> 0.9.2'
 gem 'omniauth-facebook',           '~> 3.0'
-gem 'omniauth-twitter',            '~> 1.2',   '>= 1.2.1'
+gem 'omniauth-twitter',            '~> 1.2',                                 '>= 1.2.1'
 gem 'activerecord-session_store',  '~> 0.1.2'
 gem 'friendly_id',                 '~> 5.1'
 gem 'pundit',                      '~> 1.1'
-gem 'recaptcha',                   '~> 1.1',   require: "recaptcha/rails"
+gem 'recaptcha',                   '~> 1.1',                                 require: "recaptcha/rails"
+gem 'jquery-datatables-rails',     github: "rweng/jquery-datatables-rails",  branch: "master"
 
 group :development, :test do
   gem 'byebug'

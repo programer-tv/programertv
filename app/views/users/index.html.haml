@@ -1,0 +1,33 @@
+.row
+  .col-lg-12
+    .page-title
+      = fa_icon "users lg"
+      %h3 المستخدمين
+
+.row
+  .col-lg-12
+    .grid.simple
+      .grid-body.no-border
+        .dataTables_wrapper.form-inline{ role: "grid" }
+          .table-responsive
+            %table#users-datatable.table.table-striped.datatable.responsive.no-wrap
+              %thead
+                %tr
+                  %th.text-center= User.human_attribute_name(:username)
+                  %th.text-center= User.human_attribute_name(:email)
+                  %th.text-center= User.human_attribute_name(:image_link)
+                  %th.text-center= User.human_attribute_name(:sign_in_count)
+                  %th.text-center= User.human_attribute_name(:provider)
+                  %th.text-center= User.human_attribute_name(:uid)
+                  %th.text-center= User.human_attribute_name(:role)
+              %tbody{ role: "alert" }
+                - @users.each do |user|
+                  %tr{ id: "#{dom_id(user)}" }
+                    %td= link_to user.username, user,
+                      style: "text-decoration: underline"
+                    %td= user.email
+                    %td= get_user_avatar(user, "50x50")
+                    %td= user.sign_in_count
+                    %td= user.provider
+                    %td= user.uid
+                    %td= user.role

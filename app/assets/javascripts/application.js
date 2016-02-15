@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/extras/dataTables.responsive
 //= require bootstrap
 //= require sweet-alert
 //= require sweet-alert-confirm
@@ -51,6 +53,28 @@ $(document).ready(function() {
 		buttonName: "btn btn-success btn-cons",
 		iconName: "glyphicon-cloud-upload",
 	});
+
+    // Initialize users index datatable
+    $("#users-datatable").DataTable({
+        responsive: true,
+        "language": {
+            "sProcessing":   "جاري التحميل...",
+            "sLengthMenu":   "أظهر مُدخلات _MENU_",
+            "sZeroRecords":  "لم يُعثر على أية سجلات",
+            "sInfo":         "إظهار _START_ إلى _END_ من أصل _TOTAL_ مُدخل",
+            "sInfoEmpty":    "يعرض 0 إلى 0 من أصل 0 سجلّ",
+            "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+            "sInfoPostFix":  "",
+            "sSearch":       "بحث:",
+            "sUrl":          "",
+            "oPaginate": {
+                    "sFirst":    "الأول",
+                    "sPrevious": "السابق",
+                    "sNext":     "التالي",
+                    "sLast":     "الأخير"
+            }
+        }
+    });
 });
 
 // Destroy CKEditor element before unloading page

@@ -156,20 +156,26 @@ describe ApplicationHelper, type: :helper do
     it "renders facebook avatar" do
       user = create(:user, provider: "facebook",
                     image_link: "https://example.com")
-      expect(get_user_avatar(user)).to eq("<img src='https://example.com' />\n")
+      expect(get_user_avatar(user, "200x200")).to \
+        eq('<img src="https://example.com" alt="Example" width="200" ' +
+          'height="200" />')
     end
 
     it "renders twitter avatar" do
       user = create(:user, provider: "twitter",
                     image_link: "https://example.com")
-      expect(get_user_avatar(user)).to eq("<img src='https://example.com' />\n")
+      expect(get_user_avatar(user, "50x50")).to \
+        eq('<img src="https://example.com" alt="Example" width="50" ' +
+           'height="50" />')
     end
 
     it "renders gravatar avatar" do
       user = create(:user, email: "user@example.com")
-      expect(get_user_avatar(user)).to \
-        eq("<img src='https://gravatar.com/avatar/" +
-           "b58996c504c5638798eb6b511e6f49af?d=mm' />\n")
+      expect(get_user_avatar(user, "25x25")).to \
+        eq('<img src="https://gravatar.com/avatar/' +
+           'b58996c504c5638798eb6b511e6f49af?d=mm" ' +
+           'alt="B58996c504c5638798eb6b511e6f49af?d=mm" width="25" ' +
+           'height="25" />')
     end
   end
 end

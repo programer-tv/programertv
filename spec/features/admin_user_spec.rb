@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "admin user" do
-  before(:example) { signin(create(:admin)) }
+  before(:example) { signin(create(:admin, id: 1)) }
 
   context "courses" do
     it "can view all courses" do
@@ -28,6 +28,20 @@ RSpec.describe "admin user" do
       expect(page).to have_selector("#article_2")
       expect(page).to have_selector("#article_3")
       expect(page).to have_selector("#article_4")
+    end
+  end
+
+  context "users" do
+    it "can view all users" do
+      create(:user, id: 2)
+      create(:user, id: 4)
+      create(:user, id: 6)
+      visit users_path
+      expect(page).to have_selector("#user_2")
+      expect(page).not_to have_selector("#user_3")
+      expect(page).to have_selector("#user_4")
+      expect(page).not_to have_selector("#user_5")
+      expect(page).to have_selector("#user_6")
     end
   end
 end
