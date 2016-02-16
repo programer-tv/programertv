@@ -16,10 +16,14 @@
                   %th.text-center= User.human_attribute_name(:username)
                   %th.text-center= User.human_attribute_name(:email)
                   %th.text-center= User.human_attribute_name(:image_link)
+                  %th.text-center= User.human_attribute_name(:created_at)
                   %th.text-center= User.human_attribute_name(:sign_in_count)
+                  %th.text-center= User.human_attribute_name(:role)
                   %th.text-center= User.human_attribute_name(:provider)
                   %th.text-center= User.human_attribute_name(:uid)
-                  %th.text-center= User.human_attribute_name(:role)
+                  %th.text-center= User.human_attribute_name(:current_sign_in_at)
+                  %th.text-center= User.human_attribute_name(:last_sign_in_at)
+
               %tbody{ role: "alert" }
                 - @users.each do |user|
                   %tr{ id: "#{dom_id(user)}" }
@@ -27,7 +31,10 @@
                       style: "text-decoration: underline"
                     %td= user.email
                     %td= get_user_avatar(user, "50x50")
+                    %td= l(user.created_at, format: "%B %d, %Y")
                     %td= user.sign_in_count
+                    %td= user.role
                     %td= user.provider
                     %td= user.uid
-                    %td= user.role
+                    %td= l(user.current_sign_in_at, format: "%B %d, %Y")
+                    %td= l(user.last_sign_in_at, format: "%B %d, %Y")

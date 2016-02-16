@@ -1,2 +1,35 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.haml
+.row
+  .col-lg-12
+    .page-title
+      = fa_icon "user lg"
+      %h3 حسابي
+
+.row
+  .col-md-8.col-md-offset-2
+    .tiles.white.no-padding
+      .tiles.green.cover-pic-wrapper
+        = image_tag "footer_bg.png"
+      .tiles.white
+        .row
+          .col-md-3.col-sm-3
+            .user-profile-pic
+              = get_user_avatar(@user, size: "200x200")
+          .col-md-5.col-sm-5.user-description-box
+            %h4.semi-bold.no-margin= @user.username
+            %br
+            %p
+              = fa_icon "envelope"
+              = @user.email
+            %p
+              = fa_icon "calendar"
+              مشترك منذ
+              = l(@user.created_at, format: "%B %d, %Y")
+            - if @user.provider
+              - if @user.provider == "facebook"
+                %p
+                  = fa_icon "facebook"
+                  مسجل عبر فيسبوك
+              - elsif @user.provider == "twitter"
+                %p
+                  = fa_icon "twitter"
+                  مسجل عبر تويتر

@@ -18,8 +18,8 @@
             %ul.dropdown-menu.pull-right{ role: "menu",
                                           "aria-labelledby": "user-options" }
               %li
-                = link_to "#", class: "text-right" do
-                  صفحتي&nbsp;
+                = link_to user_path(current_user), class: "text-right" do
+                  حسابي&nbsp;
                   = fa_icon "user"
               %li.divider
               %li
@@ -61,8 +61,8 @@
               %ul.dropdown-menu.pull-right{ role: "menu",
                                             "aria-labelledby": "user-options" }
                 %li
-                  = link_to "#", class: "text-right" do
-                    صفحتي&nbsp;
+                  = link_to user_path(current_user), class: "text-right" do
+                    حسابي&nbsp;
                     = fa_icon "user"
                 %li.divider
                 %li

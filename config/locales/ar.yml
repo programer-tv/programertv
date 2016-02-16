@@ -62,6 +62,14 @@ ar:
         email: البريد الإلكتروني
         password: كلمة المرور
         password_confirmation: تأكيد كلمة المرور
+        role: الدور
+        provider: المسجل
+        uid: رقم المسجل
+        created_at: تاريخ الإنشاء
+        sign_in_count: عدد مرات الدخول
+        image_link: رابط الصورة
+        current_sign_in_at: تسجيل الدخول الحالي
+        last_sign_in_at: آخر تسجيل دخول
       article:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية

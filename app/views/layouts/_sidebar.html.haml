@@ -2,7 +2,8 @@
   #main-menu-wrapper.page-sidebar-wrapper.scrollbar-dynamic
     .user-info-wrapper
       .profile-wrapper
-        = get_user_avatar(current_user, size="200x200")
+        = link_to user_path(current_user) do
+          = get_user_avatar(current_user, size="200x200")
       .user-info
         .greeting
           مرحبا
@@ -15,15 +16,7 @@
 
     %p.menu-title
       الأقسام
-
     %ul
-      - if policy(User).index?
-        %li.start{ class: "#{'active' if params[:controller] == 'users'}" }
-          = link_to users_path  do
-            = fa_icon "users"
-            %span.title
-              المستخدمين
-
       %li{ class: "#{'active' if %w(courses episodes).include?(params[:controller])}" }
         = link_to courses_path do
           = fa_icon "graduation-cap"
@@ -33,7 +26,18 @@
         = link_to articles_path do
           = fa_icon "pencil"
           %span.title المدونة
+
       -# %li
       -#   = link_to "#" do
       -#     = fa_icon "video-camera"
       -#     %span.title مكتبة الفيديو
+
+    - if policy(User).index?
+      %p.menu-title
+        الإدارة
+      %ul
+        %li.start{ class: "#{'active' if params[:controller] == 'users'}" }
+          = link_to users_path  do
+            = fa_icon "users"
+            %span.title
+              المستخدمين
