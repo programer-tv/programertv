@@ -7,8 +7,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :twitter]
 
+  extend FriendlyId
+  friendly_id :username, use: :slugged
+
   validates :username,  presence: true,  uniqueness: true
   validates :role,      presence: true
+  validates :slug,      presence: true,  uniqueness: true
 
   def admin?
     role == "admin"
