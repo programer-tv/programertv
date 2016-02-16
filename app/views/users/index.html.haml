@@ -13,6 +13,7 @@
             %table#users-datatable.table.table-striped.datatable.responsive.no-wrap
               %thead
                 %tr
+                  %th.text-center= User.human_attribute_name(:id)
                   %th.text-center= User.human_attribute_name(:username)
                   %th.text-center= User.human_attribute_name(:email)
                   %th.text-center= User.human_attribute_name(:image_link)
@@ -27,10 +28,11 @@
               %tbody{ role: "alert" }
                 - @users.each do |user|
                   %tr{ id: "#{dom_id(user)}" }
+                    %td= user.id
                     %td= link_to user.username, user,
                       style: "text-decoration: underline"
                     %td= user.email
-                    %td= get_user_avatar(user, "50x50")
+                    %td= link_to(get_user_avatar(user, "50x50"), user.image_link)
                     %td= l(user.created_at, format: "%B %d, %Y")
                     %td= user.sign_in_count
                     %td= user.role
