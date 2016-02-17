@@ -18,7 +18,8 @@ RSpec.describe "authenticaion", js: true do
         fill_in 'user_password_confirmation', with: user.password
         click_on 'user_signup_link'
         expect(page).to have_selector('.sweet-alert',
-          text: "تمّ إنشاء الحساب بنجاح، أهلًا بك!")
+          text: "تمّ إرسال رسالة تحتوي على رابط تفعيل حسابك إلى بريدك " +
+                "الإلكترونيّ، يُرجى فتح الرابط لتفعيل حسابك.")
       end
 
       it 'fails with invalid attributes' do

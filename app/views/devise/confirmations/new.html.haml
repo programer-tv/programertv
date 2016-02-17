@@ -1,9 +1,36 @@
-%h2 Resend confirmation instructions
-= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  = f.full_error :confirmation_token
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Resend confirmation instructions"
-= render "devise/shared/links"
+.login-img
+  = image_tag "logo_and_text_devise.png", alt: "Logo",
+              class: "img-responsive center-block"
+
+.row.login-container.column-seperation
+  .col-md-5.col-md-offset-1
+    %h2 لم أتسلم تعليمات تفعيل الحساب؟
+    %p
+      إذا كنت لم تستلم تعليمات تفعيل الحساب على بريدك الإلكتروني فيرجى أولا أن
+      تتأكد من عدم وجوده في مجلد spam أو مجلد junk. إذا لم يكن موجودا هناك
+      فيمكنك إضافة بريدك الإلكتروني المسجل لدينا في الخانة الموضحة و سنقوم بإعادة
+      إرسال تعليمات تفعيل الحساب على بريدك الإلكتروني.
+    %p
+      في حال وجود أي ملاحظات أو إقتراحات فيرجي إرسال بريد إلكتروني إلى
+      = mail_to "admin@programer.tv"
+
+  .col-md-5
+    = simple_form_for(resource, as: resource_name,
+                                url: confirmation_path(resource_name),
+                                html: { method: :post }) do |f|
+      - if resource.errors.any?
+        .flash-message{ key: :error, value: 'هناك خطأ ما!' }
+      = f.full_error :confirmation_token
+
+      .form-inputs
+        .form-group
+          = f.input :email, label: "البريد الإلكتروني", required: true,
+                    autofocus: true
+
+      = f.button :submit, "إعادة إرسال تعليمات التفعيل",
+                 class: "btn btn-primary btn-cons"
+
+    .grid.transparent
+      .grid-body.no-border
+        = render "devise/shared/links"
+

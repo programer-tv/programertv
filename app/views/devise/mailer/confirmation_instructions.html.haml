@@ -1,4 +1,25 @@
-%p
-  Welcome #{@email}!
-%p You can confirm your account email through the link below:
-%p= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
+.email-background{ style: "direction: rtl; border-radius: 5px;" }
+  .pre-header
+    %p{ style: "direction: rtl; color: white; font-size: 2px;" }
+      شاهد العديد من الفيديوهات التعليمية لأحدث لغات البرمجة مشروحة باللغة
+      العربية و بنقاوة 1080p العالية الجودة في programer.tv.
+
+  .email-container{ style: "direction: rtl; background: #e5e9ec; max-width: 500px; margin: 0 auto; overflow: hidden; border-radius: 5px;" }
+    = image_tag "logo_and_text_devise_email.png", alt: "Logo", style: "max-width: 100%;"
+
+    .email-body{ style: "direction: rtl; background: #F1F4F4; margin: 20px; padding: 10px; border-radius: 5px;" }
+      %p{ style: "direction: rtl; margin: 20px; font-size: 16px; font-weight: 300;" }
+        مرحبا
+        = @user.username
+
+      %p{ style: "direction: rtl; margin: 20px; font-size: 16px; font-weight: 300;" }
+        شكرا لإنضمامك إلى عائلة programer.tv.
+        %br
+        الآن يمكنك تفعيل حسابك معنا بالضغط على الرابط الموضح بالأسفل .
+
+    .cta{ style: "direction: rtl; text-align: center; margin: 20px;" }
+      = link_to "تفعيل الحساب", confirmation_url(@resource, confirmation_token: @token),
+                style: "display: inline-block; text-decoration: none; background: #0aa699; color: white; padding: 10px 20px; border-radius: 5px;"
+
+  .footer{ style: "direction: ltr; margin: 10px; text-align: center;" }
+    = link_to "\u00a9 programer.tv", "https://programer.tv", style: "font-family: sans-serif; font-size: 12px; text-decoration: none; color: #0aa699;"

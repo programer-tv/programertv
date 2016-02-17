@@ -9,6 +9,8 @@ FactoryGirl.define do
     current_sign_in_at Time.now
     last_sign_in_at    Time.now
 
+    confirmed_at       Time.now
+
     factory :admin do
       role "admin"
     end

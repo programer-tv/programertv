@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :session_limitable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook, :twitter]
+  devise :database_authenticatable, :registerable, :confirmable,
+         :session_limitable, :recoverable, :rememberable, :trackable,
+         :validatable, :omniauthable, omniauth_providers: [:facebook, :twitter]
 
   extend FriendlyId
   friendly_id :username, use: :slugged
@@ -41,6 +41,7 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.image_link = auth.info.image
       user.password = Devise.friendly_token[8, 20]
+      user.skip_confirmation!
     end
   end
 

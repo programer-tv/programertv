@@ -10,7 +10,9 @@
       = link_to "التسجيل هنا", new_user_registration_path,
                 id: "user_signup_link"
       أو يمكنك تسجيل الدخول عبر فيسبوك أو تويتر.
-    %br
+    %p
+      في حال وجود أي ملاحظات أو إقتراحات فيرجي إرسال بريد إلكتروني إلى
+      = mail_to "admin@programer.tv"
     = link_to "تسجيل الدخول عبر فيسبوك",
               user_omniauth_authorize_path(:facebook),
               id: "facebook_login_link",
@@ -35,5 +37,4 @@
 
       .grid.transparent
         .grid-body.no-border
-          = link_to "هل نسيت كلمة المرور؟", new_user_password_path,
-                    id: "password_reset_link"
+          = render "devise/shared/links"

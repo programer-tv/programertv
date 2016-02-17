@@ -11,6 +11,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     else
       session["devise.#{provider}_data"] = request.env["omniauth.auth"]
+      flash[:error] = "إسم المستخدم أو البريد الإلكتروني مسجل لدينا مسبقا."
       redirect_to new_user_registration_url
     end
   end
