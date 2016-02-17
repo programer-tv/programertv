@@ -11,7 +11,11 @@
 @import "fonts";
 
 html * {
-  font-family: "droid-sans" !important;
+  font-family: "droid-sans";
+}
+
+.btn {
+  font-family: "droid-sans";
 }
 
 .column-seperation > div[class*="col-"] {
