@@ -40,18 +40,18 @@ module ApplicationHelper
       "(document, 'script', 'twitter-wjs');</script>")
   end
 
-  def tweet_video_button(page_path, title)
+  def tweet_video_button(title)
     render_haml("<a href='https://twitter.com/share' "+
       "class='twitter-share-button' " +
-      "data-url='#{page_path}' " +
+      "data-url='https://programer.tv' " +
       "data-text='أنا أشاهد \"#{title}\"' " +
       "data-via='ProgramerTV' data-lang='ar'></a>")
   end
 
-  def tweet_article_button(page_path, title)
+  def tweet_article_button(title)
     render_haml("<a href='https://twitter.com/share' "+
       "class='twitter-share-button' " +
-      "data-url='#{page_path}' " +
+      "data-url='https://programer.tv' " +
       "data-text='أنا أقرأ \"#{title}\"' " +
       "data-via='ProgramerTV' data-lang='ar'></a>")
   end

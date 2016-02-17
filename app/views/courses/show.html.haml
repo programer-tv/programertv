@@ -29,7 +29,7 @@
           = @course.duration
       .social-buttons.pull-right
         %span= facebook_button(request.original_url)
-        %span= tweet_video_button(request.original_url, @course.ar_title)
+        %span= tweet_video_button(@course.ar_title)
 
     .grid.simple.horizontal.green
       .grid-title
