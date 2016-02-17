@@ -31,6 +31,7 @@ gem 'friendly_id',                 '~> 5.1'
 gem 'pundit',                      '~> 1.1'
 gem 'recaptcha',                   '~> 1.1',                                 require: "recaptcha/rails"
 gem 'jquery-datatables-rails',     github: "rweng/jquery-datatables-rails",  branch: "master"
+gem 'pg_search',                   '~> 1.0',                                 '>= 1.0.5'
 
 group :development, :test do
   gem 'byebug'

@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get "privacy", to: "static_pages#privacy"
   get "terms", to: "static_pages#terms"
 
+  get 'searches/index', as: "search", path: "search"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   # The priority is based upon order of creation: first created -> highest priority.

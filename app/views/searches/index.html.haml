@@ -1,0 +1,16 @@
+.row
+  .col-lg-12
+    .page-title
+      = fa_icon "search lg"
+      %h3 نتائج البحث
+
+.row.boxes.center-block
+  - @results.each do |result|
+    .box
+      = link_to result.searchable, id: "#{dom_id(result.searchable)}" do
+        .widget-item
+          .tiles.white
+            .box-img.tiles-body
+              = image_tag result.searchable.image.url,
+                          class: "center-block img-responsive hover-effect-img"
+
