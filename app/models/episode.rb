@@ -5,7 +5,7 @@ class Episode < ActiveRecord::Base
 										default_url: "/images/original/missing.png"
 
   extend FriendlyId
-  friendly_id :en_title, use: :scoped, scope: :course
+  friendly_id :sequence, use: :scoped, scope: :course
 
   validates :en_title    , presence: true , uniqueness: { scope: :course_id }
   validates :ar_title    , presence: true , uniqueness: { scope: :course_id }
