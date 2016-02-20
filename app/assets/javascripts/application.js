@@ -1,9 +1,9 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootstrap
 //= require dataTables/jquery.dataTables
 //= require dataTables/extras/dataTables.responsive
-//= require bootstrap
 //= require sweet-alert
 //= require sweet-alert-confirm
 //= require bootstrap-filestyle/bootstrap-filestyle.min

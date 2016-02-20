@@ -28,4 +28,8 @@ Rails.application.routes.draw do
   get 'searches/index', as: "search", path: "search"
 
   mount Ckeditor::Engine => '/ckeditor'
+
+  %w( 404 422 500 503 ).each do |code|
+    get code, to: "errors#show", code: code
+  end
 end

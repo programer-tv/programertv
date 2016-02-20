@@ -92,4 +92,7 @@ Rails.application.configure do
     authentication: 'plain',
     enable_starttls_auto: true,
   }
+
+  # Configure custom exceptions
+  config.exceptions_app = self.routes
 end

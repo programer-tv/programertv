@@ -101,7 +101,7 @@ section {
     background-color: white;
   }
 
-  &#privacy, &#terms {
+  &#privacy, &#terms, &#faq {
     padding-top: 25px;
     color: #BCBDBF;
     background-image: image-url("logo_bg_big.png");
@@ -178,7 +178,7 @@ footer {
 }
 
 @media only screen and (max-width : 768px) {
-  #privacy, #terms {
+  #privacy, #terms, #faq {
     background-size: 80% auto !important;
   }
 }
