@@ -85,7 +85,8 @@
     .row.copyright
       .col-lg-12
         %p.small
-          ©
-          = Time.new.year
-          programer.tv
+          = link_to root_path do
+            ©
+            = Time.new.year
+            programer.tv
     %br

@@ -30,10 +30,13 @@
                   %li
                     = link_to "https://bit.ly/prgfb", target: "_blank" do
                       = fa_icon "facebook fw lg"
+                = link_to "أسئلة شائعة", faq_path
+                &nbsp;|&nbsp;
                 = link_to "سياسة الخصوصية", privacy_path
                 &nbsp;|&nbsp;
                 = link_to "شروط الخدمة", terms_path
                 %br
-                ©
-                = Time.new.year
-                programer.tv
+                = link_to root_path do
+                  ©
+                  = Time.new.year
+                  programer.tv

@@ -36,4 +36,16 @@ RSpec.describe StaticPagesController, type: :controller do
       expect(response).to render_template(:terms)
     end
   end
+
+  describe "GET #faq" do
+    before(:example) { get :faq }
+
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders privacy template" do
+      expect(response).to render_template(:faq)
+    end
+  end
 end
