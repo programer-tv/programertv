@@ -49,6 +49,7 @@ ar:
         premium: متميز
         active: نشط
         new: جديد
+        level: المستوى
       episode:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية

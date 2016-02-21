@@ -21,11 +21,11 @@
                   - if course.premium?
                     %li= image_tag "premium_banner.png"
                   - if not course.level.nil?
-                    - if course.level == "Beginner"
+                    - if course.level == "مبتدئ"
                       %li= image_tag "beginner_banner.png"
-                    - elsif course.level == "Intermediate"
+                    - elsif course.level == "متوسط"
                       %li= image_tag "intermediate_banner.png"
-                    - elsif course.level == "Advanced"
+                    - elsif course.level == "متقدم"
                       %li= image_tag "advanced_banner.png"
 
 .row
