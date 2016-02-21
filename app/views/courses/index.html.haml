@@ -10,9 +10,16 @@
       = link_to course, id: "#{dom_id(course)}" do
         .widget-item
           .tiles.white
-            .box-img.tiles-body
-              = image_tag course.image.url,
-                          class: "center-block img-responsive hover-effect-img"
+            .tiles-body
+              .box-img
+                = image_tag course.image.url,
+                            class: "center-block img-responsive hover-effect-img"
+              .box-banners
+                %ul
+                  - if course.new?
+                    %li= image_tag "new_banner"
+                  - if course.premium?
+                    %li= image_tag "premium_banner"
 
 .row
   .col-lg-12

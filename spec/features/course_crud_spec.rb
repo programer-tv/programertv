@@ -22,6 +22,7 @@ RSpec.describe "admin create course", js: true do
     fill_in "course_video_id"             , with: course.video_id
     check "course_premium"
     check "course_active"
+    check "course_new"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
                                   text: "تم إنشاء الدورة بنجاح.")
@@ -63,6 +64,7 @@ RSpec.describe "admin update course", js: true do
     fill_in "course_video_id"             , with: course.video_id
     check "course_premium"
     check "course_active"
+    check "course_new"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
                                   text: "تم تعديل الدورة بنجاح.")

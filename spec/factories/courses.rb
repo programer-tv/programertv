@@ -8,6 +8,7 @@ FactoryGirl.define do
     video_id    { rand(99999..999999) }
     premium     true
     active      true
+    new         true
     image Rack::Test::UploadedFile.new("app/assets/images/logo_bg_big.png",
                                        "image/png")
   end

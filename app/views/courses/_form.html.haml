@@ -40,6 +40,8 @@
               = f.input_field :premium, as: :boolean, inline_label: "متميز"
             .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
               = f.input_field :active, as: :boolean, inline_label: "نشط"
+            .form-group.col-lg-2.col-md-2.col-sm-2.col-xs-3
+              = f.input_field :new, as: :boolean, inline_label: "جديد"
 
           .form-actions
             - if @course.new_record?

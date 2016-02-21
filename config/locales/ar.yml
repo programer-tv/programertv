@@ -48,6 +48,7 @@ ar:
         image: الصورة
         premium: متميز
         active: نشط
+        new: جديد
       episode:
         ar_title: العنوان بالعربية
         en_title: العنوان بالإنجليزية

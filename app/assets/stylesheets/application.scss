@@ -190,9 +190,24 @@ body {
       margin-bottom: 25px;
       width: 200px;
       height: 200px;
-      .box-img {
+
+      .tiles-body {
         padding: 0;
-        overflow: hidden;
+        position: relative;
+
+        .box-img {
+          padding: 0;
+          overflow: hidden;
+        }
+
+        .box-banners {
+          ul {
+            list-style-type: none;
+            position: absolute;
+            right: -55px;
+            top: 3px;
+          }
+        }
       }
     }
   }
