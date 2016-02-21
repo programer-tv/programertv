@@ -20,6 +20,7 @@ RSpec.describe "admin create course", js: true do
     fill_in_ckeditor "course_description" , with: course.description
     select course.video_host.to_s         , from: "course_video_host"
     fill_in "course_video_id"             , with: course.video_id
+    select course.level.to_s              , from: "course_level"
     check "course_premium"
     check "course_active"
     check "course_new"
@@ -62,6 +63,7 @@ RSpec.describe "admin update course", js: true do
     fill_in_ckeditor "course_description" , with: course.description
     select course.video_host.to_s         , from: "course_video_host"
     fill_in "course_video_id"             , with: course.video_id
+    select course.level.to_s              , from: "course_level"
     check "course_premium"
     check "course_active"
     check "course_new"
@@ -78,6 +80,7 @@ RSpec.describe "admin update course", js: true do
     fill_in_ckeditor "course_description" , with: nil
     select course.video_host.to_s         , from: "course_video_host"
     fill_in "course_video_id"             , with: nil
+    select course.level.to_s              , from: "course_level"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert", text: "هناك خطأ ما!")
   end

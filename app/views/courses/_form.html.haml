@@ -14,19 +14,23 @@
             .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
               = f.input :image, as: :file, label: false, class: "filestyle"
           .row
-            .form-group.col-lg-4.col-md-6.col-sm-4.col-xs-12
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
               = f.input :en_title
-            .form-group.col-lg-4.col-md-6.col-sm-4.col-xs-12
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
               = f.input :ar_title
-            .form-group.col-lg-4.col-md-6.col-sm-4.col-xs-12
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
               = f.input :instructor
           .row
-            .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
               = f.input :video_host,
                         collection: %w(YouTube Wistia Vimeo),
                         default: "YouTube"
-            .form-group.col-lg-6.col-md-6.col-sm-6.col-xs-12
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
               = f.input :video_id
+            .form-group.col-lg-4.col-md-4.col-sm-4.col-xs-12
+              = f.input :level,
+                        collection: %w(Beginner Intermediate Advanced),
+                        include_blank: true
           .row
             .form-group.col-lg-12
               = f.input :description,
