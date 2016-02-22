@@ -9,6 +9,7 @@
     = stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{ params[:controller] }.css")
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{ params[:controller] }.js")
+    = google_analytics_script
     = csrf_meta_tags
   %body.rtl
     = render "layouts/header"
