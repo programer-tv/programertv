@@ -7,7 +7,8 @@
     %title programer.tv | الموقع المثالي لهواة و محترفوا البرمجة العرب
     = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'static_pages', 'data-turbolinks-track' => true
-    = google_analytics_script
+    - if ENV["RAILS_ENV"] == "production"
+      = google_analytics_script
     = csrf_meta_tags
   %body#page-top
     - flash.each do |key, value|
