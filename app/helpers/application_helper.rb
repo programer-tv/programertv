@@ -3,7 +3,7 @@ module ApplicationHelper
     if title.empty?
       title = "programer.tv"
     else
-      "programer.tv | " << title
+      "programer.tv - " << title
     end
   end
 
