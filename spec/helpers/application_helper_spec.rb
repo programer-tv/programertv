@@ -190,4 +190,14 @@ describe ApplicationHelper, type: :helper do
           "</script>\n")
     end
   end
+
+  context "page title" do
+    it "assigns default page title properly" do
+      expect(page_title). to eq("programer.tv")
+    end
+
+    it "assign page title properly" do
+      expect(page_title("test title")). to eq("programer.tv | test title")
+    end
+  end
 end

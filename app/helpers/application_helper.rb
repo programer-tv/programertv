@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def page_title(title="")
+    if title.empty?
+      title = "programer.tv"
+    else
+      "programer.tv | " << title
+    end
+  end
+
   def disqus_script
     render_haml("<script>" +
       "(function(){" +
