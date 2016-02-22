@@ -19,6 +19,7 @@ RSpec.describe "admin create article", js: true do
     fill_in "article_author"           , with: article.author
     fill_in_ckeditor "article_content" , with: article.content
     check "article_active"
+    check "article_new"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
                                   text: "تم إنشاء المقال بنجاح.")
@@ -56,6 +57,7 @@ RSpec.describe "admin update article", js: true do
     fill_in "article_author"           , with: article.author
     fill_in_ckeditor "article_content" , with: article.content
     check "article_active"
+    check "article_new"
     click_on "submit"
     expect(page).to have_selector(".sweet-alert",
                                   text: "تم تعديل المقال بنجاح.")

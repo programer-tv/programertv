@@ -5,6 +5,7 @@ FactoryGirl.define do
     author      { FFaker::Name.name }
     content     { FFaker::LoremAR.paragraphs.join(" ") }
     active      true
+    new         true
     image Rack::Test::UploadedFile.new("app/assets/images/logo_bg_big.png",
                                        "image/png")
   end

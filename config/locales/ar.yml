@@ -78,6 +78,7 @@ ar:
         author: الكاتب
         content: المحتوى
         active: نشط
+        new: جديد
     errors:
       messages:
         record_invalid: 'فشل التحقّق من: %{errors}'
