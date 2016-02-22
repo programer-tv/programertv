@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
   include PgSearch
-  multisearchable against: [:ar_title, :en_title], using: [:tsearch, :trigram],
-                  ignoring: :accents
+  multisearchable against: [:ar_title, :en_title]
 
   extend FriendlyId
   friendly_id :en_title, use: :slugged
