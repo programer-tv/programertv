@@ -204,7 +204,7 @@ describe ApplicationHelper, type: :helper do
     end
 
     it "assign page title properly" do
-      expect(page_title("test title")). to eq("programer.tv | test title")
+      expect(page_title("test title")). to eq("programer.tv - test title")
     end
   end
 end
