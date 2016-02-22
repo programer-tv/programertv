@@ -103,7 +103,7 @@ module ApplicationHelper
   end
 
   def google_verification_meta_tag
-    render_haml("<meta name='google-site-verification' content='JR0_bcUI50cjMpWRB-630NrAfQ8rQGb9SPnnJns6kSI' />")
+    render_haml('<meta name="google-site-verification" content="JR0_bcUI50cjMpWRB-630NrAfQ8rQGb9SPnnJns6kSI" />')
   end
 
 	private

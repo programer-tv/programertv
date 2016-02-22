@@ -191,6 +191,13 @@ describe ApplicationHelper, type: :helper do
     end
   end
 
+  context "google verification meta tag" do
+    it "render meta tag correctly" do
+      expect(google_verification_meta_tag).to \
+        eq("<meta name='google-site-verification' content='JR0_bcUI50cjMpWRB-630NrAfQ8rQGb9SPnnJns6kSI' />\n")
+    end
+  end
+
   context "page title" do
     it "assigns default page title properly" do
       expect(page_title). to eq("programer.tv")

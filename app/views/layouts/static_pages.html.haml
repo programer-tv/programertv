@@ -4,6 +4,8 @@
     = favicon_link_tag "/favicon.ico?version=1"
     %meta{ charset: "utf-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=no" }
+    - if ENV["RAILS_ENV"] == "production"
+      = google_verification_meta_tag
     %title programer.tv | الموقع المثالي لهواة و محترفوا البرمجة العرب
     = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'static_pages', 'data-turbolinks-track' => true
