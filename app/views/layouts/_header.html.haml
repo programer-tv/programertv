@@ -42,8 +42,8 @@
           %li.quicklinks
             %span.h-seperate
           %li.quicklinks
-            = link_to root_path, "data-no-turbolink": true do
-              .iconset.top-tiles
+            = link_to root_path do
+              = fa_icon "home", style: "color: #454A5B !important; font-size: 19px;"
           %li.m-r-10.input-prepend.inside.search-form.no-boarder
             = form_tag search_path, method: :get, class: "pull-right",
                        id: "search_form",
