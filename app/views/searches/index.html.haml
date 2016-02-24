@@ -5,33 +5,37 @@
       %h3 نتائج البحث
 
 .row.boxes.center-block
-  - @results.each do |result|
-    .box
-      = link_to result.searchable, id: "#{dom_id(result.searchable)}" do
-        .widget-item
-          .tiles.white
-            .tiles-body
-              .box-img
-                = image_tag result.searchable.image.url,
-                  class: "center-block img-responsive hover-effect-img"
-              .box-banners
-                %ul
-                  - if result.searchable.new?
-                    %li= image_tag "new_banner.png"
-                  -if result.searchable.is_a?(Course)
-                    - course = result.searchable
-                    - if course.premium?
-                      %li= image_tag "premium_banner.png"
-                    - if not course.level.nil?
-                      - if course.level == "مبتدئ"
-                        %li= image_tag "beginner_banner.png"
-                      - elsif course.level == "متوسط"
-                        %li= image_tag "intermediate_banner.png"
-                      - elsif course.level == "متقدم"
-                        %li= image_tag "advanced_banner.png"
-
-              .box-icon
-                - if result.searchable.is_a?(Course)
-                  = fa_icon "graduation-cap 2x"
-                - elsif result.searchable.is_a?(Article)
-                  = fa_icon "pencil 2x"
+  - if @results.length == 0
+    .col-lg-12.text-center
+      %p{ style: "font-size: 22px"}
+        لا توجد نتائج للبحث!
+  - else
+    - @results.each do |result|
+      .box
+        = link_to result.searchable, id: "#{dom_id(result.searchable)}" do
+          .widget-item
+            .tiles.white
+              .tiles-body
+                .box-img
+                  = image_tag result.searchable.image.url,
+                    class: "center-block img-responsive hover-effect-img"
+                .box-banners
+                  %ul
+                    - if result.searchable.new?
+                      %li= image_tag "new_banner.png"
+                    -if result.searchable.is_a?(Course)
+                      - course = result.searchable
+                      - if course.premium?
+                        %li= image_tag "premium_banner.png"
+                      - if not course.level.nil?
+                        - if course.level == "مبتدئ"
+                          %li= image_tag "beginner_banner.png"
+                        - elsif course.level == "متوسط"
+                          %li= image_tag "intermediate_banner.png"
+                        - elsif course.level == "متقدم"
+                          %li= image_tag "advanced_banner.png"
+                .box-icon
+                  - if result.searchable.is_a?(Course)
+                    = fa_icon "graduation-cap 2x"
+                  - elsif result.searchable.is_a?(Article)
+                    = fa_icon "pencil 2x"
