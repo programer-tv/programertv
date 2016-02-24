@@ -1,0 +1,38 @@
+= provide(:title, "الكل")
+
+.row
+  .col-lg-12
+    .page-title
+      = fa_icon "th-large lg"
+      %h3 الكل
+
+.row.boxes.center-block
+  - @resources.each do |resource|
+    .box
+      = link_to resource, id: "#{dom_id(resource)}" do
+        .widget-item
+          .tiles.white
+            .tiles-body
+              .box-img
+                = image_tag resource.image.url,
+                  class: "center-block img-responsive hover-effect-img"
+              .box-banners
+                %ul
+                  - if resource.new?
+                    %li= image_tag "new_banner.png"
+                  -if resource.is_a?(Course)
+                    - course = resource
+                    - if course.premium?
+                      %li= image_tag "premium_banner.png"
+                    - if not course.level.nil?
+                      - if course.level == "مبتدئ"
+                        %li= image_tag "beginner_banner.png"
+                      - elsif course.level == "متوسط"
+                        %li= image_tag "intermediate_banner.png"
+                      - elsif course.level == "متقدم"
+                        %li= image_tag "advanced_banner.png"
+              .box-icon
+                - if resource.is_a?(Course)
+                  = fa_icon "graduation-cap 2x"
+                - elsif resource.is_a?(Article)
+                  = fa_icon "pencil 2x"

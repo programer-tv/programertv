@@ -17,16 +17,18 @@
     %p.menu-title
       الأقسام
     %ul
+      %li{ class: "#{'active' if params[:controller] == 'main'}" }
+        = link_to root_path do
+          = fa_icon "th-large"
+          %span.title الكل
       %li{ class: "#{'active' if %w(courses episodes).include?(params[:controller])}" }
         = link_to courses_path do
           = fa_icon "graduation-cap"
           %span.title الدورات
-
       %li{ class: "#{'active' if params[:controller] == 'articles'}" }
         = link_to articles_path do
           = fa_icon "pencil"
           %span.title المدونة
-
       -# %li
       -#   = link_to "#" do
       -#     = fa_icon "video-camera"
