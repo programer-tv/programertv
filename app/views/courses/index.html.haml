@@ -29,6 +29,9 @@
                       %li= image_tag "intermediate_banner.png"
                     - elsif course.level == "متقدم"
                       %li= image_tag "advanced_banner.png"
+              - if current_user.admin? and course.active?
+                .box-active-badge
+                  = fa_icon "play 2x"
 
 .row
   .col-lg-12

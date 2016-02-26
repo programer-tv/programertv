@@ -3,9 +3,9 @@ require "rails_helper"
 RSpec.describe ArticlePolicy do
   subject { described_class }
 
-  permissions :index?, :show do
+  permissions :index?, :show? do
     it "grants access to regular user" do
-      expect(subject).to permit(create(:user))
+      expect(subject).to permit(create(:user), create(:article))
     end
 
     it "grants access to admin user" do

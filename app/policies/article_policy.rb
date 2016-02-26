@@ -3,8 +3,8 @@ class ArticlePolicy < ApplicationPolicy
     true
   end
 
-  def show
-    true
+  def show?
+    true if user.admin? || article.active?
   end
 
   def create?
@@ -17,5 +17,11 @@ class ArticlePolicy < ApplicationPolicy
 
   def destroy?
     true if user.admin?
+  end
+
+  private
+
+  def article
+    record
   end
 end

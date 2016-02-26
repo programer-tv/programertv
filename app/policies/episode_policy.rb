@@ -1,5 +1,5 @@
 class EpisodePolicy < ApplicationPolicy
-  def show
+  def show?
     true
   end
 

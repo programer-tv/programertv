@@ -3,9 +3,9 @@ require "rails_helper"
 RSpec.describe CoursePolicy do
   subject { described_class }
 
-  permissions :index?, :show do
+  permissions :index?, :show? do
     it "grants access to regular user" do
-      expect(subject).to permit(create(:user))
+      expect(subject).to permit(create(:user), create(:course))
     end
 
     it "grants access to admin user" do

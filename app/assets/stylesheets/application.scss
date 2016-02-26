@@ -214,6 +214,16 @@ body {
           left: 7px;
           top: 5px;
         }
+
+        .box-active-badge {
+          position: absolute;
+          left: 7px;
+          top: 170px;
+
+          i {
+            color: #ED4722;
+          }
+        }
       }
     }
   }

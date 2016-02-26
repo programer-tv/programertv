@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe EpisodePolicy do
   subject { described_class }
 
-  permissions :show do
+  permissions :show? do
     it "grants access to regular user" do
       expect(subject).to permit(create(:user))
     end

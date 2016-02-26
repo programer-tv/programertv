@@ -20,6 +20,9 @@
                 %ul
                   - if article.new?
                     %li= image_tag "new_banner.png"
+              - if current_user.admin? and article.active?
+                .box-active-badge
+                  = fa_icon "play 2x"
 
 .row
   .col-lg-12
