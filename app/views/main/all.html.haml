@@ -20,22 +20,23 @@
                 %ul
                   - if resource.new?
                     %li= image_tag "new_banner.png"
-                  -if resource.is_a?(Course)
-                    - course = resource
-                    - if course.premium?
+                  -if resource.is_a?(Course) || resource.is_a?(Video)
+                    - if resource.premium?
                       %li= image_tag "premium_banner.png"
-                    - if not course.level.nil?
-                      - if course.level == "مبتدئ"
+                    - if not resource.level.nil?
+                      - if resource.level == "مبتدئ"
                         %li= image_tag "beginner_banner.png"
-                      - elsif course.level == "متوسط"
+                      - elsif resource.level == "متوسط"
                         %li= image_tag "intermediate_banner.png"
-                      - elsif course.level == "متقدم"
+                      - elsif resource.level == "متقدم"
                         %li= image_tag "advanced_banner.png"
               .box-icon
                 - if resource.is_a?(Course)
                   = fa_icon "graduation-cap 2x"
                 - elsif resource.is_a?(Article)
                   = fa_icon "pencil 2x"
+                - elsif resource.is_a?(Video)
+                  = fa_icon "video-camera 2x"
               - if current_user.admin? and resource.active?
                 .box-active-badge
                   = fa_icon "play 2x"

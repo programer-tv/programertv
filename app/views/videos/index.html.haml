@@ -1,0 +1,42 @@
+= provide(:title, "مكتبة الفيديو")
+
+.row
+  .col-lg-12
+    .page-title
+      = fa_icon "video-camera lg"
+      %h3 مكتبة الفيديو
+
+.row.boxes.center-block
+  - @videos.each do |video|
+    .box
+      = link_to video, id: "#{dom_id(video)}" do
+        .widget-item
+          .tiles.white
+            .tiles-body
+              .box-img
+                = image_tag video.image.url,
+                  class: "center-block img-responsive hover-effect-img"
+              .box-banners
+                %ul
+                  - if video.new?
+                    %li= image_tag "new_banner.png"
+                  - if video.premium?
+                    %li= image_tag "premium_banner.png"
+                  - if not video.level.nil?
+                    - if video.level == "مبتدئ"
+                      %li= image_tag "beginner_banner.png"
+                    - elsif video.level == "متوسط"
+                      %li= image_tag "intermediate_banner.png"
+                    - elsif video.level == "متقدم"
+                      %li= image_tag "advanced_banner.png"
+              - if current_user.admin? and video.active?
+                .box-active-badge
+                  = fa_icon "play 2x"
+
+.row
+  .col-lg-12
+    - if policy(Video).new?
+      = link_to new_video_path, class: "btn btn-success btn-cons",
+                id: "add_new_video_link" do
+        = fa_icon "plus"
+        %span &nbsp;إنشاء فيديو

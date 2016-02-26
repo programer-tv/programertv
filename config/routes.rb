@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :articles
+  resources :videos
 
   get "privacy", to: "static_pages#privacy"
   get "terms", to: "static_pages#terms"

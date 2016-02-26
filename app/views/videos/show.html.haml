@@ -1,4 +1,4 @@
-= provide(:title, @article.ar_title)
+= provide(:title, @video.ar_title)
 = disqus_script
 = twitter_script
 = facebook_script
@@ -7,32 +7,38 @@
   .col-lg-12
     %ul.breadcrumb
       %li
-        %p= link_to "المدونة", articles_path
+        %p= link_to "مكتبة الفيديو", videos_path
       %li
         %p
           &nbsp;
-          = @article.ar_title
+          = @video.ar_title
 
 .row
   .col-lg-10.col-lg-offset-1
     .grid.simple.transparent
+      .embed-responsive.embed-responsive-16by9
+        = video_iframe @video
+      .video-info-bar.pull-left
+        %span.small
+          المقدم:
+          = @video.instructor
+          %br
+          مدة العرض:
+          = @video.duration_in_words
+      .social-buttons.pull-right
+        %span= facebook_button(request.original_url)
+        %span= tweet_video_button(@video.ar_title)
+
+    .grid.simple.horizontal.green
       .grid-title
         %h4
-          %span.semi-bold= @article.ar_title
-        %br
-        %span.small
-          بقلم:
-          = @article.author
-          %br
-          = l(@article.created_at, format: "%B %d, %Y")
-        .social-buttons
-          %span= facebook_button(request.original_url)
-          %span= tweet_article_button(@article.ar_title)
+          %span.semi-bold= @video.ar_title
+        .tools
+          %a{ href: "javascript:;", class: "collapse" }
+          %a{ href: "javascript:;", class: "reload" }
+          %a{ href: "javascript:;", class: "remove" }
       .grid-body
-        %p#course_description= @article.content.html_safe
-        .social-buttons
-          %span= facebook_button(request.original_url)
-          %span= tweet_article_button(@article.ar_title)
+        %p#course_description= @video.description.html_safe
 
     .grid.simple.horizontal.blue
       .grid-title
@@ -48,16 +54,16 @@
 .row
   .col-lg-10.col-lg-offset-1
     .grid.simple.transparent
-      - if policy(@article).edit?
-        = link_to edit_article_path, class: "btn btn-warning btn-cons",
-                  id: "edit_article_link" do
+      - if policy(@video).edit?
+        = link_to edit_video_path, class: "btn btn-warning btn-cons",
+                  id: "edit_video_link" do
           = fa_icon "pencil"
           %span &nbsp;تعديل
 
-      - if policy(@article).destroy?
-        = link_to article_path,
+      - if policy(@video).destroy?
+        = link_to video_path,
                   class: "btn btn-danger btn-cons",
-                  id: "delete_article_link",
+                  id: "delete_video_link",
                   method: :delete,
                   data: { "confirm": "هل أنت متأكد؟",
                           "confirm-button-text": "نعم",

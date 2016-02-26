@@ -1,10 +1,8 @@
-class Course < ActiveRecord::Base
+class Video < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:ar_title, :en_title]
 
   include ActionView::Helpers::DateHelper
-
-  has_many :episodes, dependent: :destroy
 
 	has_attached_file :image, styles: { original: "200x200" },
 										default_url: "/images/original/missing.png"
@@ -15,6 +13,7 @@ class Course < ActiveRecord::Base
   validates :ar_title,     presence: true,  uniqueness: true
   validates :en_title,     presence: true,  uniqueness: true
   validates :instructor,   presence: true
+  validates :duration ,    presence: true
   validates :description,  presence: true
   validates :video_host,   presence: true
   validates :video_id,     presence: true
@@ -22,23 +21,15 @@ class Course < ActiveRecord::Base
 	validates_attachment :image, presence: true, size: { in: 0..2.megabytes },
                        content_type: { content_type: %w(image/jpeg image/png) }
 
-  def get_sequential_episodes
-    episodes.order("sequence ASC")
-  end
-
   def duration_in_words
-    if episodes.any?
-      distance_of_time_in_words(episodes.map(&:duration).sum)
-    else
-      distance_of_time_in_words(0)
-    end
+    distance_of_time_in_words(duration)
   end
 
-  def self.get_courses(user)
+  def self.get_videos(user)
     if user.admin?
-      Course.all.order("created_at DESC")
+      Video.all.order("created_at DESC")
     else
-      Course.where(active: true).order("created_at DESC")
+      Video.where(active: true).order("created_at DESC")
     end
   end
 

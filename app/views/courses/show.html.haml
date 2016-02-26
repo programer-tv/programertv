@@ -27,7 +27,7 @@
           = @course.episodes.count
           %br
           مدة العرض:
-          = @course.duration
+          = @course.duration_in_words
       .social-buttons.pull-right
         %span= facebook_button(request.original_url)
         %span= tweet_video_button(@course.ar_title)

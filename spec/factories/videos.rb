@@ -1,0 +1,17 @@
+FactoryGirl.define do
+  factory :video do
+    ar_title    { FFaker::LoremAR.phrase }
+    en_title    { FFaker::Lorem.phrase }
+    duration            { rand(99999..999999) }
+    instructor  { FFaker::Name.name }
+    description { FFaker::LoremAR.paragraphs.join(" ") }
+    video_host  { %w(YouTube Wistia Vimeo).sample }
+    video_id    { rand(99999..999999) }
+    level       { %w(مبتدئ متوسط متقدم).sample }
+    premium     true
+    active      true
+    new         true
+    image Rack::Test::UploadedFile.new("app/assets/images/logo_bg_big.png",
+                                       "image/png")
+  end
+end

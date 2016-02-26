@@ -26,6 +26,15 @@ ar:
       error: "هناك خطأ ما!"
     destroy:
       success: "تم حذف المقال بنجاح."
+  video:
+    create:
+      success: "تم إنشاء الفيديو بنجاح."
+      error: "هناك خطأ ما!"
+    update:
+      success: "تم تعديل الفيديو بنجاح."
+      error: "هناك خطأ ما!"
+    destroy:
+      success: "تم حذف الفيديو بنجاح."
 
   recaptcha:
     errors:
@@ -33,10 +42,11 @@ ar:
 
   activerecord:
     models:
-      course: الدورة
-      episode: الحلقة
-      user: المستخدم
-      article: المقال
+      course: دورة
+      episode: حلقة
+      user: مستخدم
+      article: مقال
+      video: فيديو
     attributes:
       course:
         ar_title: العنوان بالعربية
@@ -79,6 +89,19 @@ ar:
         content: المحتوى
         active: نشط
         new: جديد
+      video:
+        ar_title: العنوان بالعربية
+        en_title: العنوان بالإنجليزية
+        duration: مدة العرض (بالثواني)
+        instructor: المقدم
+        description: الوصف
+        video_id: معرف الفيديو
+        video_host: موفر الفيديو
+        image: الصورة
+        premium: متميز
+        active: نشط
+        new: جديد
+        level: المستوى
     errors:
       messages:
         record_invalid: 'فشل التحقّق من: %{errors}'
