@@ -31,7 +31,8 @@
                       %li= image_tag "advanced_banner.png"
               - if current_user.admin? and video.active?
                 .box-active-badge
-                  = fa_icon "play 2x"
+                  %span Live
+                  = fa_icon "circle"
 
 .row
   .col-lg-12

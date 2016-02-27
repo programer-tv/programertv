@@ -218,10 +218,12 @@ body {
         .box-active-badge {
           position: absolute;
           left: 7px;
-          top: 170px;
+          top: 180px;
+          color: #ED4722;
+          font-size: 11px;
 
           i {
-            color: #ED4722;
+            font-size: 9px;
           }
         }
       }
