@@ -15,10 +15,6 @@
 # Ignore application configuration
 /config/application.yml
 
-# Ignore rvm files
-.ruby-version
-.ruby-gemset
-
 # Ignore SimpleCov files
 /coverage
 
